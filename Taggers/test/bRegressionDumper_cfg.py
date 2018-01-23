@@ -52,32 +52,49 @@ cut=cms.string(
 
 process.load("flashgg.Taggers.bRegressionDumper_cfi")
 import flashgg.Taggers.dumperConfigTools as cfgTools
-from flashgg.Taggers.bRegressionDumper_cfi import bRegressionDumper
-bRegressionDumper.dumpTrees = True
+#from flashgg.Taggers.bRegressionDumper_cfi import bRegressionDumper
+
 
 
 #process.bRegressionDumper.src = "kinPreselDiPhotons"
 
-cfgTools.addCategories(bRegressionDumper,
+
+
+process.load("flashgg.Taggers.flashggbRegressionProducer_cfi")
+from flashgg.Taggers.flashggbRegressionProducer_cfi import flashggbRegressionProducer
+
+from flashgg.Taggers.flashggTags_cff import UnpackedJetCollectionVInputTag
+recoJetCollections = UnpackedJetCollectionVInputTag
+
+print recoJetCollections
+from flashgg.Taggers.bRegressionDumpConfig_cff import bRegressionDumpConfig
+
+for icoll,coll in enumerate(recoJetCollections):
+    setattr(process,"bRegProducer%d" %icoll,cms.EDProducer('flashggbRegressionProducer',
+                                               JetTag=coll,
+                              )
+            )
+    setattr(process,"bRegressionDumper%d" %icoll, cms.EDAnalyzer('CutBasedbRegressionDumper',
+                                   **bRegressionDumpConfig.parameters_()
+                               ))
+    getattr(process,"bRegressionDumper%d" %icoll).src="bRegProducer%d" %icoll
+    cfgTools.addCategories( getattr(process,"bRegressionDumper%d" %icoll),
                        [
 #        ("Reject", "diPhoton.mass < 50 || diPhoton.mass > 130", -1),
         ("All", "1", 0)
-        # ("EBHighR9", "abs(getProbe.superCluster.eta)<1.4442 && getProbe.full5x5_r9>0.94", 0),
-        # ("EBLowR9", "abs(getProbe.superCluster.eta)<1.4442 && getProbe.full5x5_r9<=0.94", 0),
-        # ("EEHighR9", "abs(getProbe.superCluster.eta)>1.566 && getProbe.full5x5_r9>0.94", 0),
-        # ("EELowR9", "abs(getProbe.superCluster.eta)>1.566 && getProbe.full5x5_r9<=0.94", 0)
         ],
                        variables=[ "jetPt                   :=pt"],
                        histograms=[]
                        )    
 
 
-process.load("flashgg.Taggers.flashggbRegressionProducer_cfi")
-from flashgg.Taggers.flashggbRegressionProducer_cfi import flashggbRegressionProducer
+#    break
 
+#print process.bRegProducer.JetTag
 
 from flashgg.Taggers.flashggTags_cff import flashggUnpackedJets
 
-bRegSequence = cms.Sequence(flashggUnpackedJets+flashggbRegressionProducer+bRegressionDumper)
+#bRegSequence = cms.Sequence(flashggUnpackedJets+flashggbRegressionProducer+bRegressionDumper)
+bRegSequence = cms.Sequence(flashggUnpackedJets*process.bRegProducer0*process.bRegressionDumper0*process.bRegProducer1*process.bRegressionDumper1)
 
 process.p = cms.Path(bRegSequence)

@@ -5,7 +5,8 @@ from flashgg.Taggers.globalVariables_cff import globalVariables
 bRegressionDumpConfig = cms.PSet(
     className  = cms.untracked.string("CutBasedbRegressionDumper"),
 #    src = cms.InputTag("flashggJets"),
-    src = cms.InputTag("flashggbRegressionProducer"),
+#    src = cms.InputTag("flashggbRegressionProducer"),
+    src = cms.InputTag("bRegProducer"),
     generatorInfo = cms.InputTag("generator"),
     processId = cms.string(""),
     maxCandPerEvent = cms.int32(-1), # -1 turns off the maxCandPerEvent check
