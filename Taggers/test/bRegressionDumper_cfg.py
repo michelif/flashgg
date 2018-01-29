@@ -9,7 +9,7 @@ process = cms.Process("Analysis")
 process.load("FWCore.MessageService.MessageLogger_cfi")
 process.source = cms.Source("PoolSource",
                             fileNames=cms.untracked.vstring(
-        "file:myMicroAODOutputFile.root"        
+        "file:myMicroAODOutputFile_5.root"        
         )
 )
 
@@ -71,8 +71,9 @@ from flashgg.Taggers.bRegressionDumpConfig_cff import bRegressionDumpConfig
 
 for icoll,coll in enumerate(recoJetCollections):
     setattr(process,"bRegProducer%d" %icoll,cms.EDProducer('flashggbRegressionProducer',
-                                               JetTag=coll,
-                              )
+                                                           JetTag=coll,
+                                                           rhoFixedGridCollection = cms.InputTag('fixedGridRhoAll'),
+                                                           )
             )
     setattr(process,"bRegressionDumper%d" %icoll, cms.EDAnalyzer('CutBasedbRegressionDumper',
                                    **bRegressionDumpConfig.parameters_()
