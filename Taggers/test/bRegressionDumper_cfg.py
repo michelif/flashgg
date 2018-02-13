@@ -73,6 +73,7 @@ for icoll,coll in enumerate(recoJetCollections):
     setattr(process,"bRegProducer%d" %icoll,cms.EDProducer('flashggbRegressionProducer',
                                                            JetTag=coll,
                                                            rhoFixedGridCollection = cms.InputTag('fixedGridRhoAll'),
+                                                           bRegressionWeightfile= cms.FileInPath("flashgg/Taggers/data/xgboost_bRegression.weights.xml"), 
                                                            )
             )
     setattr(process,"bRegressionDumper%d" %icoll, cms.EDAnalyzer('CutBasedbRegressionDumper',
@@ -85,6 +86,7 @@ for icoll,coll in enumerate(recoJetCollections):
         ("All", "1", 0)
         ],
                        variables=[ "jetPt                   :=pt"],
+#                                   "bRegMVA                 :=bRegMVA"],
                        histograms=[]
                        )    
 
