@@ -1,16 +1,17 @@
 #ifndef flashgg_bRegressionDumper_h
 #define flashgg_bRegressionDumper_h
 
-#include "flashgg/DataFormats/interface/Jet.h"
+//#include "flashgg/DataFormats/interface/Jet.h"
+#include "flashgg/DataFormats/interface/JetBReg.h"
 
 #include "flashgg/Taggers/interface/CollectionDumper.h"
 
 namespace flashgg
 {
-    typedef CollectionDumper<std::vector<Jet> > bRegressionDumper;
-    typedef CollectionDumper<std::vector<Jet>,
-            Jet,
-            CutBasedClassifier<Jet> > CutBasedbRegressionDumper;
+    typedef CollectionDumper<std::vector<JetBReg> > bRegressionDumper;
+    typedef CollectionDumper<std::vector<JetBReg>,
+            JetBReg,
+            CutBasedClassifier<JetBReg> > CutBasedbRegressionDumper;
 }
 
 #endif

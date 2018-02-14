@@ -85,8 +85,8 @@ for icoll,coll in enumerate(recoJetCollections):
 #        ("Reject", "diPhoton.mass < 50 || diPhoton.mass > 130", -1),
         ("All", "1", 0)
         ],
-                       variables=[ "jetPt                   :=pt"],
-#                                   "bRegMVA                 :=bRegMVA"],
+                       variables=[ "jetPt                   :=pt",
+                                   "bRegMVA                 :=getBRegMVA()"],
                        histograms=[]
                        )    
 

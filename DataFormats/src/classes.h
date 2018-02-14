@@ -42,6 +42,7 @@
 #include "flashgg/DataFormats/interface/ZPlusJetTag.h"
 #include "flashgg/DataFormats/interface/TagCandidate.h"
 #include "flashgg/DataFormats/interface/TagAndProbeCandidate.h" //spigazzi
+#include "flashgg/DataFormats/interface/JetBReg.h" //micheli
 
 #include <vector>
 #include <map>
@@ -313,6 +314,17 @@ namespace  {
         edm::Wrapper<edm::Ptr<flashgg::TagAndProbeCandidate> >                 wrp_ptr_fgg_tnp;
         std::vector<edm::Ptr<flashgg::TagAndProbeCandidate> >                  vec_ptr_fgg_tnp;
         edm::Wrapper<std::vector<edm::Ptr<flashgg::TagAndProbeCandidate> > >   wrp_vec_ptr_fgg_tnp;
+
+        //---JetBReg candidate
+        flashgg::JetBReg                                                       fgg_jetBReg;
+        edm::Wrapper<flashgg::JetBReg>                                     wrp_fgg_jetBReg;
+        std::vector<flashgg::JetBReg>                                      vec_fgg_jetBReg;
+        edm::Ptr<flashgg::JetBReg>                                         ptr_fgg_jetBReg;
+        std::vector<std::vector<flashgg::JetBReg> >                    vec_vec_fgg_jetBReg;
+        edm::Wrapper<std::vector<flashgg::JetBReg> >                   wrp_vec_fgg_jetBReg;
+        edm::Wrapper<std::vector<std::vector<flashgg::JetBReg> > > wrp_vec_vec_fgg_jetBReg;
+ 
+
 
     };
 }

@@ -13,6 +13,7 @@
 #include "DataFormats/PatCandidates/interface/PackedCandidate.h"
 #include "flashgg/DataFormats/interface/VertexCandidateMap.h"
 #include "flashgg/DataFormats/interface/Jet.h"
+#include "flashgg/DataFormats/interface/JetBReg.h"
 #include "FWCore/Utilities/interface/EDMException.h"
 #include "DataFormats/Math/interface/deltaR.h"
 
@@ -168,7 +169,7 @@ namespace flashgg {
         bRegressionReader_->BookMVA( "BDT" , bRegressionWeightfile_.fullPath() );
 
 
-        produces<vector<flashgg::Jet> > ();
+        produces<vector<flashgg::JetBReg> > ();
         
     }
 
@@ -182,12 +183,13 @@ namespace flashgg {
         evt.getByToken( jetToken_, jets );//just to try get the first one
         std::cout<<"jet size: "<<jets->size()<<std::endl;
         
-        unique_ptr<vector<flashgg::Jet> > jetColl( new vector<flashgg::Jet> );
+        unique_ptr<vector<flashgg::JetBReg> > jetColl( new vector<flashgg::JetBReg> );
         for( unsigned int i = 0 ; i < jets->size() ; i++ ) {
 
             
             Ptr<flashgg::Jet> pjet = jets->ptrAt( i );
-            flashgg::Jet fjet = flashgg::Jet( *pjet );
+            //            flashgg::Jet fjet = flashgg::Jet( *pjet );
+            flashgg::JetBReg fjet = flashgg::JetBReg( *pjet );
 
             //variables needed for regression
             Jet_pt = fjet.pt();
@@ -212,32 +214,32 @@ namespace flashgg {
                 Jet_vtx3deL = fjet.userFloat("vtx3DSig");
             }
             if(fjet.emEnergies().size()>0){
-                Jet_energyRing_dR0_em_Jet_e = fjet.emEnergies()[0]/fjet.energy();
-                Jet_energyRing_dR1_em_Jet_e = fjet.emEnergies()[1];
-                Jet_energyRing_dR2_em_Jet_e = fjet.emEnergies()[2];
-                Jet_energyRing_dR3_em_Jet_e = fjet.emEnergies()[3];
-                Jet_energyRing_dR4_em_Jet_e = fjet.emEnergies()[4];
+                Jet_energyRing_dR0_em_Jet_e = fjet.emEnergies()[0]/fjet.energy();//remember to divide by jet energy
+                Jet_energyRing_dR1_em_Jet_e = fjet.emEnergies()[1]/fjet.energy();
+                Jet_energyRing_dR2_em_Jet_e = fjet.emEnergies()[2]/fjet.energy();
+                Jet_energyRing_dR3_em_Jet_e = fjet.emEnergies()[3]/fjet.energy();
+                Jet_energyRing_dR4_em_Jet_e = fjet.emEnergies()[4]/fjet.energy();
             }
             if(fjet.neEnergies().size()>0){
-                Jet_energyRing_dR0_neut_Jet_e = fjet.neEnergies()[0];
-                Jet_energyRing_dR1_neut_Jet_e = fjet.neEnergies()[1];
-                Jet_energyRing_dR2_neut_Jet_e = fjet.neEnergies()[2];
-                Jet_energyRing_dR3_neut_Jet_e = fjet.neEnergies()[3];
-                Jet_energyRing_dR4_neut_Jet_e = fjet.neEnergies()[4];
+                Jet_energyRing_dR0_neut_Jet_e = fjet.neEnergies()[0]/fjet.energy();
+                Jet_energyRing_dR1_neut_Jet_e = fjet.neEnergies()[1]/fjet.energy();
+                Jet_energyRing_dR2_neut_Jet_e = fjet.neEnergies()[2]/fjet.energy();
+                Jet_energyRing_dR3_neut_Jet_e = fjet.neEnergies()[3]/fjet.energy();
+                Jet_energyRing_dR4_neut_Jet_e = fjet.neEnergies()[4]/fjet.energy();
             }
             if(fjet.chEnergies().size()>0){
-                Jet_energyRing_dR0_ch_Jet_e = fjet.chEnergies()[0];
-                Jet_energyRing_dR1_ch_Jet_e = fjet.chEnergies()[1];
-                Jet_energyRing_dR2_ch_Jet_e = fjet.chEnergies()[2];
-                Jet_energyRing_dR3_ch_Jet_e = fjet.chEnergies()[3];
-                Jet_energyRing_dR4_ch_Jet_e = fjet.chEnergies()[4];
+                Jet_energyRing_dR0_ch_Jet_e = fjet.chEnergies()[0]/fjet.energy();
+                Jet_energyRing_dR1_ch_Jet_e = fjet.chEnergies()[1]/fjet.energy();
+                Jet_energyRing_dR2_ch_Jet_e = fjet.chEnergies()[2]/fjet.energy();
+                Jet_energyRing_dR3_ch_Jet_e = fjet.chEnergies()[3]/fjet.energy();
+                Jet_energyRing_dR4_ch_Jet_e = fjet.chEnergies()[4]/fjet.energy();
             }
             if(fjet.muEnergies().size()>0){
-                Jet_energyRing_dR0_mu_Jet_e = fjet.muEnergies()[0];
-                Jet_energyRing_dR1_mu_Jet_e = fjet.muEnergies()[1];
-                Jet_energyRing_dR2_mu_Jet_e = fjet.muEnergies()[2];
-                Jet_energyRing_dR3_mu_Jet_e = fjet.muEnergies()[3];
-                Jet_energyRing_dR4_mu_Jet_e = fjet.muEnergies()[4];
+                Jet_energyRing_dR0_mu_Jet_e = fjet.muEnergies()[0]/fjet.energy();
+                Jet_energyRing_dR1_mu_Jet_e = fjet.muEnergies()[1]/fjet.energy();
+                Jet_energyRing_dR2_mu_Jet_e = fjet.muEnergies()[2]/fjet.energy();
+                Jet_energyRing_dR3_mu_Jet_e = fjet.muEnergies()[3]/fjet.energy();
+                Jet_energyRing_dR4_mu_Jet_e = fjet.muEnergies()[4]/fjet.energy();
             }
             Jet_numDaughters_pt03 = fjet.userInt("numDaug03");
             
@@ -290,9 +292,28 @@ namespace flashgg {
             std::cout<<bRegMVA<<std::endl;
 
             std::cout<<"Jet index: "<<i<<" Pt:"<<fjet.pt()<<std::endl;
-            int stocazzo = 69;
-            fjet.addUserInt("stocazzo", stocazzo);
-            fjet.addUserFloat("bRegMVA", bRegMVA);
+
+            //..... gen jets info                                                                                   
+            int cflav = 0; //~correct flavour definition
+            if ( !evt.isRealData() ) {
+                int hflav = fjet.hadronFlavour();//4 if c, 5 if b, 0 if light jets
+                int pflav = fjet.partonFlavour();
+
+                if( hflav != 0 ) {
+                    cflav = hflav;
+                } else { //not a heavy jet                                              
+                    cflav = std::abs(pflav) == 4 || std::abs(pflav) == 5 ? 0 : pflav;
+                }
+                std::cout<<cflav<<std::endl;
+                if (cflav != 5) continue;//i want only bjets
+            }
+            if (fjet.pt()<15. || fabs(fjet.eta())>2.5) continue;
+            std::cout<<"found a b-jet of pt"<<fjet.pt()<<" eta:"<<fjet.eta()<<std::endl;
+
+            //            fjet.addUserFloat("bRegMVA", bRegMVA);
+            fjet.setbRegMVA(bRegMVA);
+
+            std::cout<<fjet.getBRegMVA()<<std::endl;
             jetColl->push_back( fjet );
 
         }
