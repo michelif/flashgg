@@ -13,9 +13,16 @@
 #include "DataFormats/PatCandidates/interface/PackedCandidate.h"
 #include "flashgg/DataFormats/interface/VertexCandidateMap.h"
 #include "flashgg/DataFormats/interface/Jet.h"
-#include "flashgg/DataFormats/interface/JetBReg.h"
 #include "FWCore/Utilities/interface/EDMException.h"
 #include "DataFormats/Math/interface/deltaR.h"
+
+
+#include <iostream>
+#include <string>
+#include <vector>
+
+#include "DNN/Tensorflow/interface/Graph.h"
+#include "DNN/Tensorflow/interface/Tensor.h"
 
 
 using namespace std;
@@ -29,6 +36,9 @@ namespace flashgg {
     public:
         bRegressionProducer( const ParameterSet & );
         ~bRegressionProducer(){};
+        void InitJet();
+        void SetNNVectorVar();
+        std::vector<float> EvaluateNN();
     private:
         void produce( Event &, const EventSetup & ) override;
         //        std::vector<edm::InputTag> inputTagJets_;
@@ -38,7 +48,8 @@ namespace flashgg {
 
         unique_ptr<TMVA::Reader>bRegressionReader_;
         FileInPath bRegressionWeightfile_;
-
+        dnn::tf::Graph NNgraph_;
+        std::vector<float> NNvectorVar_; 
         //add vector of mva for eache jet
 
         //mva variables
@@ -90,6 +101,8 @@ namespace flashgg {
     {
         jetToken_= consumes<View<flashgg::Jet> >(inputTagJets_);
         bRegressionReader_.reset( new TMVA::Reader( "!Color:Silent" ) );
+
+        NNgraph_ = *(new dnn::tf::Graph("/afs/cern.ch/work/m/micheli/CMSSW_8_0_28/src/flashgg/MetaData/data/DNN_models/model-09",dnn::LogLevel::DEBUG)); //FIXME make this configurable
 
         //for variables for breg check this PR https://github.com/cms-analysis/flashgg/pull/968
         Jet_pt = 0.;
@@ -166,30 +179,31 @@ namespace flashgg {
         bRegressionReader_->AddVariable( "Jet_energyRing_dR4_mu_Jet_e", &Jet_energyRing_dR4_mu_Jet_e );
         bRegressionReader_->AddVariable( "Jet_numDaughters_pt03", &Jet_numDaughters_pt03 );
 
+
         bRegressionReader_->BookMVA( "BDT" , bRegressionWeightfile_.fullPath() );
 
 
-        produces<vector<flashgg::JetBReg> > ();
-        
+        //FIXME        produces<vector<flashgg::JetBReg> > ();
+        produces<vector<flashgg::Jet> > ();
     }
 
 
 
     void bRegressionProducer::produce( Event &evt, const EventSetup & )
     {
-        
+        InitJet();
         // input jets
         Handle<View<flashgg::Jet> > jets;
         evt.getByToken( jetToken_, jets );//just to try get the first one
-        std::cout<<"jet size: "<<jets->size()<<std::endl;
-        
-        unique_ptr<vector<flashgg::JetBReg> > jetColl( new vector<flashgg::JetBReg> );
+       unique_ptr<vector<flashgg::Jet> > jetColl( new vector<flashgg::Jet> );
         for( unsigned int i = 0 ; i < jets->size() ; i++ ) {
 
             
             Ptr<flashgg::Jet> pjet = jets->ptrAt( i );
-            //            flashgg::Jet fjet = flashgg::Jet( *pjet );
-            flashgg::JetBReg fjet = flashgg::JetBReg( *pjet );
+            flashgg::Jet fjet = flashgg::Jet( *pjet );
+
+            if (fjet.pt()<15. || fabs(fjet.eta())>2.5) continue;
+
 
             //variables needed for regression
             Jet_pt = fjet.pt();
@@ -199,51 +213,48 @@ namespace flashgg {
             evt.getByToken( rhoToken_, rhoHandle );
             const double rhoFixedGrd = *( rhoHandle.product() );
             rho = rhoFixedGrd;
-            Jet_mt = sqrt(fjet.energy()*fjet.energy()-fjet.pz()*fjet.pz());
-            Jet_leptonPtRel = fjet.userFloat("softLepPtRel");
-            Jet_leptonDeltaR = fjet.userFloat("softLepDr");
+            Jet_mt = sqrt(fjet.energy()*fjet.energy()-fjet.pz()*fjet.pz());//seems correct but check again
+
+            //this max probably not needed, it's just heppy
+            Jet_leptonPtRel = std::max(float(0.),fjet.userFloat("softLepPtRel"));
+            Jet_leptonDeltaR = std::max(float(0.),fjet.userFloat("softLepDr"));
             Jet_neHEF = fjet.neutralHadronEnergyFraction();
-            Jet_neEmEF = fjet.chargedEmEnergyFraction();
+            Jet_neEmEF = fjet.neutralEmEnergyFraction();
             if(fjet.userFloat("nSecVertices")>0){
-                float vertexX=fjet.userFloat("vtxPosX")-fjet.userFloat("vtxPx");//check if it's correct
-                float vertexY=fjet.userFloat("vtxPosY")-fjet.userFloat("vtxPy");                
-                Jet_vtxPt = sqrt(vertexX*vertexX+vertexY*vertexY);
-                Jet_vtxMass = fjet.userFloat("vtxMass");
-                Jet_vtx3dL = fjet.userFloat("vtx3DVal");
-                Jet_vtxNtrk = fjet.userFloat("vtxNTracks");
-                Jet_vtx3deL = fjet.userFloat("vtx3DSig");
+//                float vertexX=fjet.userFloat("vtxPosX")-fjet.userFloat("vtxPx");//check if it's correct
+//                float vertexY=fjet.userFloat("vtxPosY")-fjet.userFloat("vtxPy");                
+//                Jet_vtxPt = sqrt(vertexX*vertexX+vertexY*vertexY);
+                Jet_vtxPt=sqrt(fjet.userFloat("vtxPx")*fjet.userFloat("vtxPx")+fjet.userFloat("vtxPy")*fjet.userFloat("vtxPy"));
+                Jet_vtxMass = std::max(float(0.),fjet.userFloat("vtxMass"));
+                Jet_vtx3dL = std::max(float(0.),fjet.userFloat("vtx3DVal"));
+                Jet_vtxNtrk = std::max(float(0.),fjet.userFloat("vtxNTracks"));
+                Jet_vtx3deL = std::max(float(0.),fjet.userFloat("vtx3DSig"));
             }
-            if(fjet.emEnergies().size()>0){
-                Jet_energyRing_dR0_em_Jet_e = fjet.emEnergies()[0]/fjet.energy();//remember to divide by jet energy
-                Jet_energyRing_dR1_em_Jet_e = fjet.emEnergies()[1]/fjet.energy();
-                Jet_energyRing_dR2_em_Jet_e = fjet.emEnergies()[2]/fjet.energy();
-                Jet_energyRing_dR3_em_Jet_e = fjet.emEnergies()[3]/fjet.energy();
-                Jet_energyRing_dR4_em_Jet_e = fjet.emEnergies()[4]/fjet.energy();
-            }
-            if(fjet.neEnergies().size()>0){
-                Jet_energyRing_dR0_neut_Jet_e = fjet.neEnergies()[0]/fjet.energy();
-                Jet_energyRing_dR1_neut_Jet_e = fjet.neEnergies()[1]/fjet.energy();
-                Jet_energyRing_dR2_neut_Jet_e = fjet.neEnergies()[2]/fjet.energy();
-                Jet_energyRing_dR3_neut_Jet_e = fjet.neEnergies()[3]/fjet.energy();
-                Jet_energyRing_dR4_neut_Jet_e = fjet.neEnergies()[4]/fjet.energy();
-            }
-            if(fjet.chEnergies().size()>0){
-                Jet_energyRing_dR0_ch_Jet_e = fjet.chEnergies()[0]/fjet.energy();
-                Jet_energyRing_dR1_ch_Jet_e = fjet.chEnergies()[1]/fjet.energy();
-                Jet_energyRing_dR2_ch_Jet_e = fjet.chEnergies()[2]/fjet.energy();
-                Jet_energyRing_dR3_ch_Jet_e = fjet.chEnergies()[3]/fjet.energy();
-                Jet_energyRing_dR4_ch_Jet_e = fjet.chEnergies()[4]/fjet.energy();
-            }
-            if(fjet.muEnergies().size()>0){
-                Jet_energyRing_dR0_mu_Jet_e = fjet.muEnergies()[0]/fjet.energy();
-                Jet_energyRing_dR1_mu_Jet_e = fjet.muEnergies()[1]/fjet.energy();
-                Jet_energyRing_dR2_mu_Jet_e = fjet.muEnergies()[2]/fjet.energy();
-                Jet_energyRing_dR3_mu_Jet_e = fjet.muEnergies()[3]/fjet.energy();
-                Jet_energyRing_dR4_mu_Jet_e = fjet.muEnergies()[4]/fjet.energy();
-            }
+            Jet_energyRing_dR0_em_Jet_e = fjet.emEnergies()[0]/fjet.energy();//remember to divide by jet energy
+            Jet_energyRing_dR1_em_Jet_e = fjet.emEnergies()[1]/fjet.energy();
+            Jet_energyRing_dR2_em_Jet_e = fjet.emEnergies()[2]/fjet.energy();
+            Jet_energyRing_dR3_em_Jet_e = fjet.emEnergies()[3]/fjet.energy();
+            Jet_energyRing_dR4_em_Jet_e = fjet.emEnergies()[4]/fjet.energy();
+            Jet_energyRing_dR0_neut_Jet_e = fjet.neEnergies()[0]/fjet.energy();
+            Jet_energyRing_dR1_neut_Jet_e = fjet.neEnergies()[1]/fjet.energy();
+            Jet_energyRing_dR2_neut_Jet_e = fjet.neEnergies()[2]/fjet.energy();
+            Jet_energyRing_dR3_neut_Jet_e = fjet.neEnergies()[3]/fjet.energy();
+            Jet_energyRing_dR4_neut_Jet_e = fjet.neEnergies()[4]/fjet.energy();
+            Jet_energyRing_dR0_ch_Jet_e = fjet.chEnergies()[0]/fjet.energy();
+            Jet_energyRing_dR1_ch_Jet_e = fjet.chEnergies()[1]/fjet.energy();
+            Jet_energyRing_dR2_ch_Jet_e = fjet.chEnergies()[2]/fjet.energy();
+            Jet_energyRing_dR3_ch_Jet_e = fjet.chEnergies()[3]/fjet.energy();
+            Jet_energyRing_dR4_ch_Jet_e = fjet.chEnergies()[4]/fjet.energy();
+            Jet_energyRing_dR0_mu_Jet_e = fjet.muEnergies()[0]/fjet.energy();
+            Jet_energyRing_dR1_mu_Jet_e = fjet.muEnergies()[1]/fjet.energy();
+            Jet_energyRing_dR2_mu_Jet_e = fjet.muEnergies()[2]/fjet.energy();
+            Jet_energyRing_dR3_mu_Jet_e = fjet.muEnergies()[3]/fjet.energy();
+            Jet_energyRing_dR4_mu_Jet_e = fjet.muEnergies()[4]/fjet.energy();
+
             Jet_numDaughters_pt03 = fjet.userInt("numDaug03");
             
             float bRegMVA=-999;
+            std::vector<float> bRegNN(3,-999);
             
 
             int debug=0;
@@ -288,11 +299,6 @@ namespace flashgg {
 
             }
 
-            bRegMVA = bRegressionReader_->EvaluateMVA("BDT");
-            std::cout<<bRegMVA<<std::endl;
-
-            std::cout<<"Jet index: "<<i<<" Pt:"<<fjet.pt()<<std::endl;
-
             //..... gen jets info                                                                                   
             int cflav = 0; //~correct flavour definition
             if ( !evt.isRealData() ) {
@@ -304,25 +310,153 @@ namespace flashgg {
                 } else { //not a heavy jet                                              
                     cflav = std::abs(pflav) == 4 || std::abs(pflav) == 5 ? 0 : pflav;
                 }
-                std::cout<<cflav<<std::endl;
+                //                std::cout<<cflav<<std::endl;
                 if (cflav != 5) continue;//i want only bjets
             }
-            if (fjet.pt()<15. || fabs(fjet.eta())>2.5) continue;
-            std::cout<<"found a b-jet of pt"<<fjet.pt()<<" eta:"<<fjet.eta()<<std::endl;
+            //            std::cout<<"found a b-jet of pt"<<fjet.pt()<<" eta:"<<fjet.eta()<<bRegMVA<<std::endl;
 
-            //            fjet.addUserFloat("bRegMVA", bRegMVA);
-            fjet.setbRegMVA(bRegMVA);
+            bRegMVA = bRegressionReader_->EvaluateMVA("BDT");
+            SetNNVectorVar();
+            bRegNN = EvaluateNN();
+            NNvectorVar_.clear();
 
-            std::cout<<fjet.getBRegMVA()<<std::endl;
+            //FIXME read through file, config is here /afs/cern.ch/user/n/nchernya/public/100M_2018-03-01_job23_rawJetsJECtarget/config.json
+            float y_mean= 1.0454729795455933;
+            float y_std = 0.3162831664085388;
+
+            fjet.addUserFloat("bRegMVA", bRegMVA);
+            fjet.addUserFloat("bRegNNCorr", bRegNN[0]*y_std+y_mean);
+            fjet.addUserFloat("bRegNNResolution",0.5*(bRegNN[2]-bRegNN[1])*y_std);
+            fjet.addUserFloat("energyRing_dR0_em_Jet_e", Jet_energyRing_dR0_em_Jet_e) ;//remember to divide by jet energy
+            fjet.addUserFloat("energyRing_dR1_em_Jet_e", Jet_energyRing_dR1_em_Jet_e) ;
+            fjet.addUserFloat("energyRing_dR2_em_Jet_e", Jet_energyRing_dR2_em_Jet_e) ;
+            fjet.addUserFloat("energyRing_dR3_em_Jet_e", Jet_energyRing_dR3_em_Jet_e) ;
+            fjet.addUserFloat("energyRing_dR4_em_Jet_e", Jet_energyRing_dR4_em_Jet_e) ;
+            fjet.addUserFloat("energyRing_dR0_neut_Jet_e", Jet_energyRing_dR0_neut_Jet_e) ;
+            fjet.addUserFloat("energyRing_dR1_neut_Jet_e", Jet_energyRing_dR1_neut_Jet_e) ;
+            fjet.addUserFloat("energyRing_dR2_neut_Jet_e", Jet_energyRing_dR2_neut_Jet_e) ;
+            fjet.addUserFloat("energyRing_dR3_neut_Jet_e", Jet_energyRing_dR3_neut_Jet_e) ;
+            fjet.addUserFloat("energyRing_dR4_neut_Jet_e", Jet_energyRing_dR4_neut_Jet_e) ;
+            fjet.addUserFloat("energyRing_dR0_ch_Jet_e", Jet_energyRing_dR0_ch_Jet_e) ;
+            fjet.addUserFloat("energyRing_dR1_ch_Jet_e", Jet_energyRing_dR1_ch_Jet_e) ;
+            fjet.addUserFloat("energyRing_dR2_ch_Jet_e", Jet_energyRing_dR2_ch_Jet_e) ;
+            fjet.addUserFloat("energyRing_dR3_ch_Jet_e", Jet_energyRing_dR3_ch_Jet_e) ;
+            fjet.addUserFloat("energyRing_dR4_ch_Jet_e", Jet_energyRing_dR4_ch_Jet_e) ;
+            fjet.addUserFloat("energyRing_dR0_mu_Jet_e", Jet_energyRing_dR0_mu_Jet_e) ;
+            fjet.addUserFloat("energyRing_dR1_mu_Jet_e", Jet_energyRing_dR1_mu_Jet_e) ;
+            fjet.addUserFloat("energyRing_dR2_mu_Jet_e", Jet_energyRing_dR2_mu_Jet_e) ;
+            fjet.addUserFloat("energyRing_dR3_mu_Jet_e", Jet_energyRing_dR3_mu_Jet_e) ;
+            fjet.addUserFloat("energyRing_dR4_mu_Jet_e", Jet_energyRing_dR4_mu_Jet_e ) ;
+            fjet.addUserFloat("numDaughters_pt03", fjet.userInt("numDaug03"));
+
+
             jetColl->push_back( fjet );
+
+            
 
         }
         evt.put( std::move( jetColl ) );
     }
     
+    void bRegressionProducer::InitJet(){
+        Jet_pt = 0.;
+        Jet_eta = 0.;
+        rho = 0.;
+        Jet_mt = 0.;
+        Jet_leadTrackPt = 0.;
+        Jet_leptonPtRel = 0.;
+        Jet_leptonDeltaR = 0.;
+        Jet_neHEF = 0.;
+        Jet_neEmEF = 0.;
+        Jet_vtxPt = 0.;
+        Jet_vtxMass = 0.;
+        Jet_vtx3dL = 0.;
+        Jet_vtxNtrk = 0.;
+        Jet_vtx3deL = 0.;
+        Jet_energyRing_dR0_em_Jet_e = 0.;
+        Jet_energyRing_dR1_em_Jet_e = 0.;
+        Jet_energyRing_dR2_em_Jet_e = 0.;
+        Jet_energyRing_dR3_em_Jet_e = 0.;
+        Jet_energyRing_dR4_em_Jet_e = 0.;
+        Jet_energyRing_dR0_neut_Jet_e = 0.;
+        Jet_energyRing_dR1_neut_Jet_e = 0.;
+        Jet_energyRing_dR2_neut_Jet_e = 0.;
+        Jet_energyRing_dR3_neut_Jet_e = 0.;
+        Jet_energyRing_dR4_neut_Jet_e = 0.;
+        Jet_energyRing_dR0_ch_Jet_e = 0.;
+        Jet_energyRing_dR1_ch_Jet_e = 0.;
+        Jet_energyRing_dR2_ch_Jet_e = 0.;
+        Jet_energyRing_dR3_ch_Jet_e = 0.;
+        Jet_energyRing_dR4_ch_Jet_e = 0.;
+        Jet_energyRing_dR0_mu_Jet_e = 0.;
+        Jet_energyRing_dR1_mu_Jet_e = 0.;
+        Jet_energyRing_dR2_mu_Jet_e = 0.;
+        Jet_energyRing_dR3_mu_Jet_e = 0.;
+        Jet_energyRing_dR4_mu_Jet_e = 0.;
+        Jet_numDaughters_pt03 = 0;
 
+    }//end InitJet
 
+    void bRegressionProducer::SetNNVectorVar(){
+
+        NNvectorVar_.push_back(Jet_pt) ;//0
+        NNvectorVar_.push_back(Jet_eta) ;
+        NNvectorVar_.push_back(rho) ;
+        NNvectorVar_.push_back(Jet_mt) ;
+        NNvectorVar_.push_back(Jet_leadTrackPt) ;
+        NNvectorVar_.push_back(Jet_leptonPtRel) ;//5
+        NNvectorVar_.push_back(Jet_leptonDeltaR) ;
+        NNvectorVar_.push_back(Jet_neHEF) ;
+        NNvectorVar_.push_back(Jet_neEmEF) ;
+        NNvectorVar_.push_back(Jet_vtxPt) ;
+        NNvectorVar_.push_back(Jet_vtxMass) ;//10
+        NNvectorVar_.push_back(Jet_vtx3dL) ;
+        NNvectorVar_.push_back(Jet_vtxNtrk) ;
+        NNvectorVar_.push_back(Jet_vtx3deL) ;
+        NNvectorVar_.push_back(Jet_numDaughters_pt03) ;//this variable has changed order, in bdt it was last, check why
+        NNvectorVar_.push_back(Jet_energyRing_dR0_em_Jet_e) ;//15
+        NNvectorVar_.push_back(Jet_energyRing_dR1_em_Jet_e) ;
+        NNvectorVar_.push_back(Jet_energyRing_dR2_em_Jet_e) ;
+        NNvectorVar_.push_back(Jet_energyRing_dR3_em_Jet_e) ;
+        NNvectorVar_.push_back(Jet_energyRing_dR4_em_Jet_e) ;
+        NNvectorVar_.push_back(Jet_energyRing_dR0_neut_Jet_e) ;//20
+        NNvectorVar_.push_back(Jet_energyRing_dR1_neut_Jet_e) ;
+        NNvectorVar_.push_back(Jet_energyRing_dR2_neut_Jet_e) ;
+        NNvectorVar_.push_back(Jet_energyRing_dR3_neut_Jet_e) ;
+        NNvectorVar_.push_back(Jet_energyRing_dR4_neut_Jet_e) ;
+        NNvectorVar_.push_back(Jet_energyRing_dR0_ch_Jet_e) ;//25
+        NNvectorVar_.push_back(Jet_energyRing_dR1_ch_Jet_e) ;
+        NNvectorVar_.push_back(Jet_energyRing_dR2_ch_Jet_e) ;
+        NNvectorVar_.push_back(Jet_energyRing_dR3_ch_Jet_e) ;
+        NNvectorVar_.push_back(Jet_energyRing_dR4_ch_Jet_e) ;
+        NNvectorVar_.push_back(Jet_energyRing_dR0_mu_Jet_e) ;//30
+        NNvectorVar_.push_back(Jet_energyRing_dR1_mu_Jet_e) ;
+        NNvectorVar_.push_back(Jet_energyRing_dR2_mu_Jet_e) ;
+        NNvectorVar_.push_back(Jet_energyRing_dR3_mu_Jet_e) ;
+        NNvectorVar_.push_back(Jet_energyRing_dR4_mu_Jet_e) ;
+
+    }
+    
+    std::vector<float> bRegressionProducer::EvaluateNN(){
+        dnn::tf::Shape xShape[] = { 1, 35 };
+
+        dnn::tf::Tensor* x = NNgraph_.defineInput(new dnn::tf::Tensor("ffwd_inp:0", 2, xShape));
+        dnn::tf::Tensor* y = NNgraph_.defineOutput(new dnn::tf::Tensor("ffwd_out/BiasAdd:0"));
+        for (int i = 0; i < x->getShape(1); i++){
+            //            std::cout<<"i:"<<i<<" x:"<<NNvectorVar_[i]<<std::endl;
+            x->setValue<float>(0, i, NNvectorVar_[i]);
+        }
+        NNgraph_.eval();
+        std::vector<float> correction(3);//3 outputs, first value is mean and then other 2 quantiles
+        correction[0] = y->getValue<float>(0, 0);
+        correction[1] = y->getValue<float>(0, 1);            
+        correction[2] = y->getValue<float>(0, 2);            
+        return correction;
+    }//end EvaluateNN
+    
 }
+
+
 
 typedef flashgg::bRegressionProducer flashggbRegressionProducer;
 DEFINE_FWK_MODULE( flashggbRegressionProducer );

@@ -1,3 +1,5 @@
+<use name="DNN/Base" />
+<use name="DNN/Tensorflow" />
 <use   name="DataFormats/Candidate"/>
 <use   name="DataFormats/PatCandidates"/>
 <use   name="DataFormats/Common"/>

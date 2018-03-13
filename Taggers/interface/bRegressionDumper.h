@@ -8,10 +8,14 @@
 
 namespace flashgg
 {
-    typedef CollectionDumper<std::vector<JetBReg> > bRegressionDumper;
-    typedef CollectionDumper<std::vector<JetBReg>,
-            JetBReg,
-            CutBasedClassifier<JetBReg> > CutBasedbRegressionDumper;
+    //FIXME typedef CollectionDumper<std::vector<JetBReg> > bRegressionDumper;
+    //FIXME typedef CollectionDumper<std::vector<JetBReg>,
+    //FIXME         JetBReg,
+    //FIXME            CutBasedClassifier<JetBReg> > CutBasedbRegressionDumper;
+    typedef CollectionDumper<std::vector<Jet> > bRegressionDumper; 
+    typedef CollectionDumper<std::vector<Jet>,                     
+                             Jet,                                                   
+                             CutBasedClassifier<Jet> > CutBasedbRegressionDumper;
 }
 
 #endif

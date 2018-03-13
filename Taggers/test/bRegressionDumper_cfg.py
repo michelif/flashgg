@@ -70,6 +70,7 @@ print recoJetCollections
 from flashgg.Taggers.bRegressionDumpConfig_cff import bRegressionDumpConfig
 
 for icoll,coll in enumerate(recoJetCollections):
+    print "doing icoll "+str(icoll)
     setattr(process,"bRegProducer%d" %icoll,cms.EDProducer('flashggbRegressionProducer',
                                                            JetTag=coll,
                                                            rhoFixedGridCollection = cms.InputTag('fixedGridRhoAll'),
@@ -85,9 +86,47 @@ for icoll,coll in enumerate(recoJetCollections):
 #        ("Reject", "diPhoton.mass < 50 || diPhoton.mass > 130", -1),
         ("All", "1", 0)
         ],
-                       variables=[ "jetPt                   :=pt",
-                                   "bRegMVA                 :=getBRegMVA()"],
-                       histograms=[]
+                       variables=[ "pt                   :=pt",
+                                   "eta                   :=eta",
+                                   "leadTrackPt           :=userFloat('leadTrackPt')",
+                                   "mt                    :=sqrt(energy*energy-pz*pz)",
+                                   "leptonPtRel           :=userFloat('softLepPtRel')",
+                                   "leptonDeltaRel           :=userFloat('softLepDr')",
+                                   "neHEF                 :=neutralHadronEnergyFraction()",
+                                   "neEmEF                 :=neutralEmEnergyFraction()",
+                                   "vtxPt                  :=sqrt(userFloat('vtxPx')*userFloat('vtxPx')+userFloat('vtxPy')*userFloat('vtxPy'))",
+                                   "vtxMass := userFloat('vtxMass')",
+                                   "vtx3dL  := userFloat('vtx3DVal')",
+                                   "vtxNtrk := userFloat('vtxNTracks')",
+                                   "vtx3deL := userFloat('vtx3DSig')",
+                                   "energyRing_dR0_em_Jet_e := userFloat('energyRing_dR0_em_Jet_e')", 
+                                   "energyRing_dR1_em_Jet_e :=  userFloat('energyRing_dR1_em_Jet_e')", 
+                                   "energyRing_dR2_em_Jet_e :=   userFloat('energyRing_dR2_em_Jet_e')", 
+                                   "energyRing_dR3_em_Jet_e:=    userFloat('energyRing_dR3_em_Jet_e')", 
+                                   "energyRing_dR4_em_Jet_e:=     userFloat('energyRing_dR4_em_Jet_e')", 
+                                   "energyRing_dR0_neut_Jet_e:=  userFloat('energyRing_dR0_neut_Jet_e')",
+                                   "energyRing_dR1_neut_Jet_e:=   userFloat('energyRing_dR1_neut_Jet_e')",
+                                   "energyRing_dR2_neut_Jet_e:=    userFloat('energyRing_dR2_neut_Jet_e')",
+                                   "energyRing_dR3_neut_Jet_e:=    userFloat('energyRing_dR3_neut_Jet_e')",
+                                   "energyRing_dR4_neut_Jet_e:=      userFloat('energyRing_dR4_neut_Jet_e')",
+                                   "energyRing_dR0_ch_Jet_e:= userFloat('energyRing_dR0_ch_Jet_e')", 
+                                   "energyRing_dR1_ch_Jet_e:= userFloat('energyRing_dR1_ch_Jet_e')", 
+                                   "energyRing_dR2_ch_Jet_e:= userFloat('energyRing_dR2_ch_Jet_e')", 
+                                   "energyRing_dR3_ch_Jet_e:= userFloat('energyRing_dR3_ch_Jet_e')", 
+                                   "energyRing_dR4_ch_Jet_e:= userFloat('energyRing_dR4_ch_Jet_e')", 
+                                   "energyRing_dR0_mu_Jet_e:= userFloat('energyRing_dR0_mu_Jet_e')", 
+                                   "energyRing_dR1_mu_Jet_e:= userFloat('energyRing_dR1_mu_Jet_e')", 
+                                   "energyRing_dR2_mu_Jet_e:= userFloat('energyRing_dR2_mu_Jet_e')", 
+                                   "energyRing_dR3_mu_Jet_e:= userFloat('energyRing_dR3_mu_Jet_e')", 
+                                   "energyRing_dR4_mu_Jet_e:= userFloat('energyRing_dR4_mu_Jet_e')", 
+                                   "numDaughters_pt03   := userFloat('numDaughters_pt03')",
+                                   "bRegMVA                 :=userFloat('bRegMVA')",
+                                   "bRegNNCorr                 :=userFloat('bRegNNCorr')",
+                                   "bRegNNResolution                 :=userFloat('bRegNNResolution')",                                  
+
+
+                      ],
+      histograms=[]
                        )    
 
 
