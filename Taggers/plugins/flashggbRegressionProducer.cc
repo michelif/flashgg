@@ -24,6 +24,8 @@
 #include "DNN/Tensorflow/interface/Graph.h"
 #include "DNN/Tensorflow/interface/Tensor.h"
 
+#define doBDTAnalysis 0 
+#define debug 0
 
 using namespace std;
 using namespace edm;
@@ -100,9 +102,10 @@ namespace flashgg {
         bRegressionWeightfile_(iConfig.getParameter<edm::FileInPath>("bRegressionWeightfile"))
     {
         jetToken_= consumes<View<flashgg::Jet> >(inputTagJets_);
-        bRegressionReader_.reset( new TMVA::Reader( "!Color:Silent" ) );
 
-        NNgraph_ = *(new dnn::tf::Graph("/afs/cern.ch/work/m/micheli/CMSSW_8_0_28/src/flashgg/MetaData/data/DNN_models/model-09",dnn::LogLevel::DEBUG)); //FIXME make this configurable
+
+        NNgraph_ = *(new dnn::tf::Graph("/afs/cern.ch/work/m/micheli/CMSSW_8_0_28/src/flashgg/MetaData/data/DNN_models/model-09"); //FIXME make this configurable
+        //        NNgraph_ = *(new dnn::tf::Graph("/afs/cern.ch/work/m/micheli/CMSSW_8_0_28/src/flashgg/MetaData/data/DNN_models/model-09",dnn::LogLevel::ALL)); //FIXME make this configurable
 
         //for variables for breg check this PR https://github.com/cms-analysis/flashgg/pull/968
         Jet_pt = 0.;
@@ -141,8 +144,8 @@ namespace flashgg {
         Jet_energyRing_dR4_mu_Jet_e = 0.;
         Jet_numDaughters_pt03 = 0;
 
-
-
+        if (doBDTAnalysis){ 
+        bRegressionReader_.reset( new TMVA::Reader( "!Color:Silent" ) );
         bRegressionReader_->AddVariable( "Jet_pt", &Jet_pt );
         bRegressionReader_->AddVariable( "Jet_eta", &Jet_eta );
         bRegressionReader_->AddVariable( "rho", &rho );
@@ -179,10 +182,9 @@ namespace flashgg {
         bRegressionReader_->AddVariable( "Jet_energyRing_dR4_mu_Jet_e", &Jet_energyRing_dR4_mu_Jet_e );
         bRegressionReader_->AddVariable( "Jet_numDaughters_pt03", &Jet_numDaughters_pt03 );
 
-
         bRegressionReader_->BookMVA( "BDT" , bRegressionWeightfile_.fullPath() );
 
-
+        }
         //FIXME        produces<vector<flashgg::JetBReg> > ();
         produces<vector<flashgg::Jet> > ();
     }
@@ -257,7 +259,6 @@ namespace flashgg {
             std::vector<float> bRegNN(3,-999);
             
 
-            int debug=0;
             if(debug){
                 cout<<"Jet_pt :"<<Jet_pt <<endl;
                 cout<<"Jet_eta :"<<Jet_eta <<endl;
@@ -315,7 +316,8 @@ namespace flashgg {
             }
             //            std::cout<<"found a b-jet of pt"<<fjet.pt()<<" eta:"<<fjet.eta()<<bRegMVA<<std::endl;
 
-            bRegMVA = bRegressionReader_->EvaluateMVA("BDT");
+
+            if(doBDTAnalysis) bRegMVA = bRegressionReader_->EvaluateMVA("BDT");
             SetNNVectorVar();
             bRegNN = EvaluateNN();
             NNvectorVar_.clear();
