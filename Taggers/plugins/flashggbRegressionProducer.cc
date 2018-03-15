@@ -21,8 +21,8 @@
 #include <string>
 #include <vector>
 
-#include "DNN/Tensorflow/interface/Graph.h"
-#include "DNN/Tensorflow/interface/Tensor.h"
+#include "DNN/TensorFlow/interface/TensorFlow.h"
+
 
 #define doBDTAnalysis 0 
 #define debug 0
@@ -50,7 +50,8 @@ namespace flashgg {
 
         unique_ptr<TMVA::Reader>bRegressionReader_;
         FileInPath bRegressionWeightfile_;
-        dnn::tf::Graph NNgraph_;
+        //        tensorflow::Graph NNgraph_;
+        tensorflow::Session* session;
         std::vector<float> NNvectorVar_; 
         //add vector of mva for eache jet
 
@@ -104,8 +105,9 @@ namespace flashgg {
         jetToken_= consumes<View<flashgg::Jet> >(inputTagJets_);
 
 
-        NNgraph_ = *(new dnn::tf::Graph("/afs/cern.ch/work/m/micheli/CMSSW_8_0_28/src/flashgg/MetaData/data/DNN_models/model-09"); //FIXME make this configurable
-        //        NNgraph_ = *(new dnn::tf::Graph("/afs/cern.ch/work/m/micheli/CMSSW_8_0_28/src/flashgg/MetaData/data/DNN_models/model-09",dnn::LogLevel::ALL)); //FIXME make this configurable
+        tensorflow::GraphDef* graphDef= tensorflow::loadGraphDef("/afs/cern.ch/work/m/micheli/CMSSW_9_4_2/src/flashgg/MetaData/data/DNN_models/model-09.pb"); //FIXME make this configurable
+        //        NNgraph_ = *(new tensorflow::Graph("/afs/cern.ch/work/m/micheli/CMSSW_8_0_28/src/flashgg/MetaData/data/DNN_models/model-09",dnn::LogLevel::ALL)); //FIXME make this configurable
+        session = tensorflow::createSession(graphDef);
 
         //for variables for breg check this PR https://github.com/cms-analysis/flashgg/pull/968
         Jet_pt = 0.;
@@ -440,19 +442,23 @@ namespace flashgg {
     }
     
     std::vector<float> bRegressionProducer::EvaluateNN(){
-        dnn::tf::Shape xShape[] = { 1, 35 };
-
-        dnn::tf::Tensor* x = NNgraph_.defineInput(new dnn::tf::Tensor("ffwd_inp:0", 2, xShape));
-        dnn::tf::Tensor* y = NNgraph_.defineOutput(new dnn::tf::Tensor("ffwd_out/BiasAdd:0"));
-        for (int i = 0; i < x->getShape(1); i++){
+        //        tensorflow::Tensor* x = NNgraph_.defineInput(new tensorflow::Tensor("ffwd_inp:0", 2, xShape));
+        //        tensorflow::Tensor* y = NNgraph_.defineOutput(new tensorflow::Tensor("ffwd_out/BiasAdd:0"));
+        tensorflow::Tensor input(tensorflow::DT_FLOAT, {1,35});
+        for (unsigned int i = 0; i < NNvectorVar_.size(); i++){
             //            std::cout<<"i:"<<i<<" x:"<<NNvectorVar_[i]<<std::endl;
-            x->setValue<float>(0, i, NNvectorVar_[i]);
+            input.matrix<float>()(0,i) =  float(NNvectorVar_[i]);
         }
-        NNgraph_.eval();
+        std::vector<tensorflow::Tensor> outputs;
+        tensorflow::run(session, { { "ffwd_inp:0",input } }, { "ffwd_out/BiasAdd:0" }, &outputs);
+
         std::vector<float> correction(3);//3 outputs, first value is mean and then other 2 quantiles
-        correction[0] = y->getValue<float>(0, 0);
-        correction[1] = y->getValue<float>(0, 1);            
-        correction[2] = y->getValue<float>(0, 2);            
+        correction[0] = outputs[0].matrix<float>()(0, 0);
+        correction[1] = outputs[0].matrix<float>()(0, 1);
+        correction[2] = outputs[0].matrix<float>()(0, 2);
+        
+        //        std::cout<<correction[0]<<" "<<correction[1]<<" "<<correction[2]<<std::endl;
+
         return correction;
     }//end EvaluateNN
     

@@ -30,8 +30,11 @@ elif os.environ["CMSSW_VERSION"].count("CMSSW_7_4"):
     process.GlobalTag.globaltag = '74X_mcRun2_asymptotic_v4' 
 elif os.environ["CMSSW_VERSION"].count("CMSSW_8_0"):
     process.GlobalTag.globaltag = '80X_mcRun2_asymptotic_2016_miniAODv2'
-else:
-    raise Exception,"Could not find a sensible CMSSW_VERSION for default globaltag"
+elif os.environ["CMSSW_VERSION"].count("CMSSW_9_2"):
+    process.GlobalTag.globaltag = '80X_mcRun2_asymptotic_2016_miniAODv2'
+    
+#else:
+#    raise Exception,"Could not find a sensible CMSSW_VERSION for default globaltag"
 
 process.TFileService = cms.Service("TFileService",
                                    fileName = cms.string("test.root")
