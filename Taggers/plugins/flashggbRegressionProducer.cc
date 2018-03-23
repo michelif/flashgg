@@ -24,7 +24,6 @@
 #include "DNN/Tensorflow/interface/Graph.h"
 #include "DNN/Tensorflow/interface/Tensor.h"
 
-#define doBDTAnalysis 0 
 #define debug 0
 
 using namespace std;
@@ -48,8 +47,6 @@ namespace flashgg {
         EDGetTokenT<View<flashgg::Jet> > jetToken_;
         edm::EDGetTokenT<double> rhoToken_;        
 
-        unique_ptr<TMVA::Reader>bRegressionReader_;
-        FileInPath bRegressionWeightfile_;
         dnn::tf::Graph NNgraph_;
         std::vector<float> NNvectorVar_; 
         //add vector of mva for eache jet
@@ -98,17 +95,13 @@ namespace flashgg {
     bRegressionProducer::bRegressionProducer( const ParameterSet &iConfig ) :
         //     inputTagJets_( iConfig.getParameter<std::vector<edm::InputTag> >( "JetTag" )) {
         inputTagJets_( iConfig.getParameter<edm::InputTag>( "JetTag" )) ,
-        rhoToken_( consumes<double>(iConfig.getParameter<edm::InputTag>( "rhoFixedGridCollection" ) ) ),
-        bRegressionWeightfile_(iConfig.getParameter<edm::FileInPath>("bRegressionWeightfile"))
+        rhoToken_( consumes<double>(iConfig.getParameter<edm::InputTag>( "rhoFixedGridCollection" ) ) )
     {
         jetToken_= consumes<View<flashgg::Jet> >(inputTagJets_);
 
 
         
-        NNgraph_ = *(new dnn::tf::Graph("/afs/cern.ch/work/m/micheli/CMSSW_8_0_28/src/flashgg/MetaData/data/DNN_models/model-09")); //FIXME make this configurable
-        //        NNgraph_ = *(new dnn::tf::Graph("/afs/cern.ch/work/m/micheli/CMSSW_8_0_28/src/flashgg/MetaData/data/DNN_models/model-09",dnn::LogLevel::ALL)); //FIXME make this configurable
-
-        //for variables for breg check this PR https://github.com/cms-analysis/flashgg/pull/968
+        NNgraph_ = *(new dnn::tf::Graph("/afs/cern.ch/work/m/micheli/CMSSW_8_0_28/src/flashgg/MetaData/data/DNN_models/model-09")); //FIXME make this configurable, for variables for breg check this PR https://github.com/cms-analysis/flashgg/pull/968 REMEMBER TO ADD THE LAST CONE!
         Jet_pt = 0.;
         Jet_eta = 0.;
         rho = 0.;
@@ -145,48 +138,6 @@ namespace flashgg {
         Jet_energyRing_dR4_mu_Jet_e = 0.;
         Jet_numDaughters_pt03 = 0;
 
-        if (doBDTAnalysis){ 
-        bRegressionReader_.reset( new TMVA::Reader( "!Color:Silent" ) );
-        bRegressionReader_->AddVariable( "Jet_pt", &Jet_pt );
-        bRegressionReader_->AddVariable( "Jet_eta", &Jet_eta );
-        bRegressionReader_->AddVariable( "rho", &rho );
-        bRegressionReader_->AddVariable( "Jet_mt", &Jet_mt );
-        bRegressionReader_->AddVariable( "Jet_leadTrackPt", &Jet_leadTrackPt );
-        bRegressionReader_->AddVariable( "Jet_leptonPtRel", &Jet_leptonPtRel );
-        bRegressionReader_->AddVariable( "Jet_leptonDeltaR", &Jet_leptonDeltaR );
-        bRegressionReader_->AddVariable( "Jet_neHEF", &Jet_neHEF );
-        bRegressionReader_->AddVariable( "Jet_neEmEF", &Jet_neEmEF );
-        bRegressionReader_->AddVariable( "Jet_vtxPt", &Jet_vtxPt );
-        bRegressionReader_->AddVariable( "Jet_vtxMass", &Jet_vtxMass );
-        bRegressionReader_->AddVariable( "Jet_vtx3dL", &Jet_vtx3dL );
-        bRegressionReader_->AddVariable( "Jet_vtxNtrk", &Jet_vtxNtrk );
-        bRegressionReader_->AddVariable( "Jet_vtx3deL", &Jet_vtx3deL );
-        bRegressionReader_->AddVariable( "Jet_energyRing_dR0_em_Jet_e", &Jet_energyRing_dR0_em_Jet_e );
-        bRegressionReader_->AddVariable( "Jet_energyRing_dR1_em_Jet_e", &Jet_energyRing_dR1_em_Jet_e );
-        bRegressionReader_->AddVariable( "Jet_energyRing_dR2_em_Jet_e", &Jet_energyRing_dR2_em_Jet_e );
-        bRegressionReader_->AddVariable( "Jet_energyRing_dR3_em_Jet_e", &Jet_energyRing_dR3_em_Jet_e );
-        bRegressionReader_->AddVariable( "Jet_energyRing_dR4_em_Jet_e", &Jet_energyRing_dR4_em_Jet_e );
-        bRegressionReader_->AddVariable( "Jet_energyRing_dR0_neut_Jet_e", &Jet_energyRing_dR0_neut_Jet_e );
-        bRegressionReader_->AddVariable( "Jet_energyRing_dR1_neut_Jet_e", &Jet_energyRing_dR1_neut_Jet_e );
-        bRegressionReader_->AddVariable( "Jet_energyRing_dR2_neut_Jet_e", &Jet_energyRing_dR2_neut_Jet_e );
-        bRegressionReader_->AddVariable( "Jet_energyRing_dR3_neut_Jet_e", &Jet_energyRing_dR3_neut_Jet_e );
-        bRegressionReader_->AddVariable( "Jet_energyRing_dR4_neut_Jet_e", &Jet_energyRing_dR4_neut_Jet_e );
-        bRegressionReader_->AddVariable( "Jet_energyRing_dR0_ch_Jet_e", &Jet_energyRing_dR0_ch_Jet_e );
-        bRegressionReader_->AddVariable( "Jet_energyRing_dR1_ch_Jet_e", &Jet_energyRing_dR1_ch_Jet_e );
-        bRegressionReader_->AddVariable( "Jet_energyRing_dR2_ch_Jet_e", &Jet_energyRing_dR2_ch_Jet_e );
-        bRegressionReader_->AddVariable( "Jet_energyRing_dR3_ch_Jet_e", &Jet_energyRing_dR3_ch_Jet_e );
-        bRegressionReader_->AddVariable( "Jet_energyRing_dR4_ch_Jet_e", &Jet_energyRing_dR4_ch_Jet_e );
-        bRegressionReader_->AddVariable( "Jet_energyRing_dR0_mu_Jet_e", &Jet_energyRing_dR0_mu_Jet_e );
-        bRegressionReader_->AddVariable( "Jet_energyRing_dR1_mu_Jet_e", &Jet_energyRing_dR1_mu_Jet_e );
-        bRegressionReader_->AddVariable( "Jet_energyRing_dR2_mu_Jet_e", &Jet_energyRing_dR2_mu_Jet_e );
-        bRegressionReader_->AddVariable( "Jet_energyRing_dR3_mu_Jet_e", &Jet_energyRing_dR3_mu_Jet_e );
-        bRegressionReader_->AddVariable( "Jet_energyRing_dR4_mu_Jet_e", &Jet_energyRing_dR4_mu_Jet_e );
-        bRegressionReader_->AddVariable( "Jet_numDaughters_pt03", &Jet_numDaughters_pt03 );
-
-        bRegressionReader_->BookMVA( "BDT" , bRegressionWeightfile_.fullPath() );
-
-        }
-        //FIXME        produces<vector<flashgg::JetBReg> > ();
         produces<vector<flashgg::Jet> > ();
     }
 
@@ -205,7 +156,7 @@ namespace flashgg {
             Ptr<flashgg::Jet> pjet = jets->ptrAt( i );
             flashgg::Jet fjet = flashgg::Jet( *pjet );
 
-            if (fjet.pt()<15. || fabs(fjet.eta())>2.5) continue;
+            //            if (fjet.pt()<15. || fabs(fjet.eta())>2.5) continue;
 
 
             //variables needed for regression
@@ -233,30 +184,30 @@ namespace flashgg {
                 Jet_vtxNtrk = std::max(float(0.),fjet.userFloat("vtxNTracks"));
                 Jet_vtx3deL = std::max(float(0.),fjet.userFloat("vtx3DSig"));
             }
-            Jet_energyRing_dR0_em_Jet_e = fjet.emEnergies()[0]/fjet.energy();//remember to divide by jet energy
-            Jet_energyRing_dR1_em_Jet_e = fjet.emEnergies()[1]/fjet.energy();
-            Jet_energyRing_dR2_em_Jet_e = fjet.emEnergies()[2]/fjet.energy();
-            Jet_energyRing_dR3_em_Jet_e = fjet.emEnergies()[3]/fjet.energy();
-            Jet_energyRing_dR4_em_Jet_e = fjet.emEnergies()[4]/fjet.energy();
-            Jet_energyRing_dR0_neut_Jet_e = fjet.neEnergies()[0]/fjet.energy();
-            Jet_energyRing_dR1_neut_Jet_e = fjet.neEnergies()[1]/fjet.energy();
-            Jet_energyRing_dR2_neut_Jet_e = fjet.neEnergies()[2]/fjet.energy();
-            Jet_energyRing_dR3_neut_Jet_e = fjet.neEnergies()[3]/fjet.energy();
-            Jet_energyRing_dR4_neut_Jet_e = fjet.neEnergies()[4]/fjet.energy();
-            Jet_energyRing_dR0_ch_Jet_e = fjet.chEnergies()[0]/fjet.energy();
-            Jet_energyRing_dR1_ch_Jet_e = fjet.chEnergies()[1]/fjet.energy();
-            Jet_energyRing_dR2_ch_Jet_e = fjet.chEnergies()[2]/fjet.energy();
-            Jet_energyRing_dR3_ch_Jet_e = fjet.chEnergies()[3]/fjet.energy();
-            Jet_energyRing_dR4_ch_Jet_e = fjet.chEnergies()[4]/fjet.energy();
-            Jet_energyRing_dR0_mu_Jet_e = fjet.muEnergies()[0]/fjet.energy();
-            Jet_energyRing_dR1_mu_Jet_e = fjet.muEnergies()[1]/fjet.energy();
-            Jet_energyRing_dR2_mu_Jet_e = fjet.muEnergies()[2]/fjet.energy();
-            Jet_energyRing_dR3_mu_Jet_e = fjet.muEnergies()[3]/fjet.energy();
-            Jet_energyRing_dR4_mu_Jet_e = fjet.muEnergies()[4]/fjet.energy();
-
+            if (fjet.emEnergies().size()>0){//since in order to save space we save this info only if the candidate has a minimum pt or eta
+                Jet_energyRing_dR0_em_Jet_e = fjet.emEnergies()[0]/fjet.energy();//remember to divide by jet energy
+                Jet_energyRing_dR1_em_Jet_e = fjet.emEnergies()[1]/fjet.energy();
+                Jet_energyRing_dR2_em_Jet_e = fjet.emEnergies()[2]/fjet.energy();
+                Jet_energyRing_dR3_em_Jet_e = fjet.emEnergies()[3]/fjet.energy();
+                Jet_energyRing_dR4_em_Jet_e = fjet.emEnergies()[4]/fjet.energy();
+                Jet_energyRing_dR0_neut_Jet_e = fjet.neEnergies()[0]/fjet.energy();
+                Jet_energyRing_dR1_neut_Jet_e = fjet.neEnergies()[1]/fjet.energy();
+                Jet_energyRing_dR2_neut_Jet_e = fjet.neEnergies()[2]/fjet.energy();
+                Jet_energyRing_dR3_neut_Jet_e = fjet.neEnergies()[3]/fjet.energy();
+                Jet_energyRing_dR4_neut_Jet_e = fjet.neEnergies()[4]/fjet.energy();
+                Jet_energyRing_dR0_ch_Jet_e = fjet.chEnergies()[0]/fjet.energy();
+                Jet_energyRing_dR1_ch_Jet_e = fjet.chEnergies()[1]/fjet.energy();
+                Jet_energyRing_dR2_ch_Jet_e = fjet.chEnergies()[2]/fjet.energy();
+                Jet_energyRing_dR3_ch_Jet_e = fjet.chEnergies()[3]/fjet.energy();
+                Jet_energyRing_dR4_ch_Jet_e = fjet.chEnergies()[4]/fjet.energy();
+                Jet_energyRing_dR0_mu_Jet_e = fjet.muEnergies()[0]/fjet.energy();
+                Jet_energyRing_dR1_mu_Jet_e = fjet.muEnergies()[1]/fjet.energy();
+                Jet_energyRing_dR2_mu_Jet_e = fjet.muEnergies()[2]/fjet.energy();
+                Jet_energyRing_dR3_mu_Jet_e = fjet.muEnergies()[3]/fjet.energy();
+                Jet_energyRing_dR4_mu_Jet_e = fjet.muEnergies()[4]/fjet.energy();
+            }
             Jet_numDaughters_pt03 = fjet.userInt("numDaug03");
             
-            float bRegMVA=-999;
             std::vector<float> bRegNN(3,-999);
             
 
@@ -301,24 +252,6 @@ namespace flashgg {
 
             }
 
-            //..... gen jets info                                                                                   
-            int cflav = 0; //~correct flavour definition
-            if ( !evt.isRealData() ) {
-                int hflav = fjet.hadronFlavour();//4 if c, 5 if b, 0 if light jets
-                int pflav = fjet.partonFlavour();
-
-                if( hflav != 0 ) {
-                    cflav = hflav;
-                } else { //not a heavy jet                                              
-                    cflav = std::abs(pflav) == 4 || std::abs(pflav) == 5 ? 0 : pflav;
-                }
-                //                std::cout<<cflav<<std::endl;
-                if (cflav != 5) continue;//i want only bjets
-            }
-            //            std::cout<<"found a b-jet of pt"<<fjet.pt()<<" eta:"<<fjet.eta()<<bRegMVA<<std::endl;
-
-
-            if(doBDTAnalysis) bRegMVA = bRegressionReader_->EvaluateMVA("BDT");
             SetNNVectorVar();
             bRegNN = EvaluateNN();
             NNvectorVar_.clear();
@@ -327,31 +260,8 @@ namespace flashgg {
             float y_mean= 1.0454729795455933;
             float y_std = 0.3162831664085388;
 
-            fjet.addUserFloat("bRegMVA", bRegMVA);
             fjet.addUserFloat("bRegNNCorr", bRegNN[0]*y_std+y_mean);
             fjet.addUserFloat("bRegNNResolution",0.5*(bRegNN[2]-bRegNN[1])*y_std);
-            fjet.addUserFloat("energyRing_dR0_em_Jet_e", Jet_energyRing_dR0_em_Jet_e) ;//remember to divide by jet energy
-            fjet.addUserFloat("energyRing_dR1_em_Jet_e", Jet_energyRing_dR1_em_Jet_e) ;
-            fjet.addUserFloat("energyRing_dR2_em_Jet_e", Jet_energyRing_dR2_em_Jet_e) ;
-            fjet.addUserFloat("energyRing_dR3_em_Jet_e", Jet_energyRing_dR3_em_Jet_e) ;
-            fjet.addUserFloat("energyRing_dR4_em_Jet_e", Jet_energyRing_dR4_em_Jet_e) ;
-            fjet.addUserFloat("energyRing_dR0_neut_Jet_e", Jet_energyRing_dR0_neut_Jet_e) ;
-            fjet.addUserFloat("energyRing_dR1_neut_Jet_e", Jet_energyRing_dR1_neut_Jet_e) ;
-            fjet.addUserFloat("energyRing_dR2_neut_Jet_e", Jet_energyRing_dR2_neut_Jet_e) ;
-            fjet.addUserFloat("energyRing_dR3_neut_Jet_e", Jet_energyRing_dR3_neut_Jet_e) ;
-            fjet.addUserFloat("energyRing_dR4_neut_Jet_e", Jet_energyRing_dR4_neut_Jet_e) ;
-            fjet.addUserFloat("energyRing_dR0_ch_Jet_e", Jet_energyRing_dR0_ch_Jet_e) ;
-            fjet.addUserFloat("energyRing_dR1_ch_Jet_e", Jet_energyRing_dR1_ch_Jet_e) ;
-            fjet.addUserFloat("energyRing_dR2_ch_Jet_e", Jet_energyRing_dR2_ch_Jet_e) ;
-            fjet.addUserFloat("energyRing_dR3_ch_Jet_e", Jet_energyRing_dR3_ch_Jet_e) ;
-            fjet.addUserFloat("energyRing_dR4_ch_Jet_e", Jet_energyRing_dR4_ch_Jet_e) ;
-            fjet.addUserFloat("energyRing_dR0_mu_Jet_e", Jet_energyRing_dR0_mu_Jet_e) ;
-            fjet.addUserFloat("energyRing_dR1_mu_Jet_e", Jet_energyRing_dR1_mu_Jet_e) ;
-            fjet.addUserFloat("energyRing_dR2_mu_Jet_e", Jet_energyRing_dR2_mu_Jet_e) ;
-            fjet.addUserFloat("energyRing_dR3_mu_Jet_e", Jet_energyRing_dR3_mu_Jet_e) ;
-            fjet.addUserFloat("energyRing_dR4_mu_Jet_e", Jet_energyRing_dR4_mu_Jet_e ) ;
-            fjet.addUserFloat("numDaughters_pt03", fjet.userInt("numDaug03"));
-
 
             jetColl->push_back( fjet );
 
