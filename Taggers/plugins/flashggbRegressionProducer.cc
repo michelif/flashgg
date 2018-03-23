@@ -104,7 +104,8 @@ namespace flashgg {
         jetToken_= consumes<View<flashgg::Jet> >(inputTagJets_);
 
 
-        NNgraph_ = *(new dnn::tf::Graph("/afs/cern.ch/work/m/micheli/CMSSW_8_0_28/src/flashgg/MetaData/data/DNN_models/model-09"); //FIXME make this configurable
+        
+        NNgraph_ = *(new dnn::tf::Graph("/afs/cern.ch/work/m/micheli/CMSSW_8_0_28/src/flashgg/MetaData/data/DNN_models/model-09")); //FIXME make this configurable
         //        NNgraph_ = *(new dnn::tf::Graph("/afs/cern.ch/work/m/micheli/CMSSW_8_0_28/src/flashgg/MetaData/data/DNN_models/model-09",dnn::LogLevel::ALL)); //FIXME make this configurable
 
         //for variables for breg check this PR https://github.com/cms-analysis/flashgg/pull/968
