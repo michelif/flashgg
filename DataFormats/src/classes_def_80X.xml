@@ -367,12 +367,4 @@
 <class name="edm::RefVector<std::vector<flashgg::TagAndProbeCandidate>,flashgg::TagAndProbeCandidate,edm::refhelper::FindUsingAdvance<std::vector<flashgg::TagAndProbeCandidate>,flashgg::TagAndProbeCandidate> >"/>
 <class name="edm::Wrapper<edm::RefVector<std::vector<flashgg::TagAndProbeCandidate>,flashgg::TagAndProbeCandidate,edm::refhelper::FindUsingAdvance<std::vector<flashgg::TagAndProbeCandidate>,flashgg::TagAndProbeCandidate> > >"/>
 
-<class name="flashgg::JetBReg"/>
-<class name="std::vector<flashgg::JetBReg>"/>
-<class name="edm::Wrapper<std::vector<flashgg::JetBReg> >"/>
-<class name="edm::Ptr<flashgg::JetBReg>"/>
-<class name="edm::Wrapper<edm::Ptr<flashgg::JetBReg> >"/>
-<class name="std::vector<edm::Ptr<flashgg::JetBReg> >"/>
-<class name="edm::Wrapper<std::vector<edm::Ptr<flashgg::JetBReg> > >"/>
-
 </lcgdict>
