@@ -11,6 +11,8 @@ from flashgg.Taggers.flashggTags_cff import flashggUnpackedJets
 flashggbRegressionProducer= cms.EDProducer('flashggbRegressionProducer',
 #                                               JetTag=coll,
                                            JetTag=cms.InputTag("flashggUnpackedJets","0"),
-                                           bRegressionWeightfile= cms.FileInPath("flashgg/Taggers/data/xgboost_bRegression.weights.xml"), 
-                                               )
+                                           bRegressionWeightfile= cms.untracked.string("/afs/cern.ch/work/m/micheli/CMSSW_8_0_28/src/flashgg/MetaData/data/DNN_models/model-09"), 
+                                           y_mean = cms.untracked.double(1.0454729795455933),
+                                           y_std =cms.untracked.double( 0.31628304719924927)
+                                           )
 

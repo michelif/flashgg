@@ -46,6 +46,8 @@ namespace flashgg {
         edm::InputTag inputTagJets_;
         EDGetTokenT<View<flashgg::Jet> > jetToken_;
         edm::EDGetTokenT<double> rhoToken_;        
+        string bRegressionWeightfileName_;
+        double y_mean_,y_std_;
 
         dnn::tf::Graph NNgraph_;
         std::vector<float> NNvectorVar_; 
@@ -66,6 +68,7 @@ namespace flashgg {
         float Jet_vtx3dL ;
         float Jet_vtxNtrk ;
         float Jet_vtx3deL ;
+        float Jet_numDaughters_pt03 ;
         float Jet_energyRing_dR0_em_Jet_e ;
         float Jet_energyRing_dR1_em_Jet_e ;
         float Jet_energyRing_dR2_em_Jet_e ;
@@ -86,7 +89,14 @@ namespace flashgg {
         float Jet_energyRing_dR2_mu_Jet_e ;
         float Jet_energyRing_dR3_mu_Jet_e ;
         float Jet_energyRing_dR4_mu_Jet_e ;
-        float Jet_numDaughters_pt03 ;
+        float Jet_chHEF;//implement from here
+        float Jet_chEmEF;
+        float Jet_leptonPtRelInv;
+        int isEle;
+        int isMu;
+        int isOther;
+        float Jet_mass;
+        float Jet_withPtd;
 
         
     };
@@ -95,13 +105,16 @@ namespace flashgg {
     bRegressionProducer::bRegressionProducer( const ParameterSet &iConfig ) :
         //     inputTagJets_( iConfig.getParameter<std::vector<edm::InputTag> >( "JetTag" )) {
         inputTagJets_( iConfig.getParameter<edm::InputTag>( "JetTag" )) ,
-        rhoToken_( consumes<double>(iConfig.getParameter<edm::InputTag>( "rhoFixedGridCollection" ) ) )
+        rhoToken_( consumes<double>(iConfig.getParameter<edm::InputTag>( "rhoFixedGridCollection" ) ) ),
+        bRegressionWeightfileName_( iConfig.getUntrackedParameter<std::string>("bRegressionWeightfile")),
+        y_mean_(iConfig.getUntrackedParameter<double>("y_mean")),
+        y_std_(iConfig.getUntrackedParameter<double>("y_std"))
     {
         jetToken_= consumes<View<flashgg::Jet> >(inputTagJets_);
 
 
         
-        NNgraph_ = *(new dnn::tf::Graph("/afs/cern.ch/work/m/micheli/CMSSW_8_0_28/src/flashgg/MetaData/data/DNN_models/model-09")); //FIXME make this configurable, for variables for breg check this PR https://github.com/cms-analysis/flashgg/pull/968 REMEMBER TO ADD THE LAST CONE!
+        NNgraph_ = *(new dnn::tf::Graph(bRegressionWeightfileName_.c_str())); //FIXME make this configurable, for variables for breg check this PR https://github.com/cms-analysis/flashgg/pull/968 REMEMBER TO ADD THE LAST CONE!
         Jet_pt = 0.;
         Jet_eta = 0.;
         rho = 0.;
@@ -116,6 +129,7 @@ namespace flashgg {
         Jet_vtx3dL = 0.;
         Jet_vtxNtrk = 0.;
         Jet_vtx3deL = 0.;
+        Jet_numDaughters_pt03 = 0;
         Jet_energyRing_dR0_em_Jet_e = 0.;
         Jet_energyRing_dR1_em_Jet_e = 0.;
         Jet_energyRing_dR2_em_Jet_e = 0.;
@@ -136,7 +150,14 @@ namespace flashgg {
         Jet_energyRing_dR2_mu_Jet_e = 0.;
         Jet_energyRing_dR3_mu_Jet_e = 0.;
         Jet_energyRing_dR4_mu_Jet_e = 0.;
-        Jet_numDaughters_pt03 = 0;
+        Jet_chHEF = 0.;//implement from here
+        Jet_chEmEF = 0.;
+        Jet_leptonPtRelInv = 0.;
+        isEle = 0.;
+        isMu = 0.;
+        isOther = 0.;
+        Jet_mass = 0.;
+        Jet_withPtd = 0.;
 
         produces<vector<flashgg::Jet> > ();
     }
@@ -174,6 +195,21 @@ namespace flashgg {
             Jet_leptonDeltaR = std::max(float(0.),fjet.userFloat("softLepDr"));
             Jet_neHEF = fjet.neutralHadronEnergyFraction();
             Jet_neEmEF = fjet.neutralEmEnergyFraction();
+            Jet_chHEF = fjet.chargedHadronEnergyFraction();
+            Jet_chEmEF = fjet.chargedEmEnergyFraction();
+            Jet_leptonPtRelInv = fjet.userFloat("softLepPtRelInv");
+            
+            int lepPdgID = fjet.userInt("softLepPdgId");
+            if (abs(lepPdgID)==13){
+                isMu=1; 
+            }else if (abs(lepPdgID)==11){
+                isEle=1;
+            }else{
+                isOther=1;
+            }
+            Jet_mass=fjet.mass();
+            Jet_withPtd=fjet.userFloat("ptD");
+            
             if(fjet.userFloat("nSecVertices")>0){
 //                float vertexX=fjet.userFloat("vtxPosX")-fjet.userFloat("vtxPx");//check if it's correct
 //                float vertexY=fjet.userFloat("vtxPosY")-fjet.userFloat("vtxPy");                
@@ -257,11 +293,13 @@ namespace flashgg {
             NNvectorVar_.clear();
 
             //FIXME read through file, config is here /afs/cern.ch/user/n/nchernya/public/100M_2018-03-01_job23_rawJetsJECtarget/config.json
-            float y_mean= 1.0454729795455933;
-            float y_std = 0.3162831664085388;
+            //            float y_mean= 1.0454729795455933;
+            //            float y_std = 0.3162831664085388;
 
-            fjet.addUserFloat("bRegNNCorr", bRegNN[0]*y_std+y_mean);
-            fjet.addUserFloat("bRegNNResolution",0.5*(bRegNN[2]-bRegNN[1])*y_std);
+            fjet.addUserFloat("bRegNNCorr", bRegNN[0]*y_std_+y_mean_);
+            fjet.addUserFloat("bRegNNResolution",0.5*(bRegNN[2]-bRegNN[1])*y_std_);
+            
+            std::cout<<"output:"<<bRegNN[0]*y_std_+y_mean_<<" "<<0.5*(bRegNN[2]-bRegNN[1])*y_std_<<std::endl;
 
             jetColl->push_back( fjet );
 
@@ -286,6 +324,7 @@ namespace flashgg {
         Jet_vtx3dL = 0.;
         Jet_vtxNtrk = 0.;
         Jet_vtx3deL = 0.;
+        Jet_numDaughters_pt03 = 0;
         Jet_energyRing_dR0_em_Jet_e = 0.;
         Jet_energyRing_dR1_em_Jet_e = 0.;
         Jet_energyRing_dR2_em_Jet_e = 0.;
@@ -306,7 +345,15 @@ namespace flashgg {
         Jet_energyRing_dR2_mu_Jet_e = 0.;
         Jet_energyRing_dR3_mu_Jet_e = 0.;
         Jet_energyRing_dR4_mu_Jet_e = 0.;
-        Jet_numDaughters_pt03 = 0;
+        Jet_chHEF = 0.;//implement from here
+        Jet_chEmEF = 0.;
+        Jet_leptonPtRelInv = 0.;
+        isEle = 0.;
+        isMu = 0.;
+        isOther = 0.;
+        Jet_mass = 0.;
+        Jet_withPtd = 0.;
+
 
     }//end InitJet
 
@@ -347,6 +394,23 @@ namespace flashgg {
         NNvectorVar_.push_back(Jet_energyRing_dR2_mu_Jet_e) ;
         NNvectorVar_.push_back(Jet_energyRing_dR3_mu_Jet_e) ;
         NNvectorVar_.push_back(Jet_energyRing_dR4_mu_Jet_e) ;
+        std::cout<<Jet_chHEF<<"<-Jet_chHEF"<<std::endl;
+        NNvectorVar_.push_back(Jet_chHEF);//35
+        std::cout<<Jet_chEmEF<<"<-Jet_chEmEF"<<std::endl;
+        NNvectorVar_.push_back(Jet_chEmEF);
+        std::cout<<Jet_leptonPtRelInv<<"<-Jet_leptonPtRelInv"<<std::endl;
+        NNvectorVar_.push_back(Jet_leptonPtRelInv);
+        std::cout<<isEle<<"<-isEle"<<std::endl;
+        NNvectorVar_.push_back(isEle);
+        std::cout<<isMu<<"<-isMu"<<std::endl;
+        NNvectorVar_.push_back(isMu);
+        std::cout<<isOther<<"<-isOther"<<std::endl;
+        NNvectorVar_.push_back(isOther);//40
+        std::cout<<Jet_mass<<"<-Jet_mass"<<std::endl;
+        NNvectorVar_.push_back(Jet_mass);
+        std::cout<<Jet_withPtd<<"<-Jet_withPtd"<<std::endl;
+        NNvectorVar_.push_back(Jet_withPtd);
+
 
     }
     
