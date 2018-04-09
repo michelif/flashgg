@@ -41,9 +41,7 @@ namespace flashgg {
         bool useSingleLeg_;
         unsigned int maxJetCollections_;
         EDGetTokenT<View<reco::GenParticle> >      genPartToken_;
-        bool useZerothVertexFromMicro_;
     };
-
 
     DiPhotonProducer::DiPhotonProducer( const ParameterSet &iConfig ) :
         vertexToken_( consumes<View<reco::Vertex> >( iConfig.getParameter<InputTag> ( "VertexTag" ) ) ),
@@ -58,8 +56,6 @@ namespace flashgg {
         const std::string &VertexSelectorName = iConfig.getParameter<std::string>( "VertexSelectorName" );
         vertexSelector_.reset( FlashggVertexSelectorFactory::get()->create( VertexSelectorName, iConfig ) );
         useSingleLeg_ = iConfig.getParameter<bool>( "useSingleLeg" );
-
-        useZerothVertexFromMicro_ = iConfig.getParameter<bool>( "useZerothVertexFromMicro");
         produces<vector<flashgg::DiPhotonCandidate> >();
     }
 
@@ -77,7 +73,7 @@ namespace flashgg {
         evt.getByToken( vertexCandidateMapToken_, vertexCandidateMap );
 
         Handle<View<reco::Conversion> > conversions;
-        if(!useZerothVertexFromMicro_) evt.getByToken( conversionToken_, conversions );
+        evt.getByToken( conversionToken_, conversions );
         // const PtrVector<reco::Conversion>& conversionPointers = conversions->ptrVector();
 
         Handle<reco::BeamSpot> recoBeamSpotHandle;
@@ -103,7 +99,7 @@ namespace flashgg {
         }
 
         Handle<View<reco::Conversion> > conversionsSingleLeg;
-        if(!useZerothVertexFromMicro_) evt.getByToken( conversionTokenSingleLeg_, conversionsSingleLeg );
+        evt.getByToken( conversionTokenSingleLeg_, conversionsSingleLeg );
         //const PtrVector<reco::Conversion>& conversionPointersSingleLeg = conversionsSingleLeg->ptrVector();
 
         unique_ptr<vector<DiPhotonCandidate> > diPhotonColl( new vector<DiPhotonCandidate> );
@@ -115,11 +111,8 @@ namespace flashgg {
             for( unsigned int j = i + 1 ; j < photons->size() ; j++ ) {
                 Ptr<flashgg::Photon> pp2 = photons->ptrAt( j );
 
-                Ptr<reco::Vertex> pvx ;
-
-                if(!useZerothVertexFromMicro_) pvx = vertexSelector_->select( pp1, pp2, primaryVertices->ptrs(), *vertexCandidateMap, conversions->ptrs(), conversionsSingleLeg->ptrs(), vertexPoint, useSingleLeg_ );
-                else  pvx=primaryVertices->ptrAt( 0 );
-
+                Ptr<reco::Vertex> pvx = vertexSelector_->select( pp1, pp2, primaryVertices->ptrs(), *vertexCandidateMap, conversions->ptrs(), conversionsSingleLeg->ptrs(),
+                                        vertexPoint, useSingleLeg_ );
                 // Finding and storing the vertex index to check if it corresponds to the primary vertex.
                 // This could be moved within the vertexSelector, but would need rewriting some interface
                 int ivtx = 0;
@@ -133,11 +126,9 @@ namespace flashgg {
                 dipho.setVertexIndex( ivtx );
                 dipho.setGenPV( higgsVtx );
 
-                if(useZerothVertexFromMicro_) dipho.setVtxProbMVA(-1);
-                
                 // Obviously the last selection has to be for this diphoton or this is wrong
-                else vertexSelector_->writeInfoFromLastSelectionTo( dipho );
-                
+                vertexSelector_->writeInfoFromLastSelectionTo( dipho );
+
                 // store the diphoton into the collection
                 diPhotonColl->push_back( dipho );
             }

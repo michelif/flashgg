@@ -93,20 +93,6 @@ In fact, it is recommended to set up a new area from scratch and checkout the ta
 
 https://twiki.cern.ch/twiki/bin/viewauth/CMS/FLASHggFramework#Instructions_for_users  
 
-### First real 2017??? (3_0_0)
-
-./prepareCrabJobs.py -C RunIIFall17-3_0_0 -U 1 -L 25 -s campaigns/RunIIFall17-3_0_0_part0.json -V 3_0_0 -p ${CMSSW_BASE}/src/flashgg/MicroAOD/test/microAODstd.py --lumiMask jsons/Cert_294927-306462_13TeV_PromptReco_Collisions17_JSON.txt
-./prepareCrabJobs.py -C RunIIFall17-3_0_0 -U 1 -L 25 -s campaigns/RunIIFall17-3_0_0_part1.json -V 3_0_0 -p ${CMSSW_BASE}/src/flashgg/MicroAOD/test/microAODstd.py --lumiMask jsons/Cert_294927-306462_13TeV_PromptReco_Collisions17_JSON.txt
-./prepareCrabJobs.py -C RunIIFall17-3_0_0 -U 1 -L 25 -s campaigns/RunIIFall17-3_0_0_part2.json -V 3_0_0 -p ${CMSSW_BASE}/src/flashgg/MicroAOD/test/microAODstd.py --lumiMask jsons/Cert_294927-306462_13TeV_PromptReco_Collisions17_JSON.txt
-./prepareCrabJobs.py -C RunIIFall17-3_0_0 -U 1 -L 25 -s campaigns/RunIIFall17-3_0_0_part3.json -V 3_0_0 -p ${CMSSW_BASE}/src/flashgg/MicroAOD/test/microAODstd.py --lumiMask jsons/Cert_294927-306462_13TeV_PromptReco_Collisions17_JSON.txt
-./prepareCrabJobs.py -C RunIIFall17-3_0_0 -U 1 -L 25 -s campaigns/RunIIFall17-3_0_0_part4.json -V 3_0_0 -p ${CMSSW_BASE}/src/flashgg/MicroAOD/test/microAODstd.py --lumiMask jsons/Cert_294927-306462_13TeV_PromptReco_Collisions17_JSON.txt
-./prepareCrabJobs.py -C RunIIFall17-3_0_0 -U 1 -L 25 -s campaigns/RunIIFall17-3_0_0_part5.json -V 3_0_0 -p ${CMSSW_BASE}/src/flashgg/MicroAOD/test/microAODstd.py --lumiMask jsons/Cert_294927-306462_13TeV_PromptReco_Collisions17_JSON.txt
-./prepareCrabJobs.py -C RunIIFall17-3_0_0 -U 1 -L 25 -s campaigns/RunIIFall17-3_0_0_part6.json -V 3_0_0 -p ${CMSSW_BASE}/src/flashgg/MicroAOD/test/microAODstd.py --lumiMask jsons/Cert_294927-306462_13TeV_PromptReco_Collisions17_JSON.txt
-
-#### Adding b regression vars for HH and update lumimask, otherwise consistent (3_0_1)
-
-./prepareCrabJobs.py -C RunIIFall17-3_0_1 -U 1 -L 25 -s campaigns/RunIIFall17-3_0_1_part0.json -V 3_0_1 -p ${CMSSW_BASE}/src/flashgg/MicroAOD/test/microAODstd.py --lumiMask jsons/Cert_294927-306462_13TeV_EOY2017ReReco_Collisions17_JSON.txt
-
 ### Aug Legacy
  
 ./prepareCrabJobs.py -C LegacyReReco-07Aug2017-2_6_1 -U 1 -L 25 -s campaigns/LegacyReReco-07Aug2017-2_6_1_list4.json -V 2_6_1 -p ${CMSSW_BASE}/src/flashgg/MicroAOD/test/microAODstd.py --lumiMask jsons/Recovery-LegacyReReco-07Aug2017-2_6_1-DoubleMuon-22Nov.json
@@ -119,15 +105,6 @@ https://twiki.cern.ch/twiki/bin/viewauth/CMS/FLASHggFramework#Instructions_for_u
 
 ./prepareCrabJobs.py -C LegacyReReco-07Aug2017-2_6_1 -U 1 -L 25 -s campaigns/LegacyReReco-07Aug2017-2_6_1_list4.json -V 2_6_1 -p ${CMSSW_BASE}/src/flashgg/MicroAOD/test/microAODstd.py --lumiMask jsons/Cert_271036-284044_13TeV_23Sep2016ReReco_Collisions16_JSON.txt
 
-### 942 tests
-
-./prepareCrabJobs.py -C RunIIFall17-2_7_7 -U 1 -L 25 -s campaigns/RunIIFall17-2_7_7.json -V 2_7_7 -p ${CMSSW_BASE}/src/flashgg/MicroAOD/test/microAODstd.py --lumiMask jsons/Cert_294927-306462_13TeV_PromptReco_Collisions17_JSON.txt
-
-#### signal
-
-./prepareCrabJobs.py -C RunIIFall17-2_8_0 -U 1 -L 25 -s campaigns/RunIIFall17-2_8_0.json -V 2_8_0 -p ${CMSSW_BASE}/src/flashgg/MicroAOD/test/microAODstd.py
-
-./prepareCrabJobs.py -C RunIIFall17-2_8_0 -U 1 -L 25 -s campaigns/RunIIFall17-2_8_0_part2.json -V 2_8_0 -p ${CMSSW_BASE}/src/flashgg/MicroAOD/test/microAODstd.py
 
 ### 928 tests
 

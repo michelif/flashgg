@@ -31,7 +31,6 @@ flashggDiPhotons = cms.EDProducer('FlashggDiPhotonProducer',
                                   vertexProbMVAweightfile = cms.FileInPath("flashgg/MicroAOD/data/TMVAClassification_BDTVtxProb_SL_2016.xml"),
 
                                   useSingleLeg            = cms.bool(True),
-                                  useZerothVertexFromMicro = cms.bool(False),
 
                                   nVtxSaveInfo            = cms.untracked.uint32(3),
                                   trackHighPurity         = cms.bool(False),
