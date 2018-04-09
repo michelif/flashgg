@@ -23,14 +23,18 @@ elif os.environ["CMSSW_VERSION"].count("CMSSW_7_4"):
     process.GlobalTag.globaltag = '74X_mcRun2_asymptotic_v4' 
 elif os.environ["CMSSW_VERSION"].count("CMSSW_8_0"):
     process.GlobalTag.globaltag = '80X_mcRun2_asymptotic_2016_miniAODv2'
+elif os.environ["CMSSW_VERSION"].count("CMSSW_9_4"):
+    process.GlobalTag.globaltag = '94X_mc2017_realistic_v12'
 else:
     raise Exception,"Could not find a sensible CMSSW_VERSION for default globaltag"
 
 process.maxEvents = cms.untracked.PSet( input = cms.untracked.int32(1000) )
 process.MessageLogger.cerr.FwkReport.reportEvery = cms.untracked.int32( 100 )
 
+MUON_ID = "Tight" #["Tight", "Medium" , "Loose", "Soft", "HighPt", "MediumPrompt", "TrkHighPt"]
+MUON_ISO = "LooseRel" #{ LooseID : ["LooseRel"],MediumID:["LooseRel", "TightRel"] , TrkHighPtID:["LooseRelTk", "TightRelTk"], TightIDandIPCut:["LooseRel", "TightRel"], HighPtIDandIPCut:["LooseRelTk", "TightRelTk"] }
 from flashgg.Systematics.SystematicsCustomize import *
-jetSystematicsInputTags = createStandardSystematicsProducers(process)
+jetSystematicsInputTags = createStandardSystematicsProducers(process , MUON_ID=MUON_ID , MUON_ISO=MUON_ISO)
 if dropVBFInNonGold:
     process.flashggVBFTag.SetArbitraryNonGoldMC = True
     process.flashggVBFTag.DropNonGoldData = True
@@ -228,8 +232,12 @@ if customize.processId.count("h_") or customize.processId.count("vbf_") or custo
             variablesToUse.append("FracRVWeight%s01sigma[1,-999999.,999999.] := weight(\"FracRVWeight%s01sigma\")" % (direction,direction))
             variablesToUse.append("FracRVNvtxWeight%s01sigma[1,-999999.,999999.] := weight(\"FracRVNvtxWeight%s01sigma\")" % (direction,direction))
             variablesToUse.append("ElectronWeight%s01sigma[1,-999999.,999999.] := weight(\"ElectronWeight%s01sigma\")" % (direction,direction))
-            variablesToUse.append("MuonWeight%s01sigma[1,-999999.,999999.] := weight(\"MuonWeight%s01sigma\")" % (direction,direction))
-            variablesToUse.append("MuonMiniIsoWeight%s01sigma[1,-999999.,999999.] := weight(\"MuonMiniIsoWeight%s01sigma\")" % (direction,direction))
+            if os.environ["CMSSW_VERSION"].count("CMSSW_8_0"):
+                variablesToUse.append("MuonWeight%s01sigma[1,-999999.,999999.] := weight(\"MuonWeight%s01sigma\")" % (direction,direction))
+                variablesToUse.append("MuonMiniIsoWeight%s01sigma[1,-999999.,999999.] := weight(\"MuonMiniIsoWeight%s01sigma\")" % (direction,direction))
+            elif os.environ["CMSSW_VERSION"].count("CMSSW_9_4"):
+                variablesToUse.append("MuonIDWeight%s01sigma[1,-999999.,999999.] := weight(\"Muon%sIDWeight%s01sigma\")" % (direction,MUON_ID,direction))
+                variablesToUse.append("MuonIsoWeight%s01sigma[1,-999999.,999999.] := weight(\"Muon%sISOWeight%s01sigma\")" % (direction,MUON_ISO,direction))
 	    variablesToUse.append("JetBTagCutWeight%s01sigma[1,-999999.,999999.] := weight(\"JetBTagCutWeight%s01sigma\")" % (direction,direction))
             variablesToUse.append("JetBTagReshapeWeight%s01sigma[1,-999999.,999999.] := weight(\"JetBTagReshapeWeight%s01sigma\")" % (direction,direction))
             for r9 in ["HighR9","LowR9"]:
@@ -328,6 +336,14 @@ process.tagsDumper.dumpHistos = False
 process.tagsDumper.quietRooFit = True
 process.tagsDumper.nameTemplate = cms.untracked.string("$PROCESS_$SQRTS_$CLASSNAME_$SUBCAT_$LABEL")
 process.tagsDumper.splitPdfByStage0Cat = cms.untracked.bool(customize.doHTXS)
+
+if customize.options.WeightName :
+    lheProduct = customize.dataset[1]["LHESourceName"].split("_")
+    #print lheProduct
+    process.tagsDumper.LHEEventProduct = cms.untracked.InputTag( str(lheProduct[1]) , str(lheProduct[2]) , str(lheProduct[3]) )
+    #print process.tagsDumper.LHEEventProduct
+    process.tagsDumper.LHEWeightName = cms.untracked.string(customize.options.WeightName)
+
 
 if(customize.doFiducial):
 #    if customize.processId == "Data":
