@@ -10,6 +10,8 @@
 <use   name="roofit"/>
 <use   name="roottmva"/>
 <use   name="CommonTools/CandAlgos"/>
+<use name="DNN/TensorFlow" />
+<use name="tensorflow-cc" />
 <!-- Flags CXXFLAGS="-ggdb"/ -->
 <flags   EDM_PLUGIN="1"/>
 </library>
