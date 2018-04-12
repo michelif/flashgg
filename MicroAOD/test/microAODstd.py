@@ -120,6 +120,7 @@ process.e = cms.EndPath(process.out)
 #)
 #process.p *= process.commissioning
 
+print "before customize "
 from flashgg.MicroAOD.MicroAODCustomize import customize
 customize(process)
 
