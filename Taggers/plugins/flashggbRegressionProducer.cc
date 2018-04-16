@@ -292,14 +292,9 @@ namespace flashgg {
             bRegNN = EvaluateNN();
             NNvectorVar_.clear();
 
-            //FIXME read through file, config is here /afs/cern.ch/user/n/nchernya/public/100M_2018-03-01_job23_rawJetsJECtarget/config.json
-            //            float y_mean= 1.0454729795455933;
-            //            float y_std = 0.3162831664085388;
-
             fjet.addUserFloat("bRegNNCorr", bRegNN[0]*y_std_+y_mean_);
             fjet.addUserFloat("bRegNNResolution",0.5*(bRegNN[2]-bRegNN[1])*y_std_);
             
-            std::cout<<"output:"<<bRegNN[0]*y_std_+y_mean_<<" "<<0.5*(bRegNN[2]-bRegNN[1])*y_std_<<std::endl;
 
             jetColl->push_back( fjet );
 
@@ -394,21 +389,13 @@ namespace flashgg {
         NNvectorVar_.push_back(Jet_energyRing_dR2_mu_Jet_e) ;
         NNvectorVar_.push_back(Jet_energyRing_dR3_mu_Jet_e) ;
         NNvectorVar_.push_back(Jet_energyRing_dR4_mu_Jet_e) ;
-        std::cout<<Jet_chHEF<<"<-Jet_chHEF"<<std::endl;
         NNvectorVar_.push_back(Jet_chHEF);//35
-        std::cout<<Jet_chEmEF<<"<-Jet_chEmEF"<<std::endl;
         NNvectorVar_.push_back(Jet_chEmEF);
-        std::cout<<Jet_leptonPtRelInv<<"<-Jet_leptonPtRelInv"<<std::endl;
         NNvectorVar_.push_back(Jet_leptonPtRelInv);
-        std::cout<<isEle<<"<-isEle"<<std::endl;
         NNvectorVar_.push_back(isEle);
-        std::cout<<isMu<<"<-isMu"<<std::endl;
         NNvectorVar_.push_back(isMu);
-        std::cout<<isOther<<"<-isOther"<<std::endl;
         NNvectorVar_.push_back(isOther);//40
-        std::cout<<Jet_mass<<"<-Jet_mass"<<std::endl;
         NNvectorVar_.push_back(Jet_mass);
-        std::cout<<Jet_withPtd<<"<-Jet_withPtd"<<std::endl;
         NNvectorVar_.push_back(Jet_withPtd);
 
 
