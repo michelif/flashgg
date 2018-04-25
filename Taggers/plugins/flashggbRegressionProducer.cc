@@ -166,13 +166,13 @@ namespace flashgg {
 
     void bRegressionProducer::produce( Event &evt, const EventSetup & )
     {
-        InitJet();
         // input jets
         Handle<View<flashgg::Jet> > jets;
         evt.getByToken( jetToken_, jets );//just to try get the first one
        unique_ptr<vector<flashgg::Jet> > jetColl( new vector<flashgg::Jet> );
         for( unsigned int i = 0 ; i < jets->size() ; i++ ) {
 
+            InitJet();
             
             Ptr<flashgg::Jet> pjet = jets->ptrAt( i );
             flashgg::Jet fjet = flashgg::Jet( *pjet );
@@ -283,9 +283,14 @@ namespace flashgg {
                 cout<<"Jet_energyRing_dR3_mu_Jet_e :"<<Jet_energyRing_dR3_mu_Jet_e <<endl;
                 cout<<"Jet_energyRing_dR4_mu_Jet_e :"<<Jet_energyRing_dR4_mu_Jet_e <<endl;
                 cout<<"Jet_numDaughters_pt03 :"<<Jet_numDaughters_pt03 <<endl;
-
-
-
+                cout<<"Jet_chHEF:"<<Jet_chHEF<<endl;
+                cout<<"Jet_chEmEF:"<<Jet_chEmEF<<endl;
+                cout<<"Jet_leptonPtRelInv:"<<Jet_leptonPtRelInv<<endl;
+                cout<<"isEle:"<<isEle<<endl;
+                cout<<"isMu:"<<isMu<<endl;
+                cout<<"isOther:"<<isOther<<endl;
+                cout<<"Jet_mass:"<<Jet_mass<<endl;
+                cout<<"Jet_withPtd:"<<Jet_withPtd<<endl;
             }
 
             SetNNVectorVar();
@@ -294,6 +299,13 @@ namespace flashgg {
 
             fjet.addUserFloat("bRegNNCorr", bRegNN[0]*y_std_+y_mean_);
             fjet.addUserFloat("bRegNNResolution",0.5*(bRegNN[2]-bRegNN[1])*y_std_);
+            
+            if (debug){
+                cout<<"bRegNNCorr:"<<bRegNN[0]*y_std_+y_mean_<<endl;
+                cout<<"bRegNNResolution:"<<0.5*(bRegNN[2]-bRegNN[1])*y_std_<<endl;
+                std::cout<<"--------------------------------------------------------------"<<std::endl;
+                std::cout<<"--------------------------------------------------------------"<<std::endl;
+            }
             
 
             jetColl->push_back( fjet );
@@ -343,9 +355,9 @@ namespace flashgg {
         Jet_chHEF = 0.;//implement from here
         Jet_chEmEF = 0.;
         Jet_leptonPtRelInv = 0.;
-        isEle = 0.;
-        isMu = 0.;
-        isOther = 0.;
+        isEle = 0;
+        isMu = 0;
+        isOther = 0;
         Jet_mass = 0.;
         Jet_withPtd = 0.;
 
