@@ -414,8 +414,8 @@ namespace flashgg {
     }
     
     std::vector<float> bRegressionProducer::EvaluateNN(){
-        dnn::tf::Shape xShape[] = { 1, 35 };
-
+        unsigned int shape=NNvectorVar_.size();
+        dnn::tf::Shape xShape[] = { 1, shape };
         dnn::tf::Tensor* x = NNgraph_.defineInput(new dnn::tf::Tensor("ffwd_inp:0", 2, xShape));
         dnn::tf::Tensor* y = NNgraph_.defineOutput(new dnn::tf::Tensor("ffwd_out/BiasAdd:0"));
         for (int i = 0; i < x->getShape(1); i++){
