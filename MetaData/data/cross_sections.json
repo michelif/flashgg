@@ -1,4 +1,6 @@
 {
+"DiPhotonJetsBox2BJets_MGG-80toInf_13TeV-Sherpa" : {"xs" : 0.494},
+"DiPhotonJetsBox1BJet_MGG-80toInf_13TeV-Sherpa"  : {"xs" : 0.8674276},
 "GluGluToBulkGravitonToHHTo2B2G_M-1000_narrow_13TeV-madgraph"      : { "xs" : 0.001                                },
 "GluGluToBulkGravitonToHHTo2B2G_M-250_narrow_13TeV-madgraph"      : { "xs" : 0.001                                },
 "GluGluToBulkGravitonToHHTo2B2G_M-260_narrow_13TeV-madgraph"      : { "xs" : 0.001                                },
