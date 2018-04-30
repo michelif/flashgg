@@ -181,23 +181,24 @@ namespace flashgg {
 
 
             //variables needed for regression
-            Jet_pt = fjet.pt();
+            //you need to take uncorrected jet for variables
+            Jet_pt = fjet.correctedJet("Uncorrected").pt() ;
             Jet_eta = fjet.eta() ;
             Jet_leadTrackPt = fjet.userFloat("leadTrackPt");
             edm::Handle<double> rhoHandle;
             evt.getByToken( rhoToken_, rhoHandle );
             const double rhoFixedGrd = *( rhoHandle.product() );
             rho = rhoFixedGrd;
-            Jet_mt = sqrt(fjet.energy()*fjet.energy()-fjet.pz()*fjet.pz());//seems correct but check again
+            Jet_mt = sqrt(fjet.correctedJet("Uncorrected").energy()*fjet.correctedJet("Uncorrected").energy()-fjet.correctedJet("Uncorrected").pz()*fjet.correctedJet("Uncorrected").pz());
 
             //this max probably not needed, it's just heppy
-            Jet_leptonPtRel = std::max(float(0.),fjet.userFloat("softLepPtRel"));
+            Jet_leptonPtRel = std::max(float(0.),fjet.userFloat("softLepPtRel"))*Jet_pt/fjet.pt();
             Jet_leptonDeltaR = std::max(float(0.),fjet.userFloat("softLepDr"));
             Jet_neHEF = fjet.neutralHadronEnergyFraction();
             Jet_neEmEF = fjet.neutralEmEnergyFraction();
             Jet_chHEF = fjet.chargedHadronEnergyFraction();
             Jet_chEmEF = fjet.chargedEmEnergyFraction();
-            Jet_leptonPtRelInv = fjet.userFloat("softLepPtRelInv");
+            Jet_leptonPtRelInv = fjet.userFloat("softLepPtRelInv")*Jet_pt/fjet.pt();
             
             int lepPdgID = fjet.userInt("softLepPdgId");
             if (abs(lepPdgID)==13){
@@ -207,7 +208,7 @@ namespace flashgg {
             }else{
                 isOther=1;
             }
-            Jet_mass=fjet.mass();
+            Jet_mass=fjet.correctedJet("Uncorrected").mass();
             Jet_withPtd=fjet.userFloat("ptD");
             
             if(fjet.userFloat("nSecVertices")>0){
@@ -215,32 +216,32 @@ namespace flashgg {
 //                float vertexY=fjet.userFloat("vtxPosY")-fjet.userFloat("vtxPy");                
 //                Jet_vtxPt = sqrt(vertexX*vertexX+vertexY*vertexY);
                 Jet_vtxPt=sqrt(fjet.userFloat("vtxPx")*fjet.userFloat("vtxPx")+fjet.userFloat("vtxPy")*fjet.userFloat("vtxPy"));
-                Jet_vtxMass = std::max(float(0.),fjet.userFloat("vtxMass"));
+                Jet_vtxMass = std::max(float(0.),fjet.correctedJet("Uncorrected").userFloat("vtxMass"));
                 Jet_vtx3dL = std::max(float(0.),fjet.userFloat("vtx3DVal"));
                 Jet_vtxNtrk = std::max(float(0.),fjet.userFloat("vtxNTracks"));
                 Jet_vtx3deL = std::max(float(0.),fjet.userFloat("vtx3DSig"));
             }
             if (fjet.emEnergies().size()>0){//since in order to save space we save this info only if the candidate has a minimum pt or eta
-                Jet_energyRing_dR0_em_Jet_e = fjet.emEnergies()[0]/fjet.energy();//remember to divide by jet energy
-                Jet_energyRing_dR1_em_Jet_e = fjet.emEnergies()[1]/fjet.energy();
-                Jet_energyRing_dR2_em_Jet_e = fjet.emEnergies()[2]/fjet.energy();
-                Jet_energyRing_dR3_em_Jet_e = fjet.emEnergies()[3]/fjet.energy();
-                Jet_energyRing_dR4_em_Jet_e = fjet.emEnergies()[4]/fjet.energy();
-                Jet_energyRing_dR0_neut_Jet_e = fjet.neEnergies()[0]/fjet.energy();
-                Jet_energyRing_dR1_neut_Jet_e = fjet.neEnergies()[1]/fjet.energy();
-                Jet_energyRing_dR2_neut_Jet_e = fjet.neEnergies()[2]/fjet.energy();
-                Jet_energyRing_dR3_neut_Jet_e = fjet.neEnergies()[3]/fjet.energy();
-                Jet_energyRing_dR4_neut_Jet_e = fjet.neEnergies()[4]/fjet.energy();
-                Jet_energyRing_dR0_ch_Jet_e = fjet.chEnergies()[0]/fjet.energy();
-                Jet_energyRing_dR1_ch_Jet_e = fjet.chEnergies()[1]/fjet.energy();
-                Jet_energyRing_dR2_ch_Jet_e = fjet.chEnergies()[2]/fjet.energy();
-                Jet_energyRing_dR3_ch_Jet_e = fjet.chEnergies()[3]/fjet.energy();
-                Jet_energyRing_dR4_ch_Jet_e = fjet.chEnergies()[4]/fjet.energy();
-                Jet_energyRing_dR0_mu_Jet_e = fjet.muEnergies()[0]/fjet.energy();
-                Jet_energyRing_dR1_mu_Jet_e = fjet.muEnergies()[1]/fjet.energy();
-                Jet_energyRing_dR2_mu_Jet_e = fjet.muEnergies()[2]/fjet.energy();
-                Jet_energyRing_dR3_mu_Jet_e = fjet.muEnergies()[3]/fjet.energy();
-                Jet_energyRing_dR4_mu_Jet_e = fjet.muEnergies()[4]/fjet.energy();
+                Jet_energyRing_dR0_em_Jet_e = fjet.emEnergies()[0]/fjet.correctedJet("Uncorrected").energy();//remember to divide by jet energy
+                Jet_energyRing_dR1_em_Jet_e = fjet.emEnergies()[1]/fjet.correctedJet("Uncorrected").energy();
+                Jet_energyRing_dR2_em_Jet_e = fjet.emEnergies()[2]/fjet.correctedJet("Uncorrected").energy();
+                Jet_energyRing_dR3_em_Jet_e = fjet.emEnergies()[3]/fjet.correctedJet("Uncorrected").energy();
+                Jet_energyRing_dR4_em_Jet_e = fjet.emEnergies()[4]/fjet.correctedJet("Uncorrected").energy();
+                Jet_energyRing_dR0_neut_Jet_e = fjet.neEnergies()[0]/fjet.correctedJet("Uncorrected").energy();
+                Jet_energyRing_dR1_neut_Jet_e = fjet.neEnergies()[1]/fjet.correctedJet("Uncorrected").energy();
+                Jet_energyRing_dR2_neut_Jet_e = fjet.neEnergies()[2]/fjet.correctedJet("Uncorrected").energy();
+                Jet_energyRing_dR3_neut_Jet_e = fjet.neEnergies()[3]/fjet.correctedJet("Uncorrected").energy();
+                Jet_energyRing_dR4_neut_Jet_e = fjet.neEnergies()[4]/fjet.correctedJet("Uncorrected").energy();
+                Jet_energyRing_dR0_ch_Jet_e = fjet.chEnergies()[0]/fjet.correctedJet("Uncorrected").energy();
+                Jet_energyRing_dR1_ch_Jet_e = fjet.chEnergies()[1]/fjet.correctedJet("Uncorrected").energy();
+                Jet_energyRing_dR2_ch_Jet_e = fjet.chEnergies()[2]/fjet.correctedJet("Uncorrected").energy();
+                Jet_energyRing_dR3_ch_Jet_e = fjet.chEnergies()[3]/fjet.correctedJet("Uncorrected").energy();
+                Jet_energyRing_dR4_ch_Jet_e = fjet.chEnergies()[4]/fjet.correctedJet("Uncorrected").energy();
+                Jet_energyRing_dR0_mu_Jet_e = fjet.muEnergies()[0]/fjet.correctedJet("Uncorrected").energy();
+                Jet_energyRing_dR1_mu_Jet_e = fjet.muEnergies()[1]/fjet.correctedJet("Uncorrected").energy();
+                Jet_energyRing_dR2_mu_Jet_e = fjet.muEnergies()[2]/fjet.correctedJet("Uncorrected").energy();
+                Jet_energyRing_dR3_mu_Jet_e = fjet.muEnergies()[3]/fjet.correctedJet("Uncorrected").energy();
+                Jet_energyRing_dR4_mu_Jet_e = fjet.muEnergies()[4]/fjet.correctedJet("Uncorrected").energy();
             }
             Jet_numDaughters_pt03 = fjet.userInt("numDaug03");
             
