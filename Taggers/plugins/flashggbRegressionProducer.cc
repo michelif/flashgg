@@ -24,7 +24,10 @@
 #include "DNN/Tensorflow/interface/Graph.h"
 #include "DNN/Tensorflow/interface/Tensor.h"
 
-#define debug 1
+#include "DataFormats/Math/interface/LorentzVector.h"
+#include "TLorentzVector.h"
+
+#define debug 0
 
 using namespace std;
 using namespace edm;
@@ -300,7 +303,15 @@ namespace flashgg {
 
             fjet.addUserFloat("bRegNNCorr", bRegNN[0]*y_std_+y_mean_);
             fjet.addUserFloat("bRegNNResolution",0.5*(bRegNN[2]-bRegNN[1])*y_std_);
-            
+
+            TLorentzVector jetCorrected;
+            jetCorrected.SetPtEtaPhiE(fjet.pt()*fjet.userFloat("bRegNNCorr"),fjet.eta(),fjet.phi(),fjet.p4().e()*fjet.userFloat("bRegNNCorr"));
+
+            math::XYZTLorentzVector jetCorr;
+            jetCorr.SetPxPyPzE(jetCorrected.Px(),jetCorrected.Py(),jetCorrected.Pz(),jetCorrected.E()); 
+
+            fjet.setP4(jetCorr);//set the jet  with the regressed pt
+
             if (debug){
                 cout<<"bRegNNCorr:"<<bRegNN[0]*y_std_+y_mean_<<endl;
                 cout<<"bRegNNResolution:"<<0.5*(bRegNN[2]-bRegNN[1])*y_std_<<endl;
