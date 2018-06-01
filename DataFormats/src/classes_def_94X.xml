@@ -67,6 +67,12 @@
  <version ClassVersion="11" checksum="2848650298"/>
   <version ClassVersion="10" checksum="727624063"/>
 </class>
+<class name="flashgg::DoubleHTag" ClassVersion="11">
+ <version ClassVersion="10" checksum="2099650607"/>
+ <version ClassVersion="11" checksum="2809364010"/>
+</class>
+<class name="std::vector<flashgg::DoubleHTag>"/>
+<class name="edm::Wrapper<std::vector<flashgg::DoubleHTag> >"/>
 <class name="std::vector<flashgg::TTHLeptonicTag>"/>
 <class name="edm::Wrapper<std::vector<flashgg::TTHLeptonicTag> >"/>
 <class name="std::vector<pat::Muon>"/>

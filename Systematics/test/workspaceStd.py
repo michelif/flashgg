@@ -54,6 +54,24 @@ customize.options.register('tthTagsOnly',
                            VarParsing.VarParsing.varType.bool,
                            'tthTagsOnly'
                            )
+customize.options.register('doubleHTagsOnly',
+                           False,
+                           VarParsing.VarParsing.multiplicity.singleton,
+                           VarParsing.VarParsing.varType.bool,
+                           'doubleHTagsOnly'
+                           )
+customize.options.register('doDoubleHTag',
+                           False,
+                           VarParsing.VarParsing.multiplicity.singleton,
+                           VarParsing.VarParsing.varType.bool,
+                           'doDoubleHTag'
+                           )
+customize.options.register('doBJetRegression',
+                           False,
+                           VarParsing.VarParsing.multiplicity.singleton,
+                           VarParsing.VarParsing.varType.bool,
+                           'doBJetRegression'
+                           )
 customize.options.register('doHTXS',
                            False,
                            VarParsing.VarParsing.multiplicity.singleton,
@@ -160,6 +178,11 @@ if customize.tthTagsOnly:
     process.flashggDiPhotons.whichVertex = cms.uint32(0)
     process.flashggDiPhotons.useZerothVertexFromMicro = cms.bool(True)
 
+if customize.doDoubleHTag:
+    import flashgg.Systematics.doubleHCustomize as hhc
+    hhc.customizeTagSequence(  customize, process )
+    minimalVariables += hhc.variablesToDump(customize)
+   
 process.load("flashgg/Taggers/flashggTagSequence_cfi")
 print 'here we print the tag sequence before'
 print process.flashggTagSequence
@@ -197,6 +220,9 @@ print process.flashggTagSequence
 if customize.doFiducial:
     print 'we do fiducial and we change tagsorter'
     process.flashggTagSorter.TagPriorityRanges = cms.VPSet(     cms.PSet(TagName = cms.InputTag('flashggSigmaMoMpToMTag')) )
+
+if customize.doubleHTagsOnly:
+    process.flashggTagSorter.TagPriorityRanges = cms.VPSet(     cms.PSet(TagName = cms.InputTag('flashggDoubleHTag')) )
 
 if customize.tthTagsOnly:
     process.flashggTagSorter.TagPriorityRanges = cms.VPSet(   cms.PSet(TagName = cms.InputTag('flashggTTHDiLeptonTag')),
@@ -409,6 +435,10 @@ elif customize.tthTagsOnly:
         ["TTHLeptonicTag",0],
         ["TTHDiLeptonTag",0]
         ]
+elif customize.doubleHTagsOnly:
+    tagList = hhc.tagList(customize,process)
+    print "taglist is:"
+    print tagList
 else:
     tagList=[
         ["NoTag",0],
@@ -563,6 +593,34 @@ else :
                          process.penultimateFilter*
                          process.finalFilter*
                          process.tagsDumper)
+
+if customize.doBJetRegression:
+    bregProducers = []
+    bregJets = []
+    
+    from flashgg.Taggers.flashggTags_cff import UnpackedJetCollectionVInputTag
+    recoJetCollections = UnpackedJetCollectionVInputTag
+
+
+    
+    for icoll,coll in enumerate(recoJetCollections):
+        print "doing icoll "+str(icoll)
+        #FIXME: load the correct files for 94 and 80
+        producer =   cms.EDProducer('flashggbRegressionProducer94',
+                                    JetTag=coll,
+                                    rhoFixedGridCollection = cms.InputTag('fixedGridRhoFastjetAll'),
+                                    bRegressionWeightfile= cms.untracked.string(os.environ["CMSSW_BASE"]+"/src/flashgg/MetaData/data/DNN_models/model-18"),
+                                    y_mean = cms.untracked.double(1.0454729795455933),#check MetaData/data/DNN_models/config.json
+                                    y_std = cms.untracked.double( 0.31628304719924927)
+                                    )
+        setattr(process,"bRegProducer%d" %icoll,producer)
+        bregProducers.append(producer)
+        bregJets.append("bRegProducer%d" %icoll)
+            
+    process.bregProducers = cms.Sequence(reduce(lambda x,y: x+y, bregProducers))
+#    process.bbggtree.inputTagJets=cms.VInputTag(bregJets)
+    process.p.replace(process.jetSystematicsSequence,process.jetSystematicsSequence*process.flashggUnpackedJets+process.bregProducers)
+
 
 if customize.doFiducial:
     if ( customize.doPdfWeights or customize.doSystematics ) and ( (customize.datasetName() and customize.datasetName().count("HToGG")) 
