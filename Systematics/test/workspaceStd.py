@@ -595,6 +595,11 @@ else :
                          process.tagsDumper)
 
 if customize.doBJetRegression:
+    bRegFile= str(os.environ["CMSSW_BASE"])+'/src/flashgg/MetaData/data/DNN_models/model-18'
+    if os.environ["CMSSW_VERSION"].count("CMSSW_9_4"):
+        bRegFile= str(os.environ["CMSSW_BASE"])+'/src/flashgg/MetaData/data/DNN_models/breg_training_2017.pb'
+
+
     bregProducers = []
     bregJets = []
     
@@ -605,17 +610,13 @@ if customize.doBJetRegression:
     
     for icoll,coll in enumerate(recoJetCollections):
         print "doing icoll "+str(icoll)
-        bRegFile = ['/src/flashgg/MetaData/data/DNN_models/model-18'],
-        if os.environ["CMSSW_VERSION"].count("CMSSW_9_4"):
-            bRegFile= ['/src/flashgg/MetaData/data/DNN_models/breg_training_2017.pb']
 
         print "using b-regression for jets", str(bRegFile)
 
-        #FIXME: load the correct files for 94 and 80
         producer =   cms.EDProducer('flashggbRegressionProducer94',
                                     JetTag=coll,
                                     rhoFixedGridCollection = cms.InputTag('fixedGridRhoFastjetAll'),
-                                    bRegressionWeightfile = cms.untracked.string(os.environ["CMSSW_BASE"]+str(bRegFile)),
+                                    bRegressionWeightfile = cms.untracked.string(str(bRegFile)),
                                     y_mean = cms.untracked.double(1.0454729795455933),#check MetaData/data/DNN_models/config.json
                                     y_std = cms.untracked.double( 0.31628304719924927)
                                     )
