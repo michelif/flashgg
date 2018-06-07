@@ -182,6 +182,7 @@ if customize.doDoubleHTag:
     import flashgg.Systematics.doubleHCustomize as hhc
     hhc.customizeTagSequence(  customize, process )
     minimalVariables += hhc.variablesToDump(customize)
+    print "saving variables:", minimalVariables
    
 process.load("flashgg/Taggers/flashggTagSequence_cfi")
 print 'here we print the tag sequence before'
@@ -249,7 +250,7 @@ print "customize.processId:",customize.processId
 useEGMTools(process)
 
 # Only run systematics for signal events
-if customize.processId.count("h_") or customize.processId.count("vbf_") or customize.processId.count("Acceptance"): # convention: ggh vbf wzh (wh zh) tth
+if customize.processId.count("h_") or customize.processId.count("vbf_") or customize.processId.count("Acceptance") or customize.processId.count("HHTo2B2G"): # convention: ggh vbf wzh (wh zh) tth
     print "Signal MC, so adding systematics and dZ"
     if customize.doHTXS:
         variablesToUse = minimalVariablesHTXS
@@ -380,6 +381,7 @@ process.source = cms.Source ("PoolSource",
 #"root://eoscms.cern.ch//eos/cms/store/group/phys_higgs/cmshgg/ferriff/flashgg/RunIIFall15DR76-1_3_0-25ns_ext1/1_3_1/QCD_Pt-30to40_DoubleEMEnriched_MGG-80toInf_TuneCUETP8M1_13TeV_Pythia8/RunIIFall15DR76-1_3_0-25ns_ext1-1_3_1-v0-RunIIFall15MiniAODv2-PU25nsData2015v1_76X_mcRun2_asymptotic_v12-v1/160127_023721/0000/myMicroAODOutputFile_1.root"
 #"root://eoscms.cern.ch//eos/cms/store/group/phys_higgs/cmshgg/ferriff/flashgg/RunIIFall15DR76-1_3_0-25ns_ext1/1_3_1/GJet_Pt-40toInf_DoubleEMEnriched_MGG-80toInf_TuneCUETP8M1_13TeV_Pythia8/RunIIFall15DR76-1_3_0-25ns_ext1-1_3_1-v0-RunIIFall15MiniAODv2-PU25nsData2015v1_76X_mcRun2_asymptotic_v12-v1/160210_050208/0000/myMicroAODOutputFile_1.root"
 #"root://eoscms.cern.ch//eos/cms/store/group/phys_higgs/cmshgg/ferriff/flashgg/RunIISpring16DR80X-2_2_0-25ns_ICHEP16_MiniAODv2/2_2_0/ttHJetToGG_M125_13TeV_amcatnloFXFX_madspin_pythia8_v2/RunIISpring16DR80X-2_2_0-25ns_ICHEP16_MiniAODv2-2_2_0-v0-RunIISpring16MiniAODv2-PUSpring16RAWAODSIM_reHLT_80X_mcRun2_asymptotic_v14-v1/160707_152047/0000/myMicroAODOutputFile_8.root"),skipEvents=cms.untracked.uint32(31500))
+#"root://eoscms.cern.ch//eos/cms/store/group/phys_higgs/cmshgg/sethzenz/flashgg/RunIIFall17-3_0_1/3_0_1/GluGluToHHTo2B2G_node_SM_13TeV-madgraph/RunIIFall17-3_0_1-3_0_1-v0-RunIIFall17MiniAOD-94X_mc2017_realistic_v10-v1/180330_213539/0000/myMicroAODOutputFile_1.root"
 ))
 
 process.TFileService = cms.Service("TFileService",
