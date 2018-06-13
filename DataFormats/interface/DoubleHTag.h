@@ -39,6 +39,7 @@ namespace flashgg {
         float HelicityCosTheta( TLorentzVector Booster, TLorentzVector Boosted) const;
         float getPhoJetMinDr() const;
         float getSigmaMDecorr() const;
+        float getSigmaMOverMJets() const;
         void  setSigmaMDecorrTransf( DecorrTransform* transfEBEB, DecorrTransform* transfNotEBEB){ transfEBEB_= transfEBEB; transfNotEBEB_=transfNotEBEB;}
         LorentzVector getdiHiggsP4() const {return p4();}
         
