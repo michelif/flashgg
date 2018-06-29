@@ -1,7 +1,7 @@
 import FWCore.ParameterSet.Config as cms
 
 def variablesToDump(customize):
-    return [ "leadingJet_bDis := leadJet().bDiscriminator('pfCombinedInclusiveSecondaryVertexV2BJetTags')",#FIXME make the btag type configurable?
+    variables= [ "leadingJet_bDis := leadJet().bDiscriminator('pfCombinedInclusiveSecondaryVertexV2BJetTags')",#FIXME make the btag type configurable?
              "subleadingJet_bDis := subleadJet().bDiscriminator('pfCombinedInclusiveSecondaryVertexV2BJetTags')",
              "absCosThetaStar_CS := abs(getCosThetaStar_CS(6500))",#FIXME get energy from somewhere?
              "absCosTheta_bb := abs(CosThetaAngles()[1])",
@@ -68,15 +68,32 @@ def variablesToDump(customize):
              "ttHMVA_leadingElectron :=0 ",
              "ttHMVA_subleadingElectron :=0 ",
              "ttHMVA_nelecs :=0 ",
-             "ttHHHbggMVA := 0"
-]
+             "ttHHHbggMVA := 0",
+                 ]
+
+
+    if customize.doBJetRegression : variables +=[
+            "leadingJet_bRegNNCorr := leadJet().userFloat('bRegNNCorr')",
+            "leadingJet_bRegNNResolution := leadJet().userFloat('bRegNNResolution')",
+            "subleadingJet_bRegNNCorr := subleadJet().userFloat('bRegNNCorr')",
+            "subleadingJet_bRegNNResolution := subleadJet().userFloat('bRegNNResolution')",
+            "sigmaMJets := getSigmaMOverMJets()"
+            ]
+
+    return variables
+    
+
 
 def tagList(customize,process):
-    return [ ["DoubleHTag",12] ]#12 is the number of categories?
+    return [ ["DoubleHTag",12] ]#12 is the number of categories
 
 
 def customizeTagSequence(customize,process):
     process.load("flashgg.Taggers.flashggDoubleHTag_cff")
+
+
+    from flashgg.Taggers.flashggTags_cff import UnpackedJetCollectionVInputTag
+    if customize.doBJetRegression : process.flashggDoubleHTag.JetTags = cms.VInputTag( ["bRegProducer%d" % icoll for icoll,coll in enumerate(UnpackedJetCollectionVInputTag) ] )
 
     ## customize here (regression, kin-fit, MVA...)
     ## process.flashggTagSequence += process.flashggDoubleHTagSequence
