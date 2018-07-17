@@ -28,32 +28,38 @@ flashggDoubleHTag = cms.EDProducer("FlashggDoubleHTagProducer",
                                    UseJetID = cms.bool(True),
                                    JetIDLevel = cms.string('Loose'),
 
-                                   MVABoundaries  = cms.vdouble(0.271,0.543, 0.740), # category boundaries for MVA
-                                   MXBoundaries   = cms.vdouble(250., 341.4, 426.1, 544.), # .. and MX
+                                   MVABoundaries  = cms.vdouble(0.28,0.47, 0.63), # category boundaries for MVA
+                                   MXBoundaries   = cms.vdouble(250., 310., 391., 547.), # .. and MX
+                                   MJJBoundariesLower = cms.vdouble(97.,95.,95.,95.,99.,100.,95.,95.,95.,95.,95.,108.), #for each category following the convention cat0=MX0 MVA0, cat1=MX1 MVA0, cat2=MX2 MVA0....
+                                   MJJBoundariesUpper = cms.vdouble(146.,153.,150.,155.,150.,147.,154.,151.,155.,155.,155.,148.), #for each category following the convention cat0=MX0 MVA0, cat1=MX1 MVA0, cat2=MX2 MVA0....
                                    MVAConfig = cms.PSet(variables=cms.VPSet(), # variables are added below
                                                         classifier=cms.string("BDT::bdt"), # classifier name
-                                                        weights=cms.FileInPath("flashgg/bbggTools/data/MVA2017/allMC_resWeighting_F_noDR_minDRGJet_edited.weights.xml"), # path to TMVA weights
+                                                        weights=cms.FileInPath("flashgg/MetaData/data/HHTagger/training_with_27_06_2018_newcode_v2.weights.xml"), # path to TMVA weights
                                                         regression=cms.bool(False), # this is not a regression
                                                         ),
                                    doMVAFlattening=cms.bool(True),#do transformation of cumulative to make it flat
-                                   MVAFlatteningFileName=cms.untracked.FileInPath("flashgg/bbggTools/data/MVA2017/cumulativeTransformation_output_GluGluToHHTo2B2G_node_SM_13TeV-madgraph.root")#FIXME, this should be optional, is it?
+                                   doCategorization=cms.bool(True),#do categorization based on MVA x MX or only fill first tree with all events
+                                   MVAFlatteningFileName=cms.untracked.FileInPath("flashgg/MetaData/data/HHTagger/cumulativeTransformation_output_GluGluToHHTo2B2G_node_SM_13TeV-madgraph.root")#FIXME, this should be optional, is it?
                                   ) 
 
 cfgTools.addVariables(flashggDoubleHTag.MVAConfig.variables,
                       # here the syntax is VarNameInTMVA := expression
                       ["leadingJet_bDis := leadJet().bDiscriminator('pfCombinedInclusiveSecondaryVertexV2BJetTags')",#FIXME make the btag type configurable?
                        "subleadingJet_bDis := subleadJet().bDiscriminator('pfCombinedInclusiveSecondaryVertexV2BJetTags')",
-                       "fabs(CosThetaStar_CS) := abs(getCosThetaStar_CS(6500))",#FIXME get energy from somewhere?
-                       "fabs(CosTheta_bb) := abs(CosThetaAngles()[1])",
-                       "fabs(CosTheta_gg) := abs(CosThetaAngles()[0])",
-                       "diphotonCandidate.Pt()/(diHiggsCandidate.M()) := diphotonPtOverM()",
-                       "dijetCandidate.Pt()/(diHiggsCandidate.M()) := dijetPtOverM()",
+                       "absCosThetaStar_CS := abs(getCosThetaStar_CS(6500))",#FIXME get energy from somewhere?
+                       "absCosTheta_bb := abs(CosThetaAngles()[1])",
+                       "absCosTheta_gg := abs(CosThetaAngles()[0])",
+                       "diphotonCandidatePtOverdiHiggsM := diphotonPtOverM()",
+                       "dijetCandidatePtOverdiHiggsM := dijetPtOverM()",
                        "customLeadingPhotonIDMVA := diPhoton.leadingView.phoIdMvaWrtChosenVtx",
                        "customSubLeadingPhotonIDMVA := diPhoton.subLeadingView.phoIdMvaWrtChosenVtx",
                        "leadingPhotonSigOverE := diPhoton.leadingPhoton.sigEOverE",
                        "subleadingPhotonSigOverE := diPhoton.subLeadingPhoton.sigEOverE",
                        "sigmaMOverMDecorr := getSigmaMDecorr()",
                        "PhoJetMinDr := getPhoJetMinDr()",
+                       "(leadingJet_bRegNNResolution*1.4826) := leadJet().userFloat('bRegNNResolution')*1.4826",
+                       "(subleadingJet_bRegNNResolution*1.4826) := subleadJet().userFloat('bRegNNResolution')*1.4826",
+                       "(sigmaMJets*1.4826) := getSigmaMOverMJets()*1.4826",
                        ]
                       )
 
