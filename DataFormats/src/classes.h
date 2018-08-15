@@ -43,6 +43,7 @@
 #include "flashgg/DataFormats/interface/TagCandidate.h"
 #include "flashgg/DataFormats/interface/TagAndProbeCandidate.h" //spigazzi
 #include "flashgg/DataFormats/interface/DoubleHTag.h"
+#include "flashgg/DataFormats/interface/DoubleHttHKiller.h"
 
 #include <vector>
 #include <map>
@@ -208,6 +209,10 @@ namespace  {
         flashgg::DoubleHTag hh;
         std::vector<flashgg::DoubleHTag> vec_hh;
         edm::Wrapper<std::vector<flashgg::DoubleHTag> > wrp_vec_hh;
+
+        flashgg::DoubleHttHKiller hhttH;
+        std::vector<flashgg::DoubleHttHKiller> vec_hhttH;
+        edm::Wrapper<std::vector<flashgg::DoubleHttHKiller> > wrp_vec_hhttH;
 
         edm::Ptr<reco::GenParticle> ptr_genp;
 

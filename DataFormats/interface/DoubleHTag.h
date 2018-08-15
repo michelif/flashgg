@@ -7,6 +7,7 @@
 #include "flashgg/DataFormats/interface/Jet.h"
 #include "DataFormats/Candidate/interface/LeafCandidate.h"
 #include "DataFormats/Math/interface/deltaR.h"
+#include "flashgg/DataFormats/interface/DoubleHttHKiller.h"
 
 #include "flashgg/Taggers/interface/FunctionHelpers.h"
 
@@ -42,7 +43,7 @@ namespace flashgg {
         float getSigmaMOverMJets() const;
         void  setSigmaMDecorrTransf( DecorrTransform* transfEBEB, DecorrTransform* transfNotEBEB){ transfEBEB_= transfEBEB; transfNotEBEB_=transfNotEBEB;}
         LorentzVector getdiHiggsP4() const {return p4();}
-
+        DoubleHttHKiller tthKiller_;
 
     private:
         double mva_, MX_;

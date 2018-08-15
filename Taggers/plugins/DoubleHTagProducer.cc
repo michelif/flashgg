@@ -16,6 +16,7 @@
 
 #include "flashgg/MicroAOD/interface/MVAComputer.h"
 
+#include "flashgg/DataFormats/interface/DoubleHttHKiller.h"
 
 #include <vector>
 #include <algorithm>
@@ -130,8 +131,6 @@ namespace flashgg {
 //        METToken_( consumes<View<flashgg::Met> >( iConfig.getParameter<InputTag> ( "METTag" ) ) );
 //        electronToken_ = consumes<edm::View<flashgg::Electron> >( iConfig.getParameter<edm::InputTag> ( "ElectronTag" ) );
 //        muonToken_ = consumes<edm::View<flashgg::Muon> >( iConfig.getParameter<edm::InputTag>( "MuonTag" ) );
-
-
 
         produces<vector<DoubleHTag> >();
         produces<vector<TagTruthBase> >();

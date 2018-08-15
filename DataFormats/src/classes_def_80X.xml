@@ -61,12 +61,21 @@
 </class>
 <class name="std::vector<flashgg::VBFTag>"/>
 <class name="edm::Wrapper<std::vector<flashgg::VBFTag> >"/>
-<class name="flashgg::DoubleHTag" ClassVersion="11">
-  <version ClassVersion="10" checksum="2099650607"/>
+<class name="flashgg::DoubleHTag" ClassVersion="12">
+  <version ClassVersion="12" checksum="780883748"/>
   <version ClassVersion="11" checksum="2809364010"/>
+  <version ClassVersion="10" checksum="2099650607"/>
 </class>
 <class name="std::vector<flashgg::DoubleHTag>"/>
 <class name="edm::Wrapper<std::vector<flashgg::DoubleHTag> >"/>
+<class name="flashgg::DoubleHttHKiller" ClassVersion="12">
+ <version ClassVersion="12" checksum="1380533439"/>
+ <version ClassVersion="11" checksum="1693237044"/>
+  <version ClassVersion="0" checksum="2809364010"/>
+</class>
+<class name="std::vector<flashgg::DoubleHttHKiller>"/>
+<class name="edm::Wrapper<std::vector<flashgg::DoubleHttHKiller> >"/>
+
 <class name="flashgg::TTHLeptonicTag" ClassVersion="12">
  <version ClassVersion="12" checksum="1015665249"/>
  <version ClassVersion="11" checksum="2848650298"/>
