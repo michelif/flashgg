@@ -9,7 +9,8 @@
 #include "DataFormats/Math/interface/deltaR.h"
 
 #include "flashgg/Taggers/interface/FunctionHelpers.h"
-#include "flashgg/Taggers/interface/genericMVA.h"
+#include "TMVA/Reader.h"
+#include "flashgg/DataFormats/interface/DiPhotonCandidate.h"
 
 namespace flashgg {
 
@@ -36,15 +37,24 @@ namespace flashgg {
         float Xtt0, Xtt1, MjjW0, MjjW1, Mjjbt0, Mjjbt1;
 
 
-        genericMVA ttHMVA_;
+        TMVA::Reader *Reader_;
+        bool TMVAReady;
+        //MVA variables
+        std::map<std::string, float> mvaVars;
+        std::vector<std::string> orderedVars;
+
 
         void initializeSelectionThresholds();
         void dummyPrint();
+        void initializeMVAVariables(std::string weightFile="",std::vector<string> varvec={});  
+
+        std::string ttHMVAWeights_;
+        std::vector<std::string> ttHMVAVars_;
+        void setupMVA(std::string File, std::vector<std::string> inVars);
+        float mvaDiscriminants(std::map<std::string,float>) ;
 
     private:
         double mva_;
-        //        ttHMVAWeights_;
-        //        ttHMVAVars_;
     };
 }
 

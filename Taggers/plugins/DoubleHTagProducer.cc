@@ -9,6 +9,10 @@
 
 #include "flashgg/DataFormats/interface/DiPhotonCandidate.h"
 #include "flashgg/DataFormats/interface/Jet.h"
+#include "flashgg/DataFormats/interface/Met.h"
+#include "flashgg/DataFormats/interface/Electron.h"
+#include "flashgg/DataFormats/interface/Muon.h"
+
 #include "flashgg/DataFormats/interface/DiPhotonMVAResult.h"
 #include "flashgg/DataFormats/interface/DoubleHTag.h"
 #include "flashgg/DataFormats/interface/TagTruthBase.h"
@@ -44,7 +48,7 @@ namespace flashgg {
         string systLabel_;
 
         double minLeadPhoPt_, minSubleadPhoPt_;
-        bool scalingPtCuts_, doPhotonId_, doMVAFlattening_, doCategorization_;
+        bool scalingPtCuts_, doPhotonId_, doMVAFlattening_, doCategorization_, dottHMVA_;
         double photonIDCut_;
         double vetoConeSize_;         
         unsigned int doSigmaMDecorr_;
@@ -70,6 +74,11 @@ namespace flashgg {
         edm::FileInPath MVAFlatteningFileName_;
         TFile * MVAFlatteningFile_;
         TGraph * MVAFlatteningCumulative_;
+
+        DoubleHttHKiller tthKiller_;
+        edm::EDGetTokenT<edm::View<flashgg::Met> > METToken_;
+        edm::EDGetTokenT<edm::View<flashgg::Electron> > electronToken_;
+        edm::EDGetTokenT<edm::View<flashgg::Muon> > muonToken_;
     };
 
     DoubleHTagProducer::DoubleHTagProducer( const ParameterSet &iConfig ) :
@@ -103,6 +112,7 @@ namespace flashgg {
         
         doMVAFlattening_ = iConfig.getParameter<bool>("doMVAFlattening"); 
         doCategorization_ = iConfig.getParameter<bool>("doCategorization"); 
+        dottHMVA_ = iConfig.getParameter<bool>("dottHMVA"); 
         photonElectronVeto_=iConfig.getUntrackedParameter<std::vector<int > >("PhotonElectronVeto");
         //needed for HHbbgg MVA
         if(doMVAFlattening_){
@@ -127,10 +137,16 @@ namespace flashgg {
             }
         }
 
+        if(dottHMVA_){
+            tthKiller_.initializeSelectionThresholds();
+            tthKiller_.initializeMVAVariables();
+            tthKiller_.setupMVA(tthKiller_.ttHMVAWeights_,tthKiller_.ttHMVAVars_);
+        }
+
         //needed for ttH MVA
-//        METToken_( consumes<View<flashgg::Met> >( iConfig.getParameter<InputTag> ( "METTag" ) ) );
-//        electronToken_ = consumes<edm::View<flashgg::Electron> >( iConfig.getParameter<edm::InputTag> ( "ElectronTag" ) );
-//        muonToken_ = consumes<edm::View<flashgg::Muon> >( iConfig.getParameter<edm::InputTag>( "MuonTag" ) );
+        METToken_= consumes<View<flashgg::Met> >( iConfig.getParameter<InputTag> ( "METTag" ) ) ;
+        electronToken_ = consumes<edm::View<flashgg::Electron> >( iConfig.getParameter<edm::InputTag> ( "ElectronTag" ) );
+        muonToken_ = consumes<edm::View<flashgg::Muon> >( iConfig.getParameter<edm::InputTag>( "MuonTag" ) );
 
         produces<vector<DoubleHTag> >();
         produces<vector<TagTruthBase> >();
@@ -304,6 +320,27 @@ namespace flashgg {
 
             tag_obj.setMVA( mva );
             
+            //tth MVA
+            if(dottHMVA_){
+                float sumEt=0., MET=0.,dPhi1=0., dPhi2=0.;
+                for( size_t ijet=0; ijet < cleaned_jets.size();++ijet){
+                    auto jet = cleaned_jets[ijet];
+                    if( reco::deltaR(*jet,*leadJet)< vetoConeSize_) continue;
+                    sumEt+=jet->p4().pt();
+                }
+                edm::Handle<View<flashgg::Met> > METs;
+                evt.getByToken( METToken_, METs );
+                if( METs->size() != 1 )
+                    { std::cout << "WARNING number of MET is not equal to 1" << std::endl; }
+                Ptr<flashgg::Met> theMET = METs->ptrAt( 0 );
+                auto p4MET=theMET->p4();
+
+                MET=p4MET.pt();
+                dPhi1 = reco::deltaPhi(p4MET.Phi(), leadJet->p4().phi());
+                dPhi2 = reco::deltaPhi(p4MET.Phi(), subleadJet->p4().phi());
+                std::cout<<MET<<" "<<dPhi1<<" "<<dPhi2<<std::endl;
+            }
+
             // choose category and propagate weights
             int catnum = chooseCategory( tag_obj.MVA(), tag_obj.MX() );
             tag_obj.setCategoryNumber( catnum );

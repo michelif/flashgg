@@ -75,7 +75,6 @@
 </class>
 <class name="std::vector<flashgg::DoubleHttHKiller>"/>
 <class name="edm::Wrapper<std::vector<flashgg::DoubleHttHKiller> >"/>
-
 <class name="flashgg::TTHLeptonicTag" ClassVersion="12">
  <version ClassVersion="12" checksum="1015665249"/>
  <version ClassVersion="11" checksum="2848650298"/>
