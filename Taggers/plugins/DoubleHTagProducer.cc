@@ -20,6 +20,7 @@
 
 #include "flashgg/MicroAOD/interface/MVAComputer.h"
 
+#include "flashgg/Taggers/interface/LeptonSelection.h"
 #include "flashgg/DataFormats/interface/DoubleHttHKiller.h"
 
 #include <vector>
@@ -76,9 +77,12 @@ namespace flashgg {
         TGraph * MVAFlatteningCumulative_;
 
         DoubleHttHKiller tthKiller_;
+        float ttHTagger;
         edm::EDGetTokenT<edm::View<flashgg::Met> > METToken_;
         edm::EDGetTokenT<edm::View<flashgg::Electron> > electronToken_;
         edm::EDGetTokenT<edm::View<flashgg::Muon> > muonToken_;
+        edm::EDGetTokenT<edm::View<reco::Vertex> > vertexToken_;
+        edm::EDGetTokenT<double> rhoToken_;
     };
 
     DoubleHTagProducer::DoubleHTagProducer( const ParameterSet &iConfig ) :
@@ -140,13 +144,15 @@ namespace flashgg {
         if(dottHMVA_){
             tthKiller_.initializeSelectionThresholds();
             tthKiller_.initializeMVAVariables();
-            tthKiller_.setupMVA(tthKiller_.ttHMVAWeights_,tthKiller_.ttHMVAVars_);
+            tthKiller_.setupMVA(tthKiller_.ttHMVAWeights_,tthKiller_.ttHMVAVars_);//FIXME do configurable
         }
 
         //needed for ttH MVA
         METToken_= consumes<View<flashgg::Met> >( iConfig.getParameter<InputTag> ( "METTag" ) ) ;
         electronToken_ = consumes<edm::View<flashgg::Electron> >( iConfig.getParameter<edm::InputTag> ( "ElectronTag" ) );
         muonToken_ = consumes<edm::View<flashgg::Muon> >( iConfig.getParameter<edm::InputTag>( "MuonTag" ) );
+        vertexToken_ = consumes<edm::View<reco::Vertex> >( iConfig.getParameter<edm::InputTag> ( "VertexTag" ) );
+        rhoToken_ = consumes<double>( iConfig.getParameter<edm::InputTag>( "rhoTag" ) );
 
         produces<vector<DoubleHTag> >();
         produces<vector<TagTruthBase> >();
@@ -322,23 +328,75 @@ namespace flashgg {
             
             //tth MVA
             if(dottHMVA_){
-                float sumEt=0., MET=0.,dPhi1=0., dPhi2=0.;
+                float sumEt=0.,njets=0.;
+                std::map<std::string, float> ttHVars;
+                std::vector<flashgg::Jet> cleanedDR_jets;
                 for( size_t ijet=0; ijet < cleaned_jets.size();++ijet){
                     auto jet = cleaned_jets[ijet];
                     if( reco::deltaR(*jet,*leadJet)< vetoConeSize_) continue;
+                    if( reco::deltaR(*jet,*subleadJet)< vetoConeSize_) continue;
                     sumEt+=jet->p4().pt();
+                    njets+=1;
+                    cleanedDR_jets.push_back(*jet);
                 }
+                ttHVars["sumEt"] = sumEt;
                 edm::Handle<View<flashgg::Met> > METs;
                 evt.getByToken( METToken_, METs );
                 if( METs->size() != 1 )
                     { std::cout << "WARNING number of MET is not equal to 1" << std::endl; }
                 Ptr<flashgg::Met> theMET = METs->ptrAt( 0 );
                 auto p4MET=theMET->p4();
+                ttHVars["MET"]=p4MET.pt();
 
-                MET=p4MET.pt();
-                dPhi1 = reco::deltaPhi(p4MET.Phi(), leadJet->p4().phi());
-                dPhi2 = reco::deltaPhi(p4MET.Phi(), subleadJet->p4().phi());
-                std::cout<<MET<<" "<<dPhi1<<" "<<dPhi2<<std::endl;
+                ttHVars["dPhi1"] = reco::deltaPhi(p4MET.Phi(), leadJet->p4().phi());
+                ttHVars["dPhi2"] = reco::deltaPhi(p4MET.Phi(), subleadJet->p4().phi());
+                ttHVars["PhoJetMinDr"] = tag_obj.getPhoJetMinDr();
+                ttHVars["njets>8"] = njets>8;
+                std::vector<flashgg::Jet> DiJet;
+                DiJet.push_back(tag_obj.leadJet());
+                DiJet.push_back(tag_obj.subleadJet());
+                std::vector<float> Xtt = tthKiller_.XttCalculation(cleanedDR_jets,DiJet);
+                if(Xtt.size()>1){
+                    ttHVars["Xtt0"] = Xtt[0];
+                    ttHVars["Xtt1"] = Xtt[1];
+                }else{
+                    ttHVars["Xtt0"] = 1000;
+                    ttHVars["Xtt1"] = 0;
+                }
+                Handle<View<flashgg::Electron> > theElectrons;
+                evt.getByToken( electronToken_, theElectrons );
+
+                Handle<View<reco::Vertex> > vertices;
+                evt.getByToken( vertexToken_, vertices );
+                edm::Handle<double>  rho;
+                evt.getByToken(rhoToken_,rho);
+                
+                std::vector<edm::Ptr<flashgg::Electron> > selectedElectrons = selectStdAllElectrons( theElectrons->ptrs(), vertices->ptrs(), tthKiller_.looseLeptonPtThreshold, tthKiller_.elecEtaThresholds, tthKiller_.useElecMVARecipe, tthKiller_.useElecLooseId, *rho, evt.isRealData() );
+                std::vector<edm::Ptr<flashgg::Electron> > tagElectrons = tthKiller_.filterElectrons( selectedElectrons, *tag_obj.diPhoton(), leadJet->p4(), subleadJet->p4(), tthKiller_.dRPhoLeptonThreshold, tthKiller_.dRJetLeptonThreshold);
+
+                if (tagElectrons.size() > 0) ttHVars["pte1"] = tagElectrons.at( 0 )->p4().pt();
+                else ttHVars["pte1"] = 0.;
+                if (tagElectrons.size() > 1) ttHVars["pte2"] = tagElectrons.at( 1 )->p4().pt();     
+                else ttHVars["pte2"] = 0.;
+                
+                Handle<View<flashgg::Muon> > theMuons;
+                evt.getByToken( muonToken_, theMuons );
+                                std::vector<edm::Ptr<flashgg::Muon> > selectedMuons = selectAllMuons( theMuons->ptrs(), vertices->ptrs(), tthKiller_.muEtaThreshold, tthKiller_.looseLeptonPtThreshold, tthKiller_.muPFIsoSumRelThreshold);
+                std::vector<edm::Ptr<flashgg::Muon> > tagMuons = tthKiller_.filterMuons( selectedMuons, *tag_obj.diPhoton(), leadJet->p4(), subleadJet->p4(), tthKiller_.dRPhoLeptonThreshold, tthKiller_.dRJetLeptonThreshold);
+                
+                if (tagMuons.size() > 0) ttHVars["ptmu1"] = tagMuons.at( 0 )->p4().pt();
+                else ttHVars["ptmu1"] = 0.;
+                if (tagMuons.size() > 1) ttHVars["ptmu2"] = tagMuons.at( 1 )->p4().pt();    
+                else ttHVars["ptmu2"] = 0.;
+
+                ttHVars["fabs_CosThetaStar_CS"] = abs(tag_obj.getCosThetaStar_CS(6500));//FIXME don't do hardcoded
+                ttHVars["fabs_CosTheta_bb"] = abs(tag_obj.CosThetaAngles()[1]);
+    
+                ttHTagger = tthKiller_.mvaDiscriminants(ttHVars);
+
+                tag_obj.tthKiller_=tthKiller_;
+                tag_obj.ttHMVA_ = ttHTagger;
+
             }
 
             // choose category and propagate weights
@@ -357,12 +415,16 @@ namespace flashgg {
                 if( ! evt.isRealData() ) {
                     tags->back().setTagTruth( edm::refToPtr( edm::Ref<vector<TagTruthBase> >( rTagTruth, 0 ) ) );                 
                 }
+                for ( std::map<std::string,float>::iterator it = tag_obj.tthKiller_.mvaVars.begin(); it != tag_obj.tthKiller_.mvaVars.end(); it++ ) { 
+                    std::cout<<"variable "<<it->first<<":"<<it->second<<std::endl;
+                }
             }
         }
         evt.put( std::move( truths ) );
         evt.put( std::move( tags ) );
     }
 }
+
 
 typedef flashgg::DoubleHTagProducer FlashggDoubleHTagProducer;
 DEFINE_FWK_MODULE( FlashggDoubleHTagProducer );

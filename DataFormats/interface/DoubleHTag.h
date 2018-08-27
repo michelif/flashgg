@@ -44,14 +44,17 @@ namespace flashgg {
         void  setSigmaMDecorrTransf( DecorrTransform* transfEBEB, DecorrTransform* transfNotEBEB){ transfEBEB_= transfEBEB; transfNotEBEB_=transfNotEBEB;}
         LorentzVector getdiHiggsP4() const {return p4();}
         DoubleHttHKiller tthKiller_;
-
+        float ttHMVA_;  
+        float getttHMVA() const;
+        std::vector<float> getttHMVAVariableValues() const;
+        
     private:
         double mva_, MX_;
         edm::Ptr<flashgg::Jet> leadJet_, subleadJet_;
         LorentzVector dijet_;
         DecorrTransform* transfEBEB_;
         DecorrTransform* transfNotEBEB_;
-        
+
     };
 }
 

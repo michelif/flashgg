@@ -51,22 +51,24 @@ def variablesToDump(customize):
              "subleadingJet_phi := subleadJet().phi",
              "subleadingJet_mass := subleadJet().p4().M()",
 
+                  
+             "HHttHMVA_sumEt := getttHMVAVariableValues()[0]",#FIXME add proper names of variables
+             "HHttHMVA_MET := getttHMVAVariableValues()[1]",
+             "HHttHMVA_ := getttHMVAVariableValues()[2]",
+             "HHttHMVA_Xtt1 := getttHMVAVariableValues()[3]",
+             "HHttHMVA_dPhi1 := getttHMVAVariableValues()[4]",
+             "HHttHMVA_dPhi2 := getttHMVAVariableValues()[5]",
+             "HHttHMVA_fabs_CosThetaStar_CS := getttHMVAVariableValues()[6]",
+             "HHttHMVA_fabs_CosTheta_bb := getttHMVAVariableValues()[7]",
+             "HHttHMVA_njets8 := getttHMVAVariableValues()[8]",
+             "HHttHMVA_pte1 := getttHMVAVariableValues()[9]",
+             "HHttHMVA_pte2 := getttHMVAVariableValues()[10]",
+             "HHttHMVA_ptmu1 := getttHMVAVariableValues()[11]",
+             "HHttHMVA_ptmu2 := getttHMVAVariableValues()[12]",
+             "HHttHMVA_sumEt := getttHMVAVariableValues()[13]",
+             "HHttHMVA_mva := getttHMVA()"  
 
-             "ttHMVA_MET := 0",# these variables are needed for ttH killer MVA, which has to be implemented in the producer with another mvaComputer
-             "ttHMVA_njets := 0",
-             "ttHMVA_Xtt0 :=0 ",
-             "ttHMVA_Xtt1 :=0 ",
-             "ttHMVA_MjjW0 :=0 ",
-             "ttHMVA_MjjW1 :=0 ",
-             "ttHMVA_Mjjbt0 :=0 ",
-             "ttHMVA_Mjjbt1 :=0 ",
-             "ttHMVA_leadingMuon :=0 ",
-             "ttHMVA_subleadingMuon :=0 ",
-             "ttHMVA_nmus :=0 ",
-             "ttHMVA_leadingElectron :=0 ",
-             "ttHMVA_subleadingElectron :=0 ",
-             "ttHMVA_nelecs :=0 ",
-             "ttHHHbggMVA := 0",
+
     ]
     if customize.doBJetRegression : variables +=[
              "leadingJet_bRegNNCorr := leadJet().userFloat('bRegNNCorr')",

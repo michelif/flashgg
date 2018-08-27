@@ -115,8 +115,13 @@ float DoubleHTag::getSigmaMOverMJets() const
 
 }
 
+float DoubleHTag::getttHMVA() const{
+    return ttHMVA_;
+}
 
-
+std::vector<float> DoubleHTag::getttHMVAVariableValues() const {
+    return tthKiller_.getVariableValues();
+}
 
 // Local Variables:
 // mode:c++

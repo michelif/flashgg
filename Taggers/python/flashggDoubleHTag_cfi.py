@@ -37,14 +37,15 @@ flashggDoubleHTag = cms.EDProducer("FlashggDoubleHTagProducer",
                                                         weights=cms.FileInPath("flashgg/MetaData/data/HHTagger/training_with_27_06_2018_newcode_v2.weights.xml"), # path to TMVA weights
                                                         regression=cms.bool(False), # this is not a regression
                                                         ),
-                                   doMVAFlattening=cms.bool(True),#do transformation of cumulative to make it flat
-                                   doCategorization=cms.bool(True),#do categorization based on MVA x MX or only fill first tree with all events
-                                   MVAFlatteningFileName=cms.untracked.FileInPath("flashgg/MetaData/data/HHTagger/cumulativeTransformation_output_GluGluToHHTo2B2G_node_SM_13TeV-madgraph.root"),#FIXME, this should be optional, is it?
-                                   dottHMVA=cms.bool(True),#do mva to suppress tth resonant bkg
-                                   METTag=cms.InputTag('flashggMets'),
-                                   ElectronTag    =       cms.InputTag('flashggSelectedElectrons'),
-                                   MuonTag = cms.InputTag('flashggSelectedMuons')
-
+                                   doMVAFlattening = cms.bool(True),#do transformation of cumulative to make it flat
+                                   doCategorization = cms.bool(True),#do categorization based on MVA x MX or only fill first tree with all events
+                                   MVAFlatteningFileName = cms.untracked.FileInPath("flashgg/MetaData/data/HHTagger/cumulativeTransformation_output_GluGluToHHTo2B2G_node_SM_13TeV-madgraph.root"),#FIXME, this should be optional, is it?
+                                   dottHMVA = cms.bool(True),#do mva to suppress tth resonant bkg
+                                   METTag = cms.InputTag('flashggMets'),
+                                   ElectronTag = cms.InputTag('flashggSelectedElectrons'),
+                                   MuonTag = cms.InputTag('flashggSelectedMuons'),
+                                   VertexTag = cms.InputTag('offlineSlimmedPrimaryVertices'),
+                                   rhoTag = cms.InputTag('fixedGridRhoFastjetAll')
                                   ) 
 
 cfgTools.addVariables(flashggDoubleHTag.MVAConfig.variables,

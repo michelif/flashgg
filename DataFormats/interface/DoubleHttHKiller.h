@@ -7,6 +7,8 @@
 #include "flashgg/DataFormats/interface/Jet.h"
 #include "DataFormats/Candidate/interface/LeafCandidate.h"
 #include "DataFormats/Math/interface/deltaR.h"
+#include "flashgg/DataFormats/interface/Electron.h"
+#include "flashgg/DataFormats/interface/Muon.h"
 
 #include "flashgg/Taggers/interface/FunctionHelpers.h"
 #include "TMVA/Reader.h"
@@ -20,15 +22,11 @@ namespace flashgg {
         DoubleHttHKiller();
         ~DoubleHttHKiller();
 
-        /// ttH tokens move it to producer
-        //        edm::EDGetTokenT<double> rhoToken_;
-        //        edm::EDGetTokenT<edm::View<flashgg::Electron> > electronToken_;
-        //        edm::EDGetTokenT<edm::View<flashgg::Muon> > muonToken_;
         //variables
-        double muPtThreshold, muEtaThreshold, muPFIsoSumRelThreshold;// deltaRMuonPhoThreshold;
+        double muEtaThreshold, muPFIsoSumRelThreshold;// deltaRMuonPhoThreshold;
         double dRPhoLeptonThreshold, dRJetLeptonThreshold;
 
-        double elecPtThreshold;
+        double looseLeptonPtThreshold;
         bool useElecMVARecipe, useElecLooseId;
         std::vector<double> elecEtaThresholds;
 
@@ -52,6 +50,17 @@ namespace flashgg {
         std::vector<std::string> ttHMVAVars_;
         void setupMVA(std::string File, std::vector<std::string> inVars);
         float mvaDiscriminants(std::map<std::string,float>) ;
+        std::vector<float> XttCalculation(std::vector<flashgg::Jet> allJetsCol, std::vector<flashgg::Jet> DiJet);
+        std::vector<edm::Ptr<flashgg::Electron> > filterElectrons( const std::vector<edm::Ptr<flashgg::Electron> > &electronPointers, 
+                                                                                     flashgg::DiPhotonCandidate dipho, 
+                                                                                     LorentzVector leadingJet, LorentzVector subleadingJet,
+                                                                                     double dRPhoLeptonThreshold, double dRJetLeptonThreshold);
+        std::vector<edm::Ptr<flashgg::Muon> > filterMuons( const std::vector<edm::Ptr<flashgg::Muon> > &muonPointers, 
+                                                                      flashgg::DiPhotonCandidate dipho, 
+                                                                      LorentzVector leadingJet, LorentzVector subleadingJet,
+                                                                      double dRPhoLeptonThreshold, double dRJetLeptonThreshold);
+        std::vector<float> varValues;
+        std::vector<float> getVariableValues() const;
 
     private:
         double mva_;
