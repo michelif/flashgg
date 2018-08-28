@@ -59,9 +59,10 @@ void DoubleHttHKiller::initializeMVAVariables(std::string weightFile, std::vecto
 void DoubleHttHKiller::setupMVA(std::string File, std::vector<std::string> inVars){
   TMVAReady = 1;
   Reader_ = new TMVA::Reader();
-  for (unsigned int iv = 0; iv < inVars.size(); iv++)
+  for (unsigned int iv = 0; iv < inVars.size(); iv++){
     mvaVars[inVars[iv]] = -10;
-
+    varValues.push_back(-10);
+  }
   orderedVars = inVars;
 
   std::cout << "[MVA::SetupMVA] MVA set with the following variables (attention, the order is important): " << std::endl;
@@ -98,8 +99,7 @@ float DoubleHttHKiller::mvaDiscriminants(std::map<std::string,float> params)
       return mvaDis;
     } else {
       mvaVars[it->first] = params[it->first];
-      std::cout<<"before eval------"<<it->first<<":"<< mvaVars[it->first]<<" "<<params[it->first]<<std::endl;//FIXME remove
-      varValues.push_back(mvaVars[it->first]);
+      varValues[vv]= mvaVars[it->first];
     }
   }
 

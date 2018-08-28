@@ -54,18 +54,19 @@ def variablesToDump(customize):
                   
              "HHttHMVA_sumEt := getttHMVAVariableValues()[0]",#FIXME add proper names of variables
              "HHttHMVA_MET := getttHMVAVariableValues()[1]",
-             "HHttHMVA_ := getttHMVAVariableValues()[2]",
-             "HHttHMVA_Xtt1 := getttHMVAVariableValues()[3]",
-             "HHttHMVA_dPhi1 := getttHMVAVariableValues()[4]",
-             "HHttHMVA_dPhi2 := getttHMVAVariableValues()[5]",
-             "HHttHMVA_fabs_CosThetaStar_CS := getttHMVAVariableValues()[6]",
-             "HHttHMVA_fabs_CosTheta_bb := getttHMVAVariableValues()[7]",
-             "HHttHMVA_njets8 := getttHMVAVariableValues()[8]",
-             "HHttHMVA_pte1 := getttHMVAVariableValues()[9]",
-             "HHttHMVA_pte2 := getttHMVAVariableValues()[10]",
-             "HHttHMVA_ptmu1 := getttHMVAVariableValues()[11]",
-             "HHttHMVA_ptmu2 := getttHMVAVariableValues()[12]",
-             "HHttHMVA_sumEt := getttHMVAVariableValues()[13]",
+             "HHttHMVA_dPhi1 := getttHMVAVariableValues()[2]",
+             "HHttHMVA_dPhi2 := getttHMVAVariableValues()[3]",
+             "HHttHMVA_PhoJetMinDr := getttHMVAVariableValues()[4]",
+             "HHttHMVA_njets8 := getttHMVAVariableValues()[5]",
+             "HHttHMVA_Xtt0 := getttHMVAVariableValues()[6]",
+             "HHttHMVA_Xtt1 := getttHMVAVariableValues()[7]",
+             "HHttHMVA_pte1 := getttHMVAVariableValues()[8]",
+             "HHttHMVA_pte2 := getttHMVAVariableValues()[9]",
+             "HHttHMVA_ptmu1 := getttHMVAVariableValues()[10]",
+             "HHttHMVA_ptmu2 := getttHMVAVariableValues()[11]",
+             "HHttHMVA_fabs_CosThetaStar_CS := getttHMVAVariableValues()[12]",
+             "HHttHMVA_fabs_CosTheta_bb := getttHMVAVariableValues()[13]",
+
              "HHttHMVA_mva := getttHMVA()"  
 
 

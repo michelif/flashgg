@@ -416,7 +416,6 @@ namespace flashgg {
                     tags->back().setTagTruth( edm::refToPtr( edm::Ref<vector<TagTruthBase> >( rTagTruth, 0 ) ) );                 
                 }
                 for ( std::map<std::string,float>::iterator it = tag_obj.tthKiller_.mvaVars.begin(); it != tag_obj.tthKiller_.mvaVars.end(); it++ ) { 
-                    std::cout<<"variable "<<it->first<<":"<<it->second<<std::endl;
                 }
             }
         }
