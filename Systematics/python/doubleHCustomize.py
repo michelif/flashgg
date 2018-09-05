@@ -1,6 +1,9 @@
 import FWCore.ParameterSet.Config as cms
 
 def variablesToDump(customize):
+    var_workspace = [
+             "Mjj := dijet().M()"
+    ]
     variables= [ "leadingJet_bDis := leadJet().bDiscriminator('pfCombinedInclusiveSecondaryVertexV2BJetTags')",#FIXME make the btag type configurable?
              "subleadingJet_bDis := subleadJet().bDiscriminator('pfCombinedInclusiveSecondaryVertexV2BJetTags')",
              "absCosThetaStar_CS := abs(getCosThetaStar_CS(6500))",#FIXME get energy from somewhere?
@@ -80,7 +83,9 @@ def variablesToDump(customize):
             "sigmaMJets := getSigmaMOverMJets()"
             ]
 
-    return variables
+    if customize.dumpWorkspace == False : return variables
+    else : return var_workspace
+
     
 
 

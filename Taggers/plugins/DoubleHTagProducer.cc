@@ -43,7 +43,7 @@ namespace flashgg {
         string systLabel_;
 
         double minLeadPhoPt_, minSubleadPhoPt_;
-        bool scalingPtCuts_, doPhotonId_, doMVAFlattening_;
+        bool scalingPtCuts_, doPhotonId_, doMVAFlattening_,doCategorization_;
         double photonIDCut_;
         double vetoConeSize_;         
         unsigned int doSigmaMDecorr_;
@@ -57,6 +57,9 @@ namespace flashgg {
         double minJetPt_;
         double maxJetEta_;
         vector<double>mjjBoundaries_;
+        vector<double>mjjBoundariesLower_;
+        vector<double>mjjBoundariesUpper_;
+
         std::string bTagType_;
         bool       useJetID_;
         string     JetIDLevel_;        
@@ -87,6 +90,8 @@ namespace flashgg {
         mjjBoundaries_ = iConfig.getParameter<vector<double > >( "MJJBoundaries" ); 
         mvaBoundaries_ = iConfig.getParameter<vector<double > >( "MVABoundaries" );
         mxBoundaries_ = iConfig.getParameter<vector<double > >( "MXBoundaries" );
+        mjjBoundariesLower_ = iConfig.getParameter<vector<double > >( "MJJBoundariesLower" ); 
+        mjjBoundariesUpper_ = iConfig.getParameter<vector<double > >( "MJJBoundariesUpper" ); 
 
         auto jetTags = iConfig.getParameter<std::vector<edm::InputTag> > ( "JetTags" ); 
         for( auto & tag : jetTags ) { jetTokens_.push_back( consumes<edm::View<flashgg::Jet> >( tag ) ); }
@@ -97,6 +102,7 @@ namespace flashgg {
         photonIDCut_ = iConfig.getParameter<double>("PhotonIDCut");
         
         doMVAFlattening_ = iConfig.getParameter<bool>("doMVAFlattening"); 
+        doCategorization_ = iConfig.getParameter<bool>("doCategorization");
         photonElectronVeto_=iConfig.getUntrackedParameter<std::vector<int > >("PhotonElectronVeto");
         
         if(doMVAFlattening_){
@@ -134,7 +140,9 @@ namespace flashgg {
         //// should return 0 if mva above all the numbers, 1 if below the first, ..., boundaries.size()-N if below the Nth, ...
         //this is for mva, then you have mx
         //FIXME dummy test
-        return 0;
+        if (!doCategorization_) { 
+            return 0;
+        }
         int mvaCat=-1;
         for( int n = 0 ; n < ( int )mvaBoundaries_.size() ; n++ ) {
             if( ( double )mvavalue > mvaBoundaries_[mvaBoundaries_.size() - n - 1] ) {
@@ -160,9 +168,9 @@ namespace flashgg {
         int cat=-1;
         cat = mvaCat*mxBoundaries_.size()+mxCat;
 
-        //the schema is like this:
-        //            "cat0 := MXbin0 * MVAcat0",
-        //            "cat1 := MXbin1 * MVAcat0",
+        //the schema is like this:(different from HHbbgg_ETH)
+        //            "cat0 := MXbin0 * MVAcat0",   #High MX, High MVA
+        //            "cat1 := MXbin1 * MVAcat0",   #High but lower MX , High MVA
         //            "cat2 := MXbin2 * MVAcat0",
         //            "cat3 := MXbin0 * MVAcat1",
         //            "cat4 := MXbin1 * MVAcat1",
@@ -304,6 +312,9 @@ namespace flashgg {
             tag_obj.includeWeights( *subleadJet );
 
             if (catnum>-1){
+                if (doCategorization_) {
+                    if (tag_obj.dijet().mass()<mjjBoundariesLower_[catnum] || tag_obj.dijet().mass()>mjjBoundariesUpper_[catnum]) continue;
+                }
                 tags->push_back( tag_obj );
                 // link mc-truth
                 if( ! evt.isRealData() ) {

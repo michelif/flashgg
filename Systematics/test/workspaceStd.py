@@ -48,6 +48,8 @@ elesystlabels = []
 musystlabels = []
 
 from flashgg.MetaData.JobConfig import customize
+customize.setDefault("maxEvents",-1)
+customize.setDefault("targetLumi",1.00e+3)
 customize.options.register('tthTagsOnly',
                            False,
                            VarParsing.VarParsing.multiplicity.singleton,
@@ -324,7 +326,8 @@ else:
 
 if customize.doubleHTagsOnly:
     variablesToUse = minimalVariables
-
+    if customize.processId == "Data":
+        variablesToUse = minimalNonSignalVariables
 
 print "--- Systematics  with independent collections ---"
 print systlabels
