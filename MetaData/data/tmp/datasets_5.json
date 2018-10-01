@@ -1,0 +1,12 @@
+{
+    "/DoubleEG/micheli-ReMiniAOD2016-DeepCSV-bRegression-prod-uAOD-300-11-g22a116d-v0-Run2016D-03Feb2017-v1-2b041be6125ec2be4bd16e5d7d6c47e9/USER": {
+        "files": [
+            {
+                "bad": true, 
+                "name": "/store/user/micheli/MicroAOD/ReMiniAOD2016-DeepCSV-bRegression/ReMiniAOD2016-DeepCSV-bRegression/prod-uAOD-300-11-g22a116d/DoubleEG/ReMiniAOD2016-DeepCSV-bRegression-prod-uAOD-300-11-g22a116d-v0-Run2016D-03Feb2017-v1/180928_153046/0000/myMicroAODOutputFile_378.root", 
+                "nevents": 27570
+            }
+        ], 
+        "vetted": true
+    }
+}
