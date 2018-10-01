@@ -241,9 +241,15 @@ if options.createCrabConfig:
     print rel
 #../../../Fall17_17Nov2017BCDEF_V6_DATA.db  ../../../Fall17_17Nov2017_V6_MC.db  ../../../QGL_cmssw8020_v2.db
 
-    Popen(['cp', '-p', rel+'/src/flashgg/Fall17_17Nov2017BCDEF_V6_DATA.db', './']) # Count on local copy from setup
-    Popen(['cp', '-p', rel+'/src/flashgg/QGL_cmssw8020_v2.db', './']) # Count on local copy from setup
-    Popen(['cp', '-p', rel+'/src/flashgg/Fall17_17Nov2017_V6_MC.db', './']) # Count on local copy from setup                                                                                                                          
+#for 2017
+#    Popen(['cp', '-p', rel+'/src/flashgg/Fall17_17Nov2017BCDEF_V6_DATA.db', './']) # Count on local copy from setup
+#    Popen(['cp', '-p', rel+'/src/flashgg/QGL_cmssw8020_v2.db', './']) # Count on local copy from setup
+#    Popen(['cp', '-p', rel+'/src/flashgg/Fall17_17Nov2017_V6_MC.db', './']) # Count on local copy from setup                                                                                                                          
+#for 2016
+    Popen(['cp', '-p', rel+'/src/flashgg/Systematics/data/JEC/Summer16_23Sep2016V4_MC.db', './'])
+    Popen(['cp', '-p', rel+'/src/flashgg/Systematics/data/JEC/Summer16_23Sep2016AllV4_DATA.db', './'])
+    Popen(['cp', '-p', rel+'/src/flashgg/MicroAOD/data/QGL_80X.db', './'])
+
     print ("Storing options into config.json")
     cfg = open("config.json","w+")
     cfg.write( dumpCfg(options) )

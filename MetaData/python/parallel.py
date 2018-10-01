@@ -576,7 +576,8 @@ class SGEJob(LsfJob):
         # domain-specific configuration
         if mydomain == "hep.ph.ic.ac.uk":
             return False
-        return True
+###FIXME        return True
+        return False
         
     def run(self,script):
 

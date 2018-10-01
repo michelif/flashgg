@@ -232,11 +232,19 @@ namespace flashgg {
                 //ptD of the jet
                 float sumWeight=0;
                 float sumPt=0;
+
+                if(debug_){
+                    std::cout<<"---------------------------------------    "<<std::endl;
+                    std::cout<<"event:"<<evt.id().event()<<" lumi:"<<evt.id().luminosityBlock()<<" run:"<<evt.id().run()<<" rho:"<<rho<<endl;
+                }
+                if(debug_)std::cout<<"jet Pt:"<<pjet->pt()<<" jet Eta:"<<pjet->eta()<<" jet Phi:"<<pjet->phi()<<std::endl;
                 for(const auto & d : pjet->daughterPtrVector()){
                     sumWeight+=(d->pt())*(d->pt());
                     sumPt+=d->pt();
+                    if(debug_) std::cout<<"d->pt:"<<d->pt()<<" sumWeight:"<<sumWeight<<" sumPt:"<<sumPt<<std::endl;
                 }
                 ptD = (sumWeight > 0 ? sqrt(sumWeight)/sumPt : 0);
+                if(debug_) std::cout<<"ptD:"<<ptD<<std::endl;
                 fjet.addUserFloat("ptD", ptD);                    
 
 
