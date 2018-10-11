@@ -138,7 +138,7 @@ namespace flashgg {
         cout <<" This sample was generated with the following PDFs : " << pdfidx <<endl;
         
         // --- Get min and max pdf index for 100 replicas
-        if (!isStandardSample_) { pdfidx = 0; } 
+        //FRANCESCO I don't think this is needed since he gets it correctly the sample        if (!isStandardSample_) { pdfidx = 0; } 
         pdfid_1 = boost::lexical_cast<std::string>(pdfidx + 1);
         pdfid_2 = boost::lexical_cast<std::string>(pdfidx + 100);
 
@@ -199,9 +199,11 @@ namespace flashgg {
         //            pdfvar = "PDF_variation NNPDF31_nnlo_hessian_pdfas";
         //        }
 
+
         if (!isStandardSample_){
             pdfvar = pdfset_;
             scalevar = "Central scale variation";
+            pdfnlovar = pdfset_;
             if (isThqSample_){
                 pdfvar = "NNPDF30_lo_as_0130.LHgrid";
                 alphavar = "NNPDF30_lo_as_0118.LHgrid";
@@ -229,15 +231,14 @@ namespace flashgg {
                 std::cout << " before pdf weights, pdfvar is " << pdfvar << std::endl;
 
                 // -- PDFs + alpha_s weights
-                if ( (weightgroupname1 && weightgroupname1.get().substr(0,pdfvar.length()) == pdfvar) || (weightgroupname2 && weightgroupname2.get().substr(0,pdfvar.length()) == pdfvar)) {
-                                    
-                    BOOST_FOREACH(boost::property_tree::ptree::value_type &vs,subtree)
-                        if (vs.first == "weight") {
-                            if (debug_) std::cout << "SCZ " << vs.first <<  "   " << vs.second.get<std::string>("<xmlattr>.id")  << "  " << vs.second.data()<< endl;
-                            
-                            string strwid  = vs.second.get<std::string>("<xmlattr>.id");
-                            string strw    = vs.second.data();
-
+                if ((weightgroupname1 && weightgroupname1.get().substr(0,pdfvar.length()) == pdfvar) || (weightgroupname2 && weightgroupname2.get().substr(0,scalevar.length()) == pdfvar)) {
+                        BOOST_FOREACH(boost::property_tree::ptree::value_type &vs,subtree)
+                            if (vs.first == "weight") {
+                                if (debug_) std::cout << "SCZ " << vs.first <<  "   " << vs.second.get<std::string>("<xmlattr>.id")  << "  " << vs.second.data()<< endl;
+                                
+                                string strwid  = vs.second.get<std::string>("<xmlattr>.id");
+                                string strw    = vs.second.data();
+                                
                             int id;
                             try {
                                 id = boost::lexical_cast<int>(strwid);
@@ -245,7 +246,7 @@ namespace flashgg {
                                 std::cout << "conversion failed" << std::endl;
                             }
                             vector<string> strs;
-
+                            std::cout<<strw<<std::endl;
                             if (isStandardSample_){
                                 boost::split(strs, strw, boost::is_any_of("="));
                             }
@@ -300,8 +301,8 @@ namespace flashgg {
                 }// end loop over alpha_s weights
                 
                 
-                // -- PDF NLO weights                                                                                                                                                                        
-                if ( isThqSample_ && ( (weightgroupname1 && weightgroupname1.get() == pdfnlovar)  || ( weightgroupname2 && weightgroupname2.get() == pdfnlovar) ) ) {
+                // -- PDF NLO weights                                                                                                                                                                    ///FRANCESCO    
+                if ( (isThqSample_ || !isStandardSample_)&& ( (weightgroupname1 && weightgroupname1.get() == pdfnlovar)  || ( weightgroupname2 && weightgroupname2.get() == pdfnlovar) ) ) {
 
                     BOOST_FOREACH(boost::property_tree::ptree::value_type &vs,subtree)
                         if (vs.first == "weight") {
@@ -413,8 +414,8 @@ namespace flashgg {
                 }
             }
              
-            // --- Get PDF NLO scale weights
-            if (isThqSample_){ 
+            // --- Get PDF NLO scale weights 
+            if (!isStandardSample_ || isThqSample_){ //FRANCESCO
                 for( unsigned int k = 0 ; k < PDFWeightProducer::pdfnlo_indices.size() ; k++ ) {
                     int id_k = PDFWeightProducer::pdfnlo_indices[k];
                     if ( id_i == id_k ) {
@@ -435,7 +436,7 @@ namespace flashgg {
                 cout << "Size of pdf nlo weights: " << PDFWeightProducer::pdfnlo_indices.size() << endl;
         }
 
-        if (!isThqSample_){
+        if (!isThqSample_ && isStandardSample_){ //FRANCESCO
             assert(inpdfweights.size() > 0);
             assert(PDFWeightProducer::scale_indices.size() == 9);
             assert(PDFWeightProducer::alpha_indices.size() == 2);
