@@ -1,0 +1,693 @@
+{
+    "/GluGluHToGG_M125_13TeV_amcatnloFXFX_pythia8/micheli-HHbbgg_addendum2016_20181113-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6_ext2-v1-6d8415083387f8318d1915af9ec80430/USER": {
+        "files": [
+            {
+                "bad": false, 
+                "events": 85775, 
+                "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_addendum2016_20181113/1/GluGluHToGG_M125_13TeV_amcatnloFXFX_pythia8/HHbbgg_addendum2016_20181113-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6_ext2-v1/181113_155524/0000/myMicroAODOutputFile_13.root", 
+                "nevents": 85775, 
+                "totEvents": 85775, 
+                "weights": 9437575.0
+            }, 
+            {
+                "bad": false, 
+                "events": 52866, 
+                "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_addendum2016_20181113/1/GluGluHToGG_M125_13TeV_amcatnloFXFX_pythia8/HHbbgg_addendum2016_20181113-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6_ext2-v1/181113_155524/0000/myMicroAODOutputFile_6.root", 
+                "nevents": 52866, 
+                "totEvents": 52866, 
+                "weights": 5845569.0
+            }, 
+            {
+                "bad": false, 
+                "events": 21271, 
+                "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_addendum2016_20181113/1/GluGluHToGG_M125_13TeV_amcatnloFXFX_pythia8/HHbbgg_addendum2016_20181113-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6_ext2-v1/181113_155524/0000/myMicroAODOutputFile_9.root", 
+                "nevents": 21271, 
+                "totEvents": 21271, 
+                "weights": 2329732.25
+            }, 
+            {
+                "bad": false, 
+                "events": 14297, 
+                "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_addendum2016_20181113/1/GluGluHToGG_M125_13TeV_amcatnloFXFX_pythia8/HHbbgg_addendum2016_20181113-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6_ext2-v1/181113_155524/0000/myMicroAODOutputFile_4.root", 
+                "nevents": 14297, 
+                "totEvents": 14297, 
+                "weights": 1600681.0
+            }, 
+            {
+                "bad": false, 
+                "events": 78091, 
+                "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_addendum2016_20181113/1/GluGluHToGG_M125_13TeV_amcatnloFXFX_pythia8/HHbbgg_addendum2016_20181113-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6_ext2-v1/181113_155524/0000/myMicroAODOutputFile_11.root", 
+                "nevents": 78091, 
+                "totEvents": 78091, 
+                "weights": 8633542.0
+            }, 
+            {
+                "bad": false, 
+                "events": 108096, 
+                "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_addendum2016_20181113/1/GluGluHToGG_M125_13TeV_amcatnloFXFX_pythia8/HHbbgg_addendum2016_20181113-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6_ext2-v1/181113_155524/0000/myMicroAODOutputFile_1.root", 
+                "nevents": 108096, 
+                "totEvents": 108096, 
+                "weights": 11791248.0
+            }, 
+            {
+                "bad": false, 
+                "events": 90833, 
+                "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_addendum2016_20181113/1/GluGluHToGG_M125_13TeV_amcatnloFXFX_pythia8/HHbbgg_addendum2016_20181113-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6_ext2-v1/181113_155524/0000/myMicroAODOutputFile_5.root", 
+                "nevents": 90833, 
+                "totEvents": 90833, 
+                "weights": 9957645.0
+            }, 
+            {
+                "bad": false, 
+                "events": 27788, 
+                "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_addendum2016_20181113/1/GluGluHToGG_M125_13TeV_amcatnloFXFX_pythia8/HHbbgg_addendum2016_20181113-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6_ext2-v1/181113_155524/0000/myMicroAODOutputFile_3.root", 
+                "nevents": 27788, 
+                "totEvents": 27788, 
+                "weights": 3039040.0
+            }, 
+            {
+                "bad": false, 
+                "events": 39475, 
+                "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_addendum2016_20181113/1/GluGluHToGG_M125_13TeV_amcatnloFXFX_pythia8/HHbbgg_addendum2016_20181113-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6_ext2-v1/181113_155524/0000/myMicroAODOutputFile_12.root", 
+                "nevents": 39475, 
+                "totEvents": 39475, 
+                "weights": 4321061.0
+            }, 
+            {
+                "bad": false, 
+                "events": 93302, 
+                "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_addendum2016_20181113/1/GluGluHToGG_M125_13TeV_amcatnloFXFX_pythia8/HHbbgg_addendum2016_20181113-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6_ext2-v1/181113_155524/0000/myMicroAODOutputFile_7.root", 
+                "nevents": 93302, 
+                "totEvents": 93302, 
+                "weights": 10229841.0
+            }, 
+            {
+                "bad": false, 
+                "events": 14680, 
+                "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_addendum2016_20181113/1/GluGluHToGG_M125_13TeV_amcatnloFXFX_pythia8/HHbbgg_addendum2016_20181113-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6_ext2-v1/181113_155524/0000/myMicroAODOutputFile_2.root", 
+                "nevents": 14680, 
+                "totEvents": 14680, 
+                "weights": 1593302.25
+            }, 
+            {
+                "bad": false, 
+                "events": 79702, 
+                "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_addendum2016_20181113/1/GluGluHToGG_M125_13TeV_amcatnloFXFX_pythia8/HHbbgg_addendum2016_20181113-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6_ext2-v1/181113_155524/0000/myMicroAODOutputFile_8.root", 
+                "nevents": 79702, 
+                "totEvents": 79702, 
+                "weights": 8721086.0
+            }, 
+            {
+                "bad": false, 
+                "events": 103208, 
+                "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_addendum2016_20181113/1/GluGluHToGG_M125_13TeV_amcatnloFXFX_pythia8/HHbbgg_addendum2016_20181113-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6_ext2-v1/181113_155524/0000/myMicroAODOutputFile_10.root", 
+                "nevents": 103208, 
+                "totEvents": 103208, 
+                "weights": 11344959.0
+            }
+        ], 
+        "vetted": true
+    }, 
+    "/VBFHHTo2B2G_CV_0_5_C2V_1_C3_1_13TeV-madgraph/micheli-HHbbgg_addendum2016_20181113-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1-6d8415083387f8318d1915af9ec80430/USER": {
+        "files": [
+            {
+                "bad": false, 
+                "events": 6018, 
+                "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_addendum2016_20181113/1/VBFHHTo2B2G_CV_0_5_C2V_1_C3_1_13TeV-madgraph/HHbbgg_addendum2016_20181113-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/181113_155743/0000/myMicroAODOutputFile_1.root", 
+                "nevents": 6018, 
+                "totEvents": 6018, 
+                "weights": 6018.0
+            }, 
+            {
+                "bad": false, 
+                "events": 1062, 
+                "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_addendum2016_20181113/1/VBFHHTo2B2G_CV_0_5_C2V_1_C3_1_13TeV-madgraph/HHbbgg_addendum2016_20181113-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/181113_155743/0000/myMicroAODOutputFile_3.root", 
+                "nevents": 1062, 
+                "totEvents": 1062, 
+                "weights": 1062.0
+            }, 
+            {
+                "bad": false, 
+                "events": 708, 
+                "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_addendum2016_20181113/1/VBFHHTo2B2G_CV_0_5_C2V_1_C3_1_13TeV-madgraph/HHbbgg_addendum2016_20181113-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/181113_155743/0000/myMicroAODOutputFile_13.root", 
+                "nevents": 708, 
+                "totEvents": 708, 
+                "weights": 708.0
+            }, 
+            {
+                "bad": false, 
+                "events": 2832, 
+                "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_addendum2016_20181113/1/VBFHHTo2B2G_CV_0_5_C2V_1_C3_1_13TeV-madgraph/HHbbgg_addendum2016_20181113-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/181113_155743/0000/myMicroAODOutputFile_6.root", 
+                "nevents": 2832, 
+                "totEvents": 2832, 
+                "weights": 2832.0
+            }, 
+            {
+                "bad": false, 
+                "events": 1062, 
+                "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_addendum2016_20181113/1/VBFHHTo2B2G_CV_0_5_C2V_1_C3_1_13TeV-madgraph/HHbbgg_addendum2016_20181113-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/181113_155743/0000/myMicroAODOutputFile_8.root", 
+                "nevents": 1062, 
+                "totEvents": 1062, 
+                "weights": 1062.0
+            }, 
+            {
+                "bad": false, 
+                "events": 4774, 
+                "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_addendum2016_20181113/1/VBFHHTo2B2G_CV_0_5_C2V_1_C3_1_13TeV-madgraph/HHbbgg_addendum2016_20181113-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/181113_155743/0000/myMicroAODOutputFile_10.root", 
+                "nevents": 4774, 
+                "totEvents": 4774, 
+                "weights": 4774.0
+            }, 
+            {
+                "bad": false, 
+                "events": 5664, 
+                "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_addendum2016_20181113/1/VBFHHTo2B2G_CV_0_5_C2V_1_C3_1_13TeV-madgraph/HHbbgg_addendum2016_20181113-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/181113_155743/0000/myMicroAODOutputFile_7.root", 
+                "nevents": 5664, 
+                "totEvents": 5664, 
+                "weights": 5664.0
+            }, 
+            {
+                "bad": false, 
+                "events": 708, 
+                "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_addendum2016_20181113/1/VBFHHTo2B2G_CV_0_5_C2V_1_C3_1_13TeV-madgraph/HHbbgg_addendum2016_20181113-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/181113_155743/0000/myMicroAODOutputFile_4.root", 
+                "nevents": 708, 
+                "totEvents": 708, 
+                "weights": 708.0
+            }, 
+            {
+                "bad": false, 
+                "events": 2832, 
+                "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_addendum2016_20181113/1/VBFHHTo2B2G_CV_0_5_C2V_1_C3_1_13TeV-madgraph/HHbbgg_addendum2016_20181113-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/181113_155743/0000/myMicroAODOutputFile_5.root", 
+                "nevents": 2832, 
+                "totEvents": 2832, 
+                "weights": 2832.0
+            }, 
+            {
+                "bad": false, 
+                "events": 7080, 
+                "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_addendum2016_20181113/1/VBFHHTo2B2G_CV_0_5_C2V_1_C3_1_13TeV-madgraph/HHbbgg_addendum2016_20181113-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/181113_155743/0000/myMicroAODOutputFile_12.root", 
+                "nevents": 7080, 
+                "totEvents": 7080, 
+                "weights": 7080.0
+            }, 
+            {
+                "bad": false, 
+                "events": 56640, 
+                "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_addendum2016_20181113/1/VBFHHTo2B2G_CV_0_5_C2V_1_C3_1_13TeV-madgraph/HHbbgg_addendum2016_20181113-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/181113_155743/0000/myMicroAODOutputFile_11.root", 
+                "nevents": 56640, 
+                "totEvents": 56640, 
+                "weights": 56640.0
+            }, 
+            {
+                "bad": false, 
+                "events": 4248, 
+                "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_addendum2016_20181113/1/VBFHHTo2B2G_CV_0_5_C2V_1_C3_1_13TeV-madgraph/HHbbgg_addendum2016_20181113-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/181113_155743/0000/myMicroAODOutputFile_2.root", 
+                "nevents": 4248, 
+                "totEvents": 4248, 
+                "weights": 4248.0
+            }, 
+            {
+                "bad": false, 
+                "events": 6372, 
+                "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_addendum2016_20181113/1/VBFHHTo2B2G_CV_0_5_C2V_1_C3_1_13TeV-madgraph/HHbbgg_addendum2016_20181113-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/181113_155743/0000/myMicroAODOutputFile_9.root", 
+                "nevents": 6372, 
+                "totEvents": 6372, 
+                "weights": 6372.0
+            }
+        ], 
+        "vetted": true
+    }, 
+    "/VBFHHTo2B2G_CV_1_5_C2V_1_C3_1_13TeV-madgraph/micheli-HHbbgg_addendum2016_20181113-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1-6d8415083387f8318d1915af9ec80430/USER": {
+        "files": [
+            {
+                "bad": false, 
+                "events": 16936, 
+                "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_addendum2016_20181113/1/VBFHHTo2B2G_CV_1_5_C2V_1_C3_1_13TeV-madgraph/HHbbgg_addendum2016_20181113-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/181113_155957/0000/myMicroAODOutputFile_13.root", 
+                "nevents": 16936, 
+                "totEvents": 16936, 
+                "weights": 16936.0
+            }, 
+            {
+                "bad": false, 
+                "events": 808, 
+                "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_addendum2016_20181113/1/VBFHHTo2B2G_CV_1_5_C2V_1_C3_1_13TeV-madgraph/HHbbgg_addendum2016_20181113-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/181113_155957/0000/myMicroAODOutputFile_1.root", 
+                "nevents": 808, 
+                "totEvents": 808, 
+                "weights": 808.0
+            }, 
+            {
+                "bad": false, 
+                "events": 2016, 
+                "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_addendum2016_20181113/1/VBFHHTo2B2G_CV_1_5_C2V_1_C3_1_13TeV-madgraph/HHbbgg_addendum2016_20181113-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/181113_155957/0000/myMicroAODOutputFile_3.root", 
+                "nevents": 2016, 
+                "totEvents": 2016, 
+                "weights": 2016.0
+            }, 
+            {
+                "bad": false, 
+                "events": 3928, 
+                "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_addendum2016_20181113/1/VBFHHTo2B2G_CV_1_5_C2V_1_C3_1_13TeV-madgraph/HHbbgg_addendum2016_20181113-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/181113_155957/0000/myMicroAODOutputFile_9.root", 
+                "nevents": 3928, 
+                "totEvents": 3928, 
+                "weights": 3928.0
+            }, 
+            {
+                "bad": false, 
+                "events": 5240, 
+                "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_addendum2016_20181113/1/VBFHHTo2B2G_CV_1_5_C2V_1_C3_1_13TeV-madgraph/HHbbgg_addendum2016_20181113-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/181113_155957/0000/myMicroAODOutputFile_6.root", 
+                "nevents": 5240, 
+                "totEvents": 5240, 
+                "weights": 5240.0
+            }, 
+            {
+                "bad": false, 
+                "events": 24096, 
+                "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_addendum2016_20181113/1/VBFHHTo2B2G_CV_1_5_C2V_1_C3_1_13TeV-madgraph/HHbbgg_addendum2016_20181113-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/181113_155957/0000/myMicroAODOutputFile_11.root", 
+                "nevents": 24096, 
+                "totEvents": 24096, 
+                "weights": 24096.0
+            }, 
+            {
+                "bad": false, 
+                "events": 7256, 
+                "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_addendum2016_20181113/1/VBFHHTo2B2G_CV_1_5_C2V_1_C3_1_13TeV-madgraph/HHbbgg_addendum2016_20181113-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/181113_155957/0000/myMicroAODOutputFile_5.root", 
+                "nevents": 7256, 
+                "totEvents": 7256, 
+                "weights": 7256.0
+            }, 
+            {
+                "bad": false, 
+                "events": 7560, 
+                "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_addendum2016_20181113/1/VBFHHTo2B2G_CV_1_5_C2V_1_C3_1_13TeV-madgraph/HHbbgg_addendum2016_20181113-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/181113_155957/0000/myMicroAODOutputFile_4.root", 
+                "nevents": 7560, 
+                "totEvents": 7560, 
+                "weights": 7560.0
+            }, 
+            {
+                "bad": false, 
+                "events": 8064, 
+                "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_addendum2016_20181113/1/VBFHHTo2B2G_CV_1_5_C2V_1_C3_1_13TeV-madgraph/HHbbgg_addendum2016_20181113-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/181113_155957/0000/myMicroAODOutputFile_2.root", 
+                "nevents": 8064, 
+                "totEvents": 8064, 
+                "weights": 8064.0
+            }, 
+            {
+                "bad": false, 
+                "events": 1816, 
+                "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_addendum2016_20181113/1/VBFHHTo2B2G_CV_1_5_C2V_1_C3_1_13TeV-madgraph/HHbbgg_addendum2016_20181113-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/181113_155957/0000/myMicroAODOutputFile_10.root", 
+                "nevents": 1816, 
+                "totEvents": 1816, 
+                "weights": 1816.0
+            }, 
+            {
+                "bad": false, 
+                "events": 808, 
+                "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_addendum2016_20181113/1/VBFHHTo2B2G_CV_1_5_C2V_1_C3_1_13TeV-madgraph/HHbbgg_addendum2016_20181113-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/181113_155957/0000/myMicroAODOutputFile_8.root", 
+                "nevents": 808, 
+                "totEvents": 808, 
+                "weights": 808.0
+            }, 
+            {
+                "bad": false, 
+                "events": 13912, 
+                "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_addendum2016_20181113/1/VBFHHTo2B2G_CV_1_5_C2V_1_C3_1_13TeV-madgraph/HHbbgg_addendum2016_20181113-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/181113_155957/0000/myMicroAODOutputFile_7.root", 
+                "nevents": 13912, 
+                "totEvents": 13912, 
+                "weights": 13912.0
+            }, 
+            {
+                "bad": false, 
+                "events": 7560, 
+                "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_addendum2016_20181113/1/VBFHHTo2B2G_CV_1_5_C2V_1_C3_1_13TeV-madgraph/HHbbgg_addendum2016_20181113-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/181113_155957/0000/myMicroAODOutputFile_12.root", 
+                "nevents": 7560, 
+                "totEvents": 7560, 
+                "weights": 7560.0
+            }
+        ], 
+        "vetted": true
+    }, 
+    "/VBFHHTo2B2G_CV_1_C2V_1_C3_0_13TeV-madgraph/micheli-HHbbgg_addendum2016_20181113-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1-6d8415083387f8318d1915af9ec80430/USER": {
+        "files": [
+            {
+                "bad": false, 
+                "events": 11500, 
+                "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_addendum2016_20181113/1/VBFHHTo2B2G_CV_1_C2V_1_C3_0_13TeV-madgraph/HHbbgg_addendum2016_20181113-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/181113_160146/0000/myMicroAODOutputFile_2.root", 
+                "nevents": 11500, 
+                "totEvents": 11500, 
+                "weights": 11500.0
+            }, 
+            {
+                "bad": false, 
+                "events": 14000, 
+                "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_addendum2016_20181113/1/VBFHHTo2B2G_CV_1_C2V_1_C3_0_13TeV-madgraph/HHbbgg_addendum2016_20181113-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/181113_160146/0000/myMicroAODOutputFile_5.root", 
+                "nevents": 14000, 
+                "totEvents": 14000, 
+                "weights": 14000.0
+            }, 
+            {
+                "bad": false, 
+                "events": 6800, 
+                "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_addendum2016_20181113/1/VBFHHTo2B2G_CV_1_C2V_1_C3_0_13TeV-madgraph/HHbbgg_addendum2016_20181113-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/181113_160146/0000/myMicroAODOutputFile_3.root", 
+                "nevents": 6800, 
+                "totEvents": 6800, 
+                "weights": 6800.0
+            }, 
+            {
+                "bad": false, 
+                "events": 19500, 
+                "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_addendum2016_20181113/1/VBFHHTo2B2G_CV_1_C2V_1_C3_0_13TeV-madgraph/HHbbgg_addendum2016_20181113-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/181113_160146/0000/myMicroAODOutputFile_6.root", 
+                "nevents": 19500, 
+                "totEvents": 19500, 
+                "weights": 19500.0
+            }, 
+            {
+                "bad": false, 
+                "events": 2500, 
+                "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_addendum2016_20181113/1/VBFHHTo2B2G_CV_1_C2V_1_C3_0_13TeV-madgraph/HHbbgg_addendum2016_20181113-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/181113_160146/0000/myMicroAODOutputFile_1.root", 
+                "nevents": 2500, 
+                "totEvents": 2500, 
+                "weights": 2500.0
+            }, 
+            {
+                "bad": false, 
+                "events": 2500, 
+                "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_addendum2016_20181113/1/VBFHHTo2B2G_CV_1_C2V_1_C3_0_13TeV-madgraph/HHbbgg_addendum2016_20181113-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/181113_160146/0000/myMicroAODOutputFile_9.root", 
+                "nevents": 2500, 
+                "totEvents": 2500, 
+                "weights": 2500.0
+            }, 
+            {
+                "bad": false, 
+                "events": 6000, 
+                "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_addendum2016_20181113/1/VBFHHTo2B2G_CV_1_C2V_1_C3_0_13TeV-madgraph/HHbbgg_addendum2016_20181113-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/181113_160146/0000/myMicroAODOutputFile_7.root", 
+                "nevents": 6000, 
+                "totEvents": 6000, 
+                "weights": 6000.0
+            }, 
+            {
+                "bad": false, 
+                "events": 6000, 
+                "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_addendum2016_20181113/1/VBFHHTo2B2G_CV_1_C2V_1_C3_0_13TeV-madgraph/HHbbgg_addendum2016_20181113-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/181113_160146/0000/myMicroAODOutputFile_8.root", 
+                "nevents": 6000, 
+                "totEvents": 6000, 
+                "weights": 6000.0
+            }, 
+            {
+                "bad": false, 
+                "events": 27500, 
+                "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_addendum2016_20181113/1/VBFHHTo2B2G_CV_1_C2V_1_C3_0_13TeV-madgraph/HHbbgg_addendum2016_20181113-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/181113_160146/0000/myMicroAODOutputFile_4.root", 
+                "nevents": 27500, 
+                "totEvents": 27500, 
+                "weights": 27500.0
+            }, 
+            {
+                "bad": false, 
+                "events": 1200, 
+                "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_addendum2016_20181113/1/VBFHHTo2B2G_CV_1_C2V_1_C3_0_13TeV-madgraph/HHbbgg_addendum2016_20181113-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/181113_160146/0000/myMicroAODOutputFile_10.root", 
+                "nevents": 1200, 
+                "totEvents": 1200, 
+                "weights": 1200.0
+            }
+        ], 
+        "vetted": true
+    }, 
+    "/VBFHHTo2B2G_CV_1_C2V_1_C3_1_13TeV-madgraph/micheli-HHbbgg_addendum2016_20181113-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1-6d8415083387f8318d1915af9ec80430/USER": {
+        "files": [
+            {
+                "bad": false, 
+                "events": 25094, 
+                "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_addendum2016_20181113/1/VBFHHTo2B2G_CV_1_C2V_1_C3_1_13TeV-madgraph/HHbbgg_addendum2016_20181113-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/181113_160341/0000/myMicroAODOutputFile_2.root", 
+                "nevents": 25094, 
+                "totEvents": 25094, 
+                "weights": 25094.0
+            }, 
+            {
+                "bad": false, 
+                "events": 30224, 
+                "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_addendum2016_20181113/1/VBFHHTo2B2G_CV_1_C2V_1_C3_1_13TeV-madgraph/HHbbgg_addendum2016_20181113-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/181113_160341/0000/myMicroAODOutputFile_3.root", 
+                "nevents": 30224, 
+                "totEvents": 30224, 
+                "weights": 30224.0
+            }, 
+            {
+                "bad": false, 
+                "events": 5943, 
+                "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_addendum2016_20181113/1/VBFHHTo2B2G_CV_1_C2V_1_C3_1_13TeV-madgraph/HHbbgg_addendum2016_20181113-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/181113_160341/0000/myMicroAODOutputFile_1.root", 
+                "nevents": 5943, 
+                "totEvents": 5943, 
+                "weights": 5943.0
+            }, 
+            {
+                "bad": false, 
+                "events": 5917, 
+                "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_addendum2016_20181113/1/VBFHHTo2B2G_CV_1_C2V_1_C3_1_13TeV-madgraph/HHbbgg_addendum2016_20181113-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/181113_160341/0000/myMicroAODOutputFile_5.root", 
+                "nevents": 5917, 
+                "totEvents": 5917, 
+                "weights": 5917.0
+            }, 
+            {
+                "bad": false, 
+                "events": 69403, 
+                "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_addendum2016_20181113/1/VBFHHTo2B2G_CV_1_C2V_1_C3_1_13TeV-madgraph/HHbbgg_addendum2016_20181113-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/181113_160341/0000/myMicroAODOutputFile_8.root", 
+                "nevents": 69403, 
+                "totEvents": 69403, 
+                "weights": 69403.0
+            }, 
+            {
+                "bad": false, 
+                "events": 26133, 
+                "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_addendum2016_20181113/1/VBFHHTo2B2G_CV_1_C2V_1_C3_1_13TeV-madgraph/HHbbgg_addendum2016_20181113-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/181113_160341/0000/myMicroAODOutputFile_10.root", 
+                "nevents": 26133, 
+                "totEvents": 26133, 
+                "weights": 26133.0
+            }, 
+            {
+                "bad": false, 
+                "events": 53144, 
+                "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_addendum2016_20181113/1/VBFHHTo2B2G_CV_1_C2V_1_C3_1_13TeV-madgraph/HHbbgg_addendum2016_20181113-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/181113_160341/0000/myMicroAODOutputFile_11.root", 
+                "nevents": 53144, 
+                "totEvents": 53144, 
+                "weights": 53144.0
+            }, 
+            {
+                "bad": false, 
+                "events": 14073, 
+                "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_addendum2016_20181113/1/VBFHHTo2B2G_CV_1_C2V_1_C3_1_13TeV-madgraph/HHbbgg_addendum2016_20181113-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/181113_160341/0000/myMicroAODOutputFile_6.root", 
+                "nevents": 14073, 
+                "totEvents": 14073, 
+                "weights": 14073.0
+            }, 
+            {
+                "bad": false, 
+                "events": 15868, 
+                "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_addendum2016_20181113/1/VBFHHTo2B2G_CV_1_C2V_1_C3_1_13TeV-madgraph/HHbbgg_addendum2016_20181113-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/181113_160341/0000/myMicroAODOutputFile_9.root", 
+                "nevents": 15868, 
+                "totEvents": 15868, 
+                "weights": 15868.0
+            }, 
+            {
+                "bad": false, 
+                "events": 5717, 
+                "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_addendum2016_20181113/1/VBFHHTo2B2G_CV_1_C2V_1_C3_1_13TeV-madgraph/HHbbgg_addendum2016_20181113-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/181113_160341/0000/myMicroAODOutputFile_4.root", 
+                "nevents": 5717, 
+                "totEvents": 5717, 
+                "weights": 5717.0
+            }, 
+            {
+                "bad": false, 
+                "events": 48484, 
+                "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_addendum2016_20181113/1/VBFHHTo2B2G_CV_1_C2V_1_C3_1_13TeV-madgraph/HHbbgg_addendum2016_20181113-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/181113_160341/0000/myMicroAODOutputFile_7.root", 
+                "nevents": 48484, 
+                "totEvents": 48484, 
+                "weights": 48484.0
+            }
+        ], 
+        "vetted": true
+    }, 
+    "/VBFHHTo2B2G_CV_1_C2V_1_C3_2_13TeV-madgraph/micheli-HHbbgg_addendum2016_20181113-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1-6d8415083387f8318d1915af9ec80430/USER": {
+        "files": [
+            {
+                "bad": false, 
+                "events": 6272, 
+                "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_addendum2016_20181113/1/VBFHHTo2B2G_CV_1_C2V_1_C3_2_13TeV-madgraph/HHbbgg_addendum2016_20181113-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/181113_160535/0000/myMicroAODOutputFile_6.root", 
+                "nevents": 6272, 
+                "totEvents": 6272, 
+                "weights": 6272.0
+            }, 
+            {
+                "bad": false, 
+                "events": 9408, 
+                "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_addendum2016_20181113/1/VBFHHTo2B2G_CV_1_C2V_1_C3_2_13TeV-madgraph/HHbbgg_addendum2016_20181113-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/181113_160535/0000/myMicroAODOutputFile_7.root", 
+                "nevents": 9408, 
+                "totEvents": 9408, 
+                "weights": 9408.0
+            }, 
+            {
+                "bad": false, 
+                "events": 21952, 
+                "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_addendum2016_20181113/1/VBFHHTo2B2G_CV_1_C2V_1_C3_2_13TeV-madgraph/HHbbgg_addendum2016_20181113-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/181113_160535/0000/myMicroAODOutputFile_1.root", 
+                "nevents": 21952, 
+                "totEvents": 21952, 
+                "weights": 21952.0
+            }, 
+            {
+                "bad": false, 
+                "events": 5328, 
+                "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_addendum2016_20181113/1/VBFHHTo2B2G_CV_1_C2V_1_C3_2_13TeV-madgraph/HHbbgg_addendum2016_20181113-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/181113_160535/0000/myMicroAODOutputFile_2.root", 
+                "nevents": 5328, 
+                "totEvents": 5328, 
+                "weights": 5328.0
+            }, 
+            {
+                "bad": false, 
+                "events": 17272, 
+                "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_addendum2016_20181113/1/VBFHHTo2B2G_CV_1_C2V_1_C3_2_13TeV-madgraph/HHbbgg_addendum2016_20181113-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/181113_160535/0000/myMicroAODOutputFile_3.root", 
+                "nevents": 17272, 
+                "totEvents": 17272, 
+                "weights": 17272.0
+            }, 
+            {
+                "bad": false, 
+                "events": 2936, 
+                "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_addendum2016_20181113/1/VBFHHTo2B2G_CV_1_C2V_1_C3_2_13TeV-madgraph/HHbbgg_addendum2016_20181113-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/181113_160535/0000/myMicroAODOutputFile_10.root", 
+                "nevents": 2936, 
+                "totEvents": 2936, 
+                "weights": 2936.0
+            }, 
+            {
+                "bad": false, 
+                "events": 7816, 
+                "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_addendum2016_20181113/1/VBFHHTo2B2G_CV_1_C2V_1_C3_2_13TeV-madgraph/HHbbgg_addendum2016_20181113-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/181113_160535/0000/myMicroAODOutputFile_9.root", 
+                "nevents": 7816, 
+                "totEvents": 7816, 
+                "weights": 7816.0
+            }, 
+            {
+                "bad": false, 
+                "events": 11648, 
+                "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_addendum2016_20181113/1/VBFHHTo2B2G_CV_1_C2V_1_C3_2_13TeV-madgraph/HHbbgg_addendum2016_20181113-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/181113_160535/0000/myMicroAODOutputFile_8.root", 
+                "nevents": 11648, 
+                "totEvents": 11648, 
+                "weights": 11648.0
+            }, 
+            {
+                "bad": false, 
+                "events": 9952, 
+                "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_addendum2016_20181113/1/VBFHHTo2B2G_CV_1_C2V_1_C3_2_13TeV-madgraph/HHbbgg_addendum2016_20181113-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/181113_160535/0000/myMicroAODOutputFile_4.root", 
+                "nevents": 9952, 
+                "totEvents": 9952, 
+                "weights": 9952.0
+            }, 
+            {
+                "bad": false, 
+                "events": 7416, 
+                "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_addendum2016_20181113/1/VBFHHTo2B2G_CV_1_C2V_1_C3_2_13TeV-madgraph/HHbbgg_addendum2016_20181113-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/181113_160535/0000/myMicroAODOutputFile_5.root", 
+                "nevents": 7416, 
+                "totEvents": 7416, 
+                "weights": 7416.0
+            }
+        ], 
+        "vetted": true
+    }, 
+    "/VBFHHTo2B2G_CV_1_C2V_2_C3_1_13TeV-madgraph/micheli-HHbbgg_addendum2016_20181113-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1-6d8415083387f8318d1915af9ec80430/USER": {
+        "files": [
+            {
+                "bad": false, 
+                "events": 5685, 
+                "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_addendum2016_20181113/1/VBFHHTo2B2G_CV_1_C2V_2_C3_1_13TeV-madgraph/HHbbgg_addendum2016_20181113-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/181113_160746/0000/myMicroAODOutputFile_6.root", 
+                "nevents": 5685, 
+                "totEvents": 5685, 
+                "weights": 5685.0
+            }, 
+            {
+                "bad": false, 
+                "events": 35510, 
+                "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_addendum2016_20181113/1/VBFHHTo2B2G_CV_1_C2V_2_C3_1_13TeV-madgraph/HHbbgg_addendum2016_20181113-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/181113_160746/0000/myMicroAODOutputFile_8.root", 
+                "nevents": 35510, 
+                "totEvents": 35510, 
+                "weights": 35510.0
+            }, 
+            {
+                "bad": false, 
+                "events": 1740, 
+                "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_addendum2016_20181113/1/VBFHHTo2B2G_CV_1_C2V_2_C3_1_13TeV-madgraph/HHbbgg_addendum2016_20181113-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/181113_160746/0000/myMicroAODOutputFile_1.root", 
+                "nevents": 1740, 
+                "totEvents": 1740, 
+                "weights": 1740.0
+            }, 
+            {
+                "bad": false, 
+                "events": 4815, 
+                "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_addendum2016_20181113/1/VBFHHTo2B2G_CV_1_C2V_2_C3_1_13TeV-madgraph/HHbbgg_addendum2016_20181113-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/181113_160746/0000/myMicroAODOutputFile_10.root", 
+                "nevents": 4815, 
+                "totEvents": 4815, 
+                "weights": 4815.0
+            }, 
+            {
+                "bad": false, 
+                "events": 9295, 
+                "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_addendum2016_20181113/1/VBFHHTo2B2G_CV_1_C2V_2_C3_1_13TeV-madgraph/HHbbgg_addendum2016_20181113-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/181113_160746/0000/myMicroAODOutputFile_9.root", 
+                "nevents": 9295, 
+                "totEvents": 9295, 
+                "weights": 9295.0
+            }, 
+            {
+                "bad": false, 
+                "events": 8360, 
+                "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_addendum2016_20181113/1/VBFHHTo2B2G_CV_1_C2V_2_C3_1_13TeV-madgraph/HHbbgg_addendum2016_20181113-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/181113_160746/0000/myMicroAODOutputFile_3.root", 
+                "nevents": 8360, 
+                "totEvents": 8360, 
+                "weights": 8360.0
+            }, 
+            {
+                "bad": false, 
+                "events": 13330, 
+                "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_addendum2016_20181113/1/VBFHHTo2B2G_CV_1_C2V_2_C3_1_13TeV-madgraph/HHbbgg_addendum2016_20181113-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/181113_160746/0000/myMicroAODOutputFile_11.root", 
+                "nevents": 13330, 
+                "totEvents": 13330, 
+                "weights": 13330.0
+            }, 
+            {
+                "bad": false, 
+                "events": 4280, 
+                "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_addendum2016_20181113/1/VBFHHTo2B2G_CV_1_C2V_2_C3_1_13TeV-madgraph/HHbbgg_addendum2016_20181113-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/181113_160746/0000/myMicroAODOutputFile_2.root", 
+                "nevents": 4280, 
+                "totEvents": 4280, 
+                "weights": 4280.0
+            }, 
+            {
+                "bad": false, 
+                "events": 3410, 
+                "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_addendum2016_20181113/1/VBFHHTo2B2G_CV_1_C2V_2_C3_1_13TeV-madgraph/HHbbgg_addendum2016_20181113-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/181113_160746/0000/myMicroAODOutputFile_7.root", 
+                "nevents": 3410, 
+                "totEvents": 3410, 
+                "weights": 3410.0
+            }, 
+            {
+                "bad": false, 
+                "events": 735, 
+                "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_addendum2016_20181113/1/VBFHHTo2B2G_CV_1_C2V_2_C3_1_13TeV-madgraph/HHbbgg_addendum2016_20181113-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/181113_160746/0000/myMicroAODOutputFile_12.root", 
+                "nevents": 735, 
+                "totEvents": 735, 
+                "weights": 735.0
+            }, 
+            {
+                "bad": false, 
+                "events": 4615, 
+                "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_addendum2016_20181113/1/VBFHHTo2B2G_CV_1_C2V_2_C3_1_13TeV-madgraph/HHbbgg_addendum2016_20181113-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/181113_160746/0000/myMicroAODOutputFile_4.root", 
+                "nevents": 4615, 
+                "totEvents": 4615, 
+                "weights": 4615.0
+            }, 
+            {
+                "bad": false, 
+                "events": 7490, 
+                "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_addendum2016_20181113/1/VBFHHTo2B2G_CV_1_C2V_2_C3_1_13TeV-madgraph/HHbbgg_addendum2016_20181113-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/181113_160746/0000/myMicroAODOutputFile_5.root", 
+                "nevents": 7490, 
+                "totEvents": 7490, 
+                "weights": 7490.0
+            }
+        ], 
+        "vetted": true
+    }
+}
