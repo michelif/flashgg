@@ -32,6 +32,22 @@
                 "nevents": 56000, 
                 "totEvents": 56000, 
                 "weights": 55998.0
+            }, 
+            {
+                "bad": false, 
+                "events": 88000, 
+                "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_Signal_SM_20181120/1/GluGluToHHTo2B2G_node_SM_13TeV-madgraph/HHbbgg_Signal_SM_20181120-1-v0-RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v2/181120_113738/0000/myMicroAODOutputFile_4.root", 
+                "nevents": 88000, 
+                "totEvents": 88000, 
+                "weights": 87990.0
+            }, 
+            {
+                "bad": false, 
+                "events": 62000, 
+                "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_Signal_SM_20181120/1/GluGluToHHTo2B2G_node_SM_13TeV-madgraph/HHbbgg_Signal_SM_20181120-1-v0-RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v2/181120_113738/0000/myMicroAODOutputFile_6.root", 
+                "nevents": 62000, 
+                "totEvents": 62000, 
+                "weights": 62000.0
             }
         ], 
         "vetted": true
