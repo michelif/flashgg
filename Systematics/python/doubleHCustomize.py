@@ -174,6 +174,8 @@ def customizeTagSequence(customize,process):
         process.flashggTagSequence.remove(process.flashggVHHadronicTag)
         process.flashggTagSequence.remove(process.flashggVBFMVA)
         process.flashggTagSequence.remove(process.flashggVBFDiPhoDiJetMVA)
+        process.flashggTagSequence.remove(process.flashggTTHDiLeptonTag)
+    
 
         process.flashggTagSequence.replace(process.flashggUntagged, process.flashggDoubleHTagSequence)   
 

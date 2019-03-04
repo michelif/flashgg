@@ -28,3 +28,8 @@ AutoDict_*
 
 # This is a symlink created by setup.sh
 DataFormats/src/classes_def.xml
+
+#Fall17_17Nov2017BCDEF_V6_DATA.db
+#Fall17_17Nov2017_V6_MC.db
+#QGL_cmssw8020_v2.db
+#Taggers/src/LeptonSelection.cc.bak

@@ -19,12 +19,12 @@ MVAscalingValue=cms.double(1.)#scale MVA output before the cumulative transforma
 if year == "2016":
     year_norm = 0
     jetPUID = 'Loose'
-    weightsFile="flashgg/Taggers/data/HHTagger/training_with_10_12_2018_commonTraining_2016.weights.xml", 
+    weightsFile="flashgg/Taggers/data/HHTagger/2016_training_Mjj.xml"
     MVAscalingValue=1.
 elif year == "2017":
     year_norm = 1
     jetPUID = 'Tight2017'
-    weightsFile="flashgg/Taggers/data/HHTagger/training_with_10_12_2018_commonTraining_2017.weights.xml", 
+    weightsFile="flashgg/Taggers/data/HHTagger/2017_training_Mjj.xml" 
     MVAscalingValue=1.011026
 
 
@@ -144,6 +144,7 @@ cfgTools.addVariables(flashggDoubleHTag.MVAConfig.variables,
                       # here the syntax is VarNameInTMVA := expression
                       [#"leadingJet_bDis := leadJet().bDiscriminator('pfCombinedInclusiveSecondaryVertexV2BJetTags')",#FIXME make the btag type configurable?
                        #"subleadingJet_bDis := subleadJet().bDiscriminator('pfCombinedInclusiveSecondaryVertexV2BJetTags')",
+                       "Mjj := dijet().M()",
                        "leadingJet_DeepCSV := leadJet().bDiscriminator('pfDeepCSVJetTags:probb')+leadJet().bDiscriminator('pfDeepCSVJetTags:probbb')",#FIXME make the btag type configurable?
                        "subleadingJet_DeepCSV := subleadJet().bDiscriminator('pfDeepCSVJetTags:probb')+subleadJet().bDiscriminator('pfDeepCSVJetTags:probbb')",
                        "absCosThetaStar_CS := abs(getCosThetaStar_CS_old(6500))",#FIXME get energy from somewhere?

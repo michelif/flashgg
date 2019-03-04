@@ -11,5 +11,5 @@
             "/DoubleEG/micheli-ReMiniAOD2016-DeepCSV-bRegression-prod-uAOD-300-11-g22a116d-v0-Run2016H-03Feb2017_ver3-v1-51bf6221d3e1b7cbdcdef62aa002ceaa/USER"
         ]
    },
-	"cmdLine" : "campaign=ReMiniAOD2016-DeepCSV-bRegression_2 targetLumi=35.9e+3 processId=Data processType=data lumiMask=/shome/nchernya/CMSSW_9_4_9/src/flashgg/MetaData/work/jsons/Cert_271036-284044_13TeV_23Sep2016ReReco_Collisions16_JSON.txt"
+	"cmdLine" : "campaign=ReMiniAOD2016-DeepCSV-bRegression_2 targetLumi=35.9e+3 processId=Data processType=data lumiMask=/t3home/micheli/flashgg_20190226/CMSSW_9_4_9/src/flashgg/MetaData/work/jsons/Cert_271036-284044_13TeV_23Sep2016ReReco_Collisions16_JSON.txt"
 }
