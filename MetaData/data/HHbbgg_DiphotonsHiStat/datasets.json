@@ -2,969 +2,1934 @@
     "/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/micheli-HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1-6d8415083387f8318d1915af9ec80430/USER": {
         "files": [
             {
+                "bad": false, 
+                "events": 194051, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_196.root", 
-                "nevents": 194051
+                "nevents": 194051, 
+                "totEvents": 194051, 
+                "weights": 91655.21875
             }, 
             {
+                "bad": false, 
+                "events": 113197, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_24.root", 
-                "nevents": 113197
+                "nevents": 113197, 
+                "totEvents": 113197, 
+                "weights": 53633.1015625
             }, 
             {
+                "bad": false, 
+                "events": 194678, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_127.root", 
-                "nevents": 194678
+                "nevents": 194678, 
+                "totEvents": 194678, 
+                "weights": 92127.765625
             }, 
             {
+                "bad": false, 
+                "events": 136590, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_210.root", 
-                "nevents": 136590
+                "nevents": 136590, 
+                "totEvents": 136590, 
+                "weights": 64647.90234375
             }, 
             {
+                "bad": false, 
+                "events": 203942, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_245.root", 
-                "nevents": 203942
+                "nevents": 203942, 
+                "totEvents": 203942, 
+                "weights": 96567.0234375
             }, 
             {
+                "bad": false, 
+                "events": 218544, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_150.root", 
-                "nevents": 218544
+                "nevents": 218544, 
+                "totEvents": 218544, 
+                "weights": 103424.75
             }, 
             {
+                "bad": false, 
+                "events": 231414, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_45.root", 
-                "nevents": 231414
+                "nevents": 231414, 
+                "totEvents": 231414, 
+                "weights": 109611.2421875
             }, 
             {
+                "bad": false, 
+                "events": 138944, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_251.root", 
-                "nevents": 138944
+                "nevents": 138944, 
+                "totEvents": 138944, 
+                "weights": 65673.2265625
             }, 
             {
+                "bad": false, 
+                "events": 254338, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_213.root", 
-                "nevents": 254338
+                "nevents": 254338, 
+                "totEvents": 254338, 
+                "weights": 120319.5625
             }, 
             {
+                "bad": false, 
+                "events": 177093, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_80.root", 
-                "nevents": 177093
+                "nevents": 177093, 
+                "totEvents": 177093, 
+                "weights": 83641.1640625
             }, 
             {
+                "bad": false, 
+                "events": 187613, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_242.root", 
-                "nevents": 187613
+                "nevents": 187613, 
+                "totEvents": 187613, 
+                "weights": 88997.6875
             }, 
             {
+                "bad": false, 
+                "events": 209749, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_36.root", 
-                "nevents": 209749
+                "nevents": 209749, 
+                "totEvents": 209749, 
+                "weights": 99280.7734375
             }, 
             {
+                "bad": false, 
+                "events": 185573, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_155.root", 
-                "nevents": 185573
+                "nevents": 185573, 
+                "totEvents": 185573, 
+                "weights": 87863.3671875
             }, 
             {
+                "bad": false, 
+                "events": 138788, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_110.root", 
-                "nevents": 138788
+                "nevents": 138788, 
+                "totEvents": 138788, 
+                "weights": 65535.95703125
             }, 
             {
+                "bad": false, 
+                "events": 152604, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_105.root", 
-                "nevents": 152604
+                "nevents": 152604, 
+                "totEvents": 152604, 
+                "weights": 72164.3984375
             }, 
             {
+                "bad": false, 
+                "events": 219954, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_56.root", 
-                "nevents": 219954
+                "nevents": 219954, 
+                "totEvents": 219954, 
+                "weights": 103972.3359375
             }, 
             {
+                "bad": false, 
+                "events": 149933, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_199.root", 
-                "nevents": 149933
+                "nevents": 149933, 
+                "totEvents": 149933, 
+                "weights": 70873.6171875
             }, 
             {
+                "bad": false, 
+                "events": 138787, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_114.root", 
-                "nevents": 138787
+                "nevents": 138787, 
+                "totEvents": 138787, 
+                "weights": 65655.90625
             }, 
             {
+                "bad": false, 
+                "events": 248844, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_198.root", 
-                "nevents": 248844
+                "nevents": 248844, 
+                "totEvents": 248844, 
+                "weights": 117716.46875
             }, 
             {
+                "bad": false, 
+                "events": 168774, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_19.root", 
-                "nevents": 168774
+                "nevents": 168774, 
+                "totEvents": 168774, 
+                "weights": 79869.3828125
             }, 
             {
+                "bad": false, 
+                "events": 172857, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_20.root", 
-                "nevents": 172857
+                "nevents": 172857, 
+                "totEvents": 172857, 
+                "weights": 81656.453125
             }, 
             {
+                "bad": false, 
+                "events": 147423, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_252.root", 
-                "nevents": 147423
+                "nevents": 147423, 
+                "totEvents": 147423, 
+                "weights": 69833.4296875
             }, 
             {
+                "bad": false, 
+                "events": 258106, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_43.root", 
-                "nevents": 258106
+                "nevents": 258106, 
+                "totEvents": 258106, 
+                "weights": 122463.1015625
             }, 
             {
+                "bad": false, 
+                "events": 98439, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_115.root", 
-                "nevents": 98439
+                "nevents": 98439, 
+                "totEvents": 98439, 
+                "weights": 46459.9140625
             }, 
             {
+                "bad": false, 
+                "events": 219956, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_169.root", 
-                "nevents": 219956
+                "nevents": 219956, 
+                "totEvents": 219956, 
+                "weights": 104075.3046875
             }, 
             {
+                "bad": false, 
+                "events": 112412, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_83.root", 
-                "nevents": 112412
+                "nevents": 112412, 
+                "totEvents": 112412, 
+                "weights": 53055.16796875
             }, 
             {
+                "bad": false, 
+                "events": 132350, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_51.root", 
-                "nevents": 132350
+                "nevents": 132350, 
+                "totEvents": 132350, 
+                "weights": 62558.01171875
             }, 
             {
+                "bad": false, 
+                "events": 119791, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_119.root", 
-                "nevents": 119791
+                "nevents": 119791, 
+                "totEvents": 119791, 
+                "weights": 56495.80078125
             }, 
             {
+                "bad": false, 
+                "events": 103620, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_112.root", 
-                "nevents": 103620
+                "nevents": 103620, 
+                "totEvents": 103620, 
+                "weights": 48878.8046875
             }, 
             {
+                "bad": false, 
+                "events": 153389, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_238.root", 
-                "nevents": 153389
+                "nevents": 153389, 
+                "totEvents": 153389, 
+                "weights": 72890.1328125
             }, 
             {
+                "bad": false, 
+                "events": 40820, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_111.root", 
-                "nevents": 40820
+                "nevents": 40820, 
+                "totEvents": 40820, 
+                "weights": 19239.3046875
             }, 
             {
+                "bad": false, 
+                "events": 132193, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_2.root", 
-                "nevents": 132193
+                "nevents": 132193, 
+                "totEvents": 132193, 
+                "weights": 62438.30078125
             }, 
             {
+                "bad": false, 
+                "events": 104089, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_157.root", 
-                "nevents": 104089
+                "nevents": 104089, 
+                "totEvents": 104089, 
+                "weights": 49235.3828125
             }, 
             {
+                "bad": false, 
+                "events": 157000, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_175.root", 
-                "nevents": 157000
+                "nevents": 157000, 
+                "totEvents": 157000, 
+                "weights": 74087.9921875
             }, 
             {
+                "bad": false, 
+                "events": 129681, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_73.root", 
-                "nevents": 129681
+                "nevents": 129681, 
+                "totEvents": 129681, 
+                "weights": 61095.3203125
             }, 
             {
+                "bad": false, 
+                "events": 161396, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_31.root", 
-                "nevents": 161396
+                "nevents": 161396, 
+                "totEvents": 161396, 
+                "weights": 76369.4296875
             }, 
             {
+                "bad": false, 
+                "events": 113825, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_108.root", 
-                "nevents": 113825
+                "nevents": 113825, 
+                "totEvents": 113825, 
+                "weights": 53886.42578125
             }, 
             {
+                "bad": false, 
+                "events": 182904, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_137.root", 
-                "nevents": 182904
+                "nevents": 182904, 
+                "totEvents": 182904, 
+                "weights": 86437.3046875
             }, 
             {
+                "bad": false, 
+                "events": 176624, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_239.root", 
-                "nevents": 176624
+                "nevents": 176624, 
+                "totEvents": 176624, 
+                "weights": 83359.6015625
             }, 
             {
+                "bad": false, 
+                "events": 234087, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_87.root", 
-                "nevents": 234087
+                "nevents": 234087, 
+                "totEvents": 234087, 
+                "weights": 110806.59375
             }, 
             {
+                "bad": false, 
+                "events": 187613, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_71.root", 
-                "nevents": 187613
+                "nevents": 187613, 
+                "totEvents": 187613, 
+                "weights": 88708.46875
             }, 
             {
+                "bad": false, 
+                "events": 185731, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_181.root", 
-                "nevents": 185731
+                "nevents": 185731, 
+                "totEvents": 185731, 
+                "weights": 88010.125
             }, 
             {
+                "bad": false, 
+                "events": 296508, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_164.root", 
-                "nevents": 296508
+                "nevents": 296508, 
+                "totEvents": 296508, 
+                "weights": 140173.953125
             }, 
             {
+                "bad": false, 
+                "events": 268780, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_75.root", 
-                "nevents": 268780
+                "nevents": 268780, 
+                "totEvents": 268780, 
+                "weights": 126825.0078125
             }, 
             {
+                "bad": false, 
+                "events": 221367, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_135.root", 
-                "nevents": 221367
+                "nevents": 221367, 
+                "totEvents": 221367, 
+                "weights": 104698.6015625
             }, 
             {
+                "bad": false, 
+                "events": 262818, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_183.root", 
-                "nevents": 262818
+                "nevents": 262818, 
+                "totEvents": 262818, 
+                "weights": 124231.4453125
             }, 
             {
+                "bad": false, 
+                "events": 129681, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_62.root", 
-                "nevents": 129681
+                "nevents": 129681, 
+                "totEvents": 129681, 
+                "weights": 61379.51171875
             }, 
             {
+                "bad": false, 
+                "events": 142867, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_107.root", 
-                "nevents": 142867
+                "nevents": 142867, 
+                "totEvents": 142867, 
+                "weights": 67268.890625
             }, 
             {
+                "bad": false, 
+                "events": 135332, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_184.root", 
-                "nevents": 135332
+                "nevents": 135332, 
+                "totEvents": 135332, 
+                "weights": 64034.29296875
             }, 
             {
+                "bad": false, 
+                "events": 247900, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_130.root", 
-                "nevents": 247900
+                "nevents": 247900, 
+                "totEvents": 247900, 
+                "weights": 117029.875
             }, 
             {
+                "bad": false, 
+                "events": 75201, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_240.root", 
-                "nevents": 75201
+                "nevents": 75201, 
+                "totEvents": 75201, 
+                "weights": 35500.4140625
             }, 
             {
+                "bad": false, 
+                "events": 192478, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_228.root", 
-                "nevents": 192478
+                "nevents": 192478, 
+                "totEvents": 192478, 
+                "weights": 90957.4609375
             }, 
             {
+                "bad": false, 
+                "events": 166260, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_236.root", 
-                "nevents": 166260
+                "nevents": 166260, 
+                "totEvents": 166260, 
+                "weights": 78663.7578125
             }, 
             {
+                "bad": false, 
+                "events": 168143, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_250.root", 
-                "nevents": 168143
+                "nevents": 168143, 
+                "totEvents": 168143, 
+                "weights": 79392.1484375
             }, 
             {
+                "bad": false, 
+                "events": 201587, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_122.root", 
-                "nevents": 201587
+                "nevents": 201587, 
+                "totEvents": 201587, 
+                "weights": 95429.0
             }, 
             {
+                "bad": false, 
+                "events": 163594, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_232.root", 
-                "nevents": 163594
+                "nevents": 163594, 
+                "totEvents": 163594, 
+                "weights": 77426.1015625
             }, 
             {
+                "bad": false, 
+                "events": 248844, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_209.root", 
-                "nevents": 248844
+                "nevents": 248844, 
+                "totEvents": 248844, 
+                "weights": 117718.5546875
             }, 
             {
+                "bad": false, 
+                "events": 78971, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_109.root", 
-                "nevents": 78971
+                "nevents": 78971, 
+                "totEvents": 78971, 
+                "weights": 37380.20703125
             }, 
             {
+                "bad": false, 
+                "events": 192796, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_28.root", 
-                "nevents": 192796
+                "nevents": 192796, 
+                "totEvents": 192796, 
+                "weights": 91062.1640625
             }, 
             {
+                "bad": false, 
+                "events": 175681, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_216.root", 
-                "nevents": 175681
+                "nevents": 175681, 
+                "totEvents": 175681, 
+                "weights": 83234.5625
             }, 
             {
+                "bad": false, 
+                "events": 140044, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_220.root", 
-                "nevents": 140044
+                "nevents": 140044, 
+                "totEvents": 140044, 
+                "weights": 66374.0234375
             }, 
             {
+                "bad": false, 
+                "events": 113197, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_118.root", 
-                "nevents": 113197
+                "nevents": 113197, 
+                "totEvents": 113197, 
+                "weights": 53508.65625
             }, 
             {
+                "bad": false, 
+                "events": 202686, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_243.root", 
-                "nevents": 202686
+                "nevents": 202686, 
+                "totEvents": 202686, 
+                "weights": 95699.609375
             }, 
             {
+                "bad": false, 
+                "events": 122303, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_117.root", 
-                "nevents": 122303
+                "nevents": 122303, 
+                "totEvents": 122303, 
+                "weights": 57921.83203125
             }, 
             {
+                "bad": false, 
+                "events": 197189, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_27.root", 
-                "nevents": 197189
+                "nevents": 197189, 
+                "totEvents": 197189, 
+                "weights": 93250.453125
             }, 
             {
+                "bad": false, 
+                "events": 203158, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_177.root", 
-                "nevents": 203158
+                "nevents": 203158, 
+                "totEvents": 203158, 
+                "weights": 96052.921875
             }, 
             {
+                "bad": false, 
+                "events": 240052, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_142.root", 
-                "nevents": 240052
+                "nevents": 240052, 
+                "totEvents": 240052, 
+                "weights": 113553.5
             }, 
             {
+                "bad": false, 
+                "events": 191069, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_192.root", 
-                "nevents": 191069
+                "nevents": 191069, 
+                "totEvents": 191069, 
+                "weights": 90097.15625
             }, 
             {
+                "bad": false, 
+                "events": 200018, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_194.root", 
-                "nevents": 200018
+                "nevents": 200018, 
+                "totEvents": 200018, 
+                "weights": 94270.0859375
             }, 
             {
+                "bad": false, 
+                "events": 209437, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_206.root", 
-                "nevents": 209437
+                "nevents": 209437, 
+                "totEvents": 209437, 
+                "weights": 98953.296875
             }, 
             {
+                "bad": false, 
+                "events": 251670, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_132.root", 
-                "nevents": 251670
+                "nevents": 251670, 
+                "totEvents": 251670, 
+                "weights": 119142.5546875
             }, 
             {
+                "bad": false, 
+                "events": 266900, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_227.root", 
-                "nevents": 266900
+                "nevents": 266900, 
+                "totEvents": 266900, 
+                "weights": 126260.546875
             }, 
             {
+                "bad": false, 
+                "events": 192951, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_22.root", 
-                "nevents": 192951
+                "nevents": 192951, 
+                "totEvents": 192951, 
+                "weights": 91270.0625
             }, 
             {
+                "bad": false, 
+                "events": 197505, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_7.root", 
-                "nevents": 197505
+                "nevents": 197505, 
+                "totEvents": 197505, 
+                "weights": 93660.09375
             }, 
             {
+                "bad": false, 
+                "events": 244134, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_90.root", 
-                "nevents": 244134
+                "nevents": 244134, 
+                "totEvents": 244134, 
+                "weights": 115270.328125
             }, 
             {
+                "bad": false, 
+                "events": 216028, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_104.root", 
-                "nevents": 216028
+                "nevents": 216028, 
+                "totEvents": 216028, 
+                "weights": 102393.859375
             }, 
             {
+                "bad": false, 
+                "events": 201901, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_204.root", 
-                "nevents": 201901
+                "nevents": 201901, 
+                "totEvents": 201901, 
+                "weights": 95483.375
             }, 
             {
+                "bad": false, 
+                "events": 184788, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_76.root", 
-                "nevents": 184788
+                "nevents": 184788, 
+                "totEvents": 184788, 
+                "weights": 87615.8359375
             }, 
             {
+                "bad": false, 
+                "events": 271765, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_120.root", 
-                "nevents": 271765
+                "nevents": 271765, 
+                "totEvents": 271765, 
+                "weights": 128862.4765625
             }, 
             {
+                "bad": false, 
+                "events": 206767, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_218.root", 
-                "nevents": 206767
+                "nevents": 206767, 
+                "totEvents": 206767, 
+                "weights": 97783.2109375
             }, 
             {
+                "bad": false, 
+                "events": 276317, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_59.root", 
-                "nevents": 276317
+                "nevents": 276317, 
+                "totEvents": 276317, 
+                "weights": 130721.875
             }, 
             {
+                "bad": false, 
+                "events": 220271, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_11.root", 
-                "nevents": 220271
+                "nevents": 220271, 
+                "totEvents": 220271, 
+                "weights": 104311.015625
             }, 
             {
+                "bad": false, 
+                "events": 230317, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_163.root", 
-                "nevents": 230317
+                "nevents": 230317, 
+                "totEvents": 230317, 
+                "weights": 108873.8125
             }, 
             {
+                "bad": false, 
+                "events": 142869, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_207.root", 
-                "nevents": 142869
+                "nevents": 142869, 
+                "totEvents": 142869, 
+                "weights": 67523.0078125
             }, 
             {
+                "bad": false, 
+                "events": 206453, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_230.root", 
-                "nevents": 206453
+                "nevents": 206453, 
+                "totEvents": 206453, 
+                "weights": 97784.296875
             }, 
             {
+                "bad": false, 
+                "events": 262502, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_179.root", 
-                "nevents": 262502
+                "nevents": 262502, 
+                "totEvents": 262502, 
+                "weights": 123943.828125
             }, 
             {
+                "bad": false, 
+                "events": 202843, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_203.root", 
-                "nevents": 202843
+                "nevents": 202843, 
+                "totEvents": 202843, 
+                "weights": 95892.5859375
             }, 
             {
+                "bad": false, 
+                "events": 148050, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_182.root", 
-                "nevents": 148050
+                "nevents": 148050, 
+                "totEvents": 148050, 
+                "weights": 70184.109375
             }, 
             {
+                "bad": false, 
+                "events": 167048, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_25.root", 
-                "nevents": 167048
+                "nevents": 167048, 
+                "totEvents": 167048, 
+                "weights": 79260.546875
             }, 
             {
+                "bad": false, 
+                "events": 80384, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_113.root", 
-                "nevents": 80384
+                "nevents": 80384, 
+                "totEvents": 80384, 
+                "weights": 38139.08984375
             }, 
             {
+                "bad": false, 
+                "events": 163749, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_121.root", 
-                "nevents": 163749
+                "nevents": 163749, 
+                "totEvents": 163749, 
+                "weights": 77376.9453125
             }, 
             {
+                "bad": false, 
+                "events": 199860, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_44.root", 
-                "nevents": 199860
+                "nevents": 199860, 
+                "totEvents": 199860, 
+                "weights": 94719.9296875
             }, 
             {
+                "bad": false, 
+                "events": 239109, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_95.root", 
-                "nevents": 239109
+                "nevents": 239109, 
+                "totEvents": 239109, 
+                "weights": 113122.6171875
             }, 
             {
+                "bad": false, 
+                "events": 295942, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_138.root", 
-                "nevents": 295942
+                "nevents": 295942, 
+                "totEvents": 295942, 
+                "weights": 139859.1875
             }, 
             {
+                "bad": false, 
+                "events": 194209, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_147.root", 
-                "nevents": 194209
+                "nevents": 194209, 
+                "totEvents": 194209, 
+                "weights": 91929.8125
             }, 
             {
+                "bad": false, 
+                "events": 269098, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_48.root", 
-                "nevents": 269098
+                "nevents": 269098, 
+                "totEvents": 269098, 
+                "weights": 126746.0859375
             }, 
             {
+                "bad": false, 
+                "events": 225923, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_224.root", 
-                "nevents": 225923
+                "nevents": 225923, 
+                "totEvents": 225923, 
+                "weights": 106668.3046875
             }, 
             {
+                "bad": false, 
+                "events": 263131, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_222.root", 
-                "nevents": 263131
+                "nevents": 263131, 
+                "totEvents": 263131, 
+                "weights": 124454.3125
             }, 
             {
+                "bad": false, 
+                "events": 320279, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_3.root", 
-                "nevents": 320279
+                "nevents": 320279, 
+                "totEvents": 320279, 
+                "weights": 151535.71875
             }, 
             {
+                "bad": false, 
+                "events": 215559, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_225.root", 
-                "nevents": 215559
+                "nevents": 215559, 
+                "totEvents": 215559, 
+                "weights": 102143.328125
             }, 
             {
+                "bad": false, 
+                "events": 222939, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_50.root", 
-                "nevents": 222939
+                "nevents": 222939, 
+                "totEvents": 222939, 
+                "weights": 105383.4609375
             }, 
             {
+                "bad": false, 
+                "events": 309288, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_58.root", 
-                "nevents": 309288
+                "nevents": 309288, 
+                "totEvents": 309288, 
+                "weights": 146328.984375
             }, 
             {
+                "bad": false, 
+                "events": 261405, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_178.root", 
-                "nevents": 261405
+                "nevents": 261405, 
+                "totEvents": 261405, 
+                "weights": 122913.734375
             }, 
             {
+                "bad": false, 
+                "events": 203785, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_74.root", 
-                "nevents": 203785
+                "nevents": 203785, 
+                "totEvents": 203785, 
+                "weights": 96345.3515625
             }, 
             {
+                "bad": false, 
+                "events": 240836, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_205.root", 
-                "nevents": 240836
+                "nevents": 240836, 
+                "totEvents": 240836, 
+                "weights": 114136.5859375
             }, 
             {
+                "bad": false, 
+                "events": 228276, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_140.root", 
-                "nevents": 228276
+                "nevents": 228276, 
+                "totEvents": 228276, 
+                "weights": 107934.0859375
             }, 
             {
+                "bad": false, 
+                "events": 218385, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_77.root", 
-                "nevents": 218385
+                "nevents": 218385, 
+                "totEvents": 218385, 
+                "weights": 103603.984375
             }, 
             {
+                "bad": false, 
+                "events": 313371, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_219.root", 
-                "nevents": 313371
+                "nevents": 313371, 
+                "totEvents": 313371, 
+                "weights": 148059.65625
             }, 
             {
+                "bad": false, 
+                "events": 225452, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_26.root", 
-                "nevents": 225452
+                "nevents": 225452, 
+                "totEvents": 225452, 
+                "weights": 106453.6484375
             }, 
             {
+                "bad": false, 
+                "events": 227021, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_143.root", 
-                "nevents": 227021
+                "nevents": 227021, 
+                "totEvents": 227021, 
+                "weights": 107324.125
             }, 
             {
+                "bad": false, 
+                "events": 261402, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_226.root", 
-                "nevents": 261402
+                "nevents": 261402, 
+                "totEvents": 261402, 
+                "weights": 123831.3984375
             }, 
             {
+                "bad": false, 
+                "events": 308659, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_15.root", 
-                "nevents": 308659
+                "nevents": 308659, 
+                "totEvents": 308659, 
+                "weights": 145823.015625
             }, 
             {
+                "bad": false, 
+                "events": 146009, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_23.root", 
-                "nevents": 146009
+                "nevents": 146009, 
+                "totEvents": 146009, 
+                "weights": 69161.5703125
             }, 
             {
+                "bad": false, 
+                "events": 331896, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_47.root", 
-                "nevents": 331896
+                "nevents": 331896, 
+                "totEvents": 331896, 
+                "weights": 157121.15625
             }, 
             {
+                "bad": false, 
+                "events": 261403, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_55.root", 
-                "nevents": 261403
+                "nevents": 261403, 
+                "totEvents": 261403, 
+                "weights": 123544.7890625
             }, 
             {
+                "bad": false, 
+                "events": 248057, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_17.root", 
-                "nevents": 248057
+                "nevents": 248057, 
+                "totEvents": 248057, 
+                "weights": 116968.75
             }, 
             {
+                "bad": false, 
+                "events": 254495, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_208.root", 
-                "nevents": 254495
+                "nevents": 254495, 
+                "totEvents": 254495, 
+                "weights": 120508.640625
             }, 
             {
+                "bad": false, 
+                "events": 334404, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_247.root", 
-                "nevents": 334404
+                "nevents": 334404, 
+                "totEvents": 334404, 
+                "weights": 157936.296875
             }, 
             {
+                "bad": false, 
+                "events": 258892, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_6.root", 
-                "nevents": 258892
+                "nevents": 258892, 
+                "totEvents": 258892, 
+                "weights": 122529.359375
             }, 
             {
+                "bad": false, 
+                "events": 262973, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_57.root", 
-                "nevents": 262973
+                "nevents": 262973, 
+                "totEvents": 262973, 
+                "weights": 124361.0703125
             }, 
             {
+                "bad": false, 
+                "events": 267212, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_244.root", 
-                "nevents": 267212
+                "nevents": 267212, 
+                "totEvents": 267212, 
+                "weights": 126347.6640625
             }, 
             {
+                "bad": false, 
+                "events": 277574, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_201.root", 
-                "nevents": 277574
+                "nevents": 277574, 
+                "totEvents": 277574, 
+                "weights": 131328.390625
             }, 
             {
+                "bad": false, 
+                "events": 285111, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_38.root", 
-                "nevents": 285111
+                "nevents": 285111, 
+                "totEvents": 285111, 
+                "weights": 134818.609375
             }, 
             {
+                "bad": false, 
+                "events": 281028, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_153.root", 
-                "nevents": 281028
+                "nevents": 281028, 
+                "totEvents": 281028, 
+                "weights": 132694.4375
             }, 
             {
+                "bad": false, 
+                "events": 184943, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_246.root", 
-                "nevents": 184943
+                "nevents": 184943, 
+                "totEvents": 184943, 
+                "weights": 87822.59375
             }, 
             {
+                "bad": false, 
+                "events": 295313, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_78.root", 
-                "nevents": 295313
+                "nevents": 295313, 
+                "totEvents": 295313, 
+                "weights": 139233.9375
             }, 
             {
+                "bad": false, 
+                "events": 242089, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_131.root", 
-                "nevents": 242089
+                "nevents": 242089, 
+                "totEvents": 242089, 
+                "weights": 114530.9921875
             }, 
             {
+                "bad": false, 
+                "events": 260303, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_189.root", 
-                "nevents": 260303
+                "nevents": 260303, 
+                "totEvents": 260303, 
+                "weights": 122928.34375
             }, 
             {
+                "bad": false, 
+                "events": 216187, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_193.root", 
-                "nevents": 216187
+                "nevents": 216187, 
+                "totEvents": 216187, 
+                "weights": 102172.859375
             }, 
             {
+                "bad": false, 
+                "events": 204413, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_106.root", 
-                "nevents": 204413
+                "nevents": 204413, 
+                "totEvents": 204413, 
+                "weights": 96826.53125
             }, 
             {
+                "bad": false, 
+                "events": 286210, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_139.root", 
-                "nevents": 286210
+                "nevents": 286210, 
+                "totEvents": 286210, 
+                "weights": 135527.109375
             }, 
             {
+                "bad": false, 
+                "events": 298611, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_174.root", 
-                "nevents": 298611
+                "nevents": 298611, 
+                "totEvents": 298611, 
+                "weights": 141302.921875
             }, 
             {
+                "bad": false, 
+                "events": 283698, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_180.root", 
-                "nevents": 283698
+                "nevents": 283698, 
+                "totEvents": 283698, 
+                "weights": 134379.453125
             }, 
             {
+                "bad": false, 
+                "events": 233770, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_42.root", 
-                "nevents": 233770
+                "nevents": 233770, 
+                "totEvents": 233770, 
+                "weights": 110449.703125
             }, 
             {
+                "bad": false, 
+                "events": 283383, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_217.root", 
-                "nevents": 283383
+                "nevents": 283383, 
+                "totEvents": 283383, 
+                "weights": 134186.578125
             }, 
             {
+                "bad": false, 
+                "events": 240681, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_49.root", 
-                "nevents": 240681
+                "nevents": 240681, 
+                "totEvents": 240681, 
+                "weights": 114041.375
             }, 
             {
+                "bad": false, 
+                "events": 215401, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_172.root", 
-                "nevents": 215401
+                "nevents": 215401, 
+                "totEvents": 215401, 
+                "weights": 101611.1796875
             }, 
             {
+                "bad": false, 
+                "events": 263289, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_200.root", 
-                "nevents": 263289
+                "nevents": 263289, 
+                "totEvents": 263289, 
+                "weights": 124577.7265625
             }, 
             {
+                "bad": false, 
+                "events": 319494, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_14.root", 
-                "nevents": 319494
+                "nevents": 319494, 
+                "totEvents": 319494, 
+                "weights": 151263.3125
             }, 
             {
+                "bad": false, 
+                "events": 305991, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_4.root", 
-                "nevents": 305991
+                "nevents": 305991, 
+                "totEvents": 305991, 
+                "weights": 144382.71875
             }, 
             {
+                "bad": false, 
+                "events": 346654, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_33.root", 
-                "nevents": 346654
+                "nevents": 346654, 
+                "totEvents": 346654, 
+                "weights": 163951.6875
             }, 
             {
+                "bad": false, 
+                "events": 275848, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_116.root", 
-                "nevents": 275848
+                "nevents": 275848, 
+                "totEvents": 275848, 
+                "weights": 130422.8125
             }, 
             {
+                "bad": false, 
+                "events": 262816, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_229.root", 
-                "nevents": 262816
+                "nevents": 262816, 
+                "totEvents": 262816, 
+                "weights": 124197.3203125
             }, 
             {
+                "bad": false, 
+                "events": 253709, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_84.root", 
-                "nevents": 253709
+                "nevents": 253709, 
+                "totEvents": 253709, 
+                "weights": 120291.9921875
             }, 
             {
+                "bad": false, 
+                "events": 254024, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_5.root", 
-                "nevents": 254024
+                "nevents": 254024, 
+                "totEvents": 254024, 
+                "weights": 119833.71875
             }, 
             {
+                "bad": false, 
+                "events": 298454, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_154.root", 
-                "nevents": 298454
+                "nevents": 298454, 
+                "totEvents": 298454, 
+                "weights": 141265.671875
             }, 
             {
+                "bad": false, 
+                "events": 267528, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_125.root", 
-                "nevents": 267528
+                "nevents": 267528, 
+                "totEvents": 267528, 
+                "weights": 126384.3515625
             }, 
             {
+                "bad": false, 
+                "events": 246174, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_191.root", 
-                "nevents": 246174
+                "nevents": 246174, 
+                "totEvents": 246174, 
+                "weights": 116267.75
             }, 
             {
+                "bad": false, 
+                "events": 228592, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_249.root", 
-                "nevents": 228592
+                "nevents": 228592, 
+                "totEvents": 228592, 
+                "weights": 108127.4453125
             }, 
             {
+                "bad": false, 
+                "events": 274590, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_97.root", 
-                "nevents": 274590
+                "nevents": 274590, 
+                "totEvents": 274590, 
+                "weights": 130028.7265625
             }, 
             {
+                "bad": false, 
+                "events": 222625, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_166.root", 
-                "nevents": 222625
+                "nevents": 222625, 
+                "totEvents": 222625, 
+                "weights": 105252.46875
             }, 
             {
+                "bad": false, 
+                "events": 216502, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_202.root", 
-                "nevents": 216502
+                "nevents": 216502, 
+                "totEvents": 216502, 
+                "weights": 102324.3359375
             }, 
             {
+                "bad": false, 
+                "events": 296101, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_235.root", 
-                "nevents": 296101
+                "nevents": 296101, 
+                "totEvents": 296101, 
+                "weights": 140110.890625
             }, 
             {
+                "bad": false, 
+                "events": 228903, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_10.root", 
-                "nevents": 228903
+                "nevents": 228903, 
+                "totEvents": 228903, 
+                "weights": 108221.859375
             }, 
             {
+                "bad": false, 
+                "events": 316824, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_223.root", 
-                "nevents": 316824
+                "nevents": 316824, 
+                "totEvents": 316824, 
+                "weights": 149720.203125
             }, 
             {
+                "bad": false, 
+                "events": 275062, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_160.root", 
-                "nevents": 275062
+                "nevents": 275062, 
+                "totEvents": 275062, 
+                "weights": 130103.28125
             }, 
             {
+                "bad": false, 
+                "events": 199232, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_149.root", 
-                "nevents": 199232
+                "nevents": 199232, 
+                "totEvents": 199232, 
+                "weights": 94225.421875
             }, 
             {
+                "bad": false, 
+                "events": 316511, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_30.root", 
-                "nevents": 316511
+                "nevents": 316511, 
+                "totEvents": 316511, 
+                "weights": 149684.828125
             }, 
             {
+                "bad": false, 
+                "events": 155900, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_101.root", 
-                "nevents": 155900
+                "nevents": 155900, 
+                "totEvents": 155900, 
+                "weights": 73776.9921875
             }, 
             {
+                "bad": false, 
+                "events": 270823, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_124.root", 
-                "nevents": 270823
+                "nevents": 270823, 
+                "totEvents": 270823, 
+                "weights": 128403.9921875
             }, 
             {
+                "bad": false, 
+                "events": 257164, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_128.root", 
-                "nevents": 257164
+                "nevents": 257164, 
+                "totEvents": 257164, 
+                "weights": 121457.21875
             }, 
             {
+                "bad": false, 
+                "events": 256066, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_187.root", 
-                "nevents": 256066
+                "nevents": 256066, 
+                "totEvents": 256066, 
+                "weights": 121166.28125
             }, 
             {
+                "bad": false, 
+                "events": 225609, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_29.root", 
-                "nevents": 225609
+                "nevents": 225609, 
+                "totEvents": 225609, 
+                "weights": 106481.2265625
             }, 
             {
+                "bad": false, 
+                "events": 294060, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_82.root", 
-                "nevents": 294060
+                "nevents": 294060, 
+                "totEvents": 294060, 
+                "weights": 139392.453125
             }, 
             {
+                "bad": false, 
+                "events": 228906, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_60.root", 
-                "nevents": 228906
+                "nevents": 228906, 
+                "totEvents": 228906, 
+                "weights": 108368.71875
             }, 
             {
+                "bad": false, 
+                "events": 245233, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_65.root", 
-                "nevents": 245233
+                "nevents": 245233, 
+                "totEvents": 245233, 
+                "weights": 116071.84375
             }, 
             {
+                "bad": false, 
+                "events": 225290, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_61.root", 
-                "nevents": 225290
+                "nevents": 225290, 
+                "totEvents": 225290, 
+                "weights": 106371.5234375
             }, 
             {
+                "bad": false, 
+                "events": 245703, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_13.root", 
-                "nevents": 245703
+                "nevents": 245703, 
+                "totEvents": 245703, 
+                "weights": 116438.4609375
             }, 
             {
+                "bad": false, 
+                "events": 211321, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_241.root", 
-                "nevents": 211321
+                "nevents": 211321, 
+                "totEvents": 211321, 
+                "weights": 99927.546875
             }, 
             {
+                "bad": false, 
+                "events": 304893, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_129.root", 
-                "nevents": 304893
+                "nevents": 304893, 
+                "totEvents": 304893, 
+                "weights": 144199.90625
             }, 
             {
+                "bad": false, 
+                "events": 224823, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_1.root", 
-                "nevents": 224823
+                "nevents": 224823, 
+                "totEvents": 224823, 
+                "weights": 105956.0234375
             }, 
             {
+                "bad": false, 
+                "events": 264228, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_197.root", 
-                "nevents": 264228
+                "nevents": 264228, 
+                "totEvents": 264228, 
+                "weights": 125211.71875
             }, 
             {
+                "bad": false, 
+                "events": 286996, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_91.root", 
-                "nevents": 286996
+                "nevents": 286996, 
+                "totEvents": 286996, 
+                "weights": 135964.53125
             }, 
             {
+                "bad": false, 
+                "events": 310542, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_156.root", 
-                "nevents": 310542
+                "nevents": 310542, 
+                "totEvents": 310542, 
+                "weights": 146893.65625
             }, 
             {
+                "bad": false, 
+                "events": 223568, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_176.root", 
-                "nevents": 223568
+                "nevents": 223568, 
+                "totEvents": 223568, 
+                "weights": 105434.8125
             }, 
             {
+                "bad": false, 
+                "events": 285424, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_70.root", 
-                "nevents": 285424
+                "nevents": 285424, 
+                "totEvents": 285424, 
+                "weights": 135016.015625
             }, 
             {
+                "bad": false, 
+                "events": 211635, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_96.root", 
-                "nevents": 211635
+                "nevents": 211635, 
+                "totEvents": 211635, 
+                "weights": 99947.078125
             }, 
             {
+                "bad": false, 
+                "events": 209908, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_231.root", 
-                "nevents": 209908
+                "nevents": 209908, 
+                "totEvents": 209908, 
+                "weights": 99306.2578125
             }, 
             {
+                "bad": false, 
+                "events": 347755, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_133.root", 
-                "nevents": 347755
+                "nevents": 347755, 
+                "totEvents": 347755, 
+                "weights": 164629.453125
             }, 
             {
+                "bad": false, 
+                "events": 301281, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_99.root", 
-                "nevents": 301281
+                "nevents": 301281, 
+                "totEvents": 301281, 
+                "weights": 142096.953125
             }, 
             {
+                "bad": false, 
+                "events": 263446, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_21.root", 
-                "nevents": 263446
+                "nevents": 263446, 
+                "totEvents": 263446, 
+                "weights": 124703.46875
             }, 
             {
+                "bad": false, 
+                "events": 216973, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_145.root", 
-                "nevents": 216973
+                "nevents": 216973, 
+                "totEvents": 216973, 
+                "weights": 102833.0078125
             }, 
             {
+                "bad": false, 
+                "events": 306932, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_141.root", 
-                "nevents": 306932
+                "nevents": 306932, 
+                "totEvents": 306932, 
+                "weights": 144897.703125
             }, 
             {
+                "bad": false, 
+                "events": 273964, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_103.root", 
-                "nevents": 273964
+                "nevents": 273964, 
+                "totEvents": 273964, 
+                "weights": 129490.6640625
             }, 
             {
+                "bad": false, 
+                "events": 273019, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_190.root", 
-                "nevents": 273019
+                "nevents": 273019, 
+                "totEvents": 273019, 
+                "weights": 129048.6953125
             }, 
             {
+                "bad": false, 
+                "events": 391555, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_126.root", 
-                "nevents": 391555
+                "nevents": 391555, 
+                "totEvents": 391555, 
+                "weights": 185152.578125
             }, 
             {
+                "bad": false, 
+                "events": 227807, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_39.root", 
-                "nevents": 227807
+                "nevents": 227807, 
+                "totEvents": 227807, 
+                "weights": 107958.375
             }, 
             {
+                "bad": false, 
+                "events": 330011, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_173.root", 
-                "nevents": 330011
+                "nevents": 330011, 
+                "totEvents": 330011, 
+                "weights": 155874.21875
             }, 
             {
+                "bad": false, 
+                "events": 198604, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_69.root", 
-                "nevents": 198604
+                "nevents": 198604, 
+                "totEvents": 198604, 
+                "weights": 93644.921875
             }, 
             {
+                "bad": false, 
+                "events": 253709, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_32.root", 
-                "nevents": 253709
+                "nevents": 253709, 
+                "totEvents": 253709, 
+                "weights": 119959.9609375
             }, 
             {
+                "bad": false, 
+                "events": 273649, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_158.root", 
-                "nevents": 273649
+                "nevents": 273649, 
+                "totEvents": 273649, 
+                "weights": 129434.8046875
             }, 
             {
+                "bad": false, 
+                "events": 312114, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_35.root", 
-                "nevents": 312114
+                "nevents": 312114, 
+                "totEvents": 312114, 
+                "weights": 147689.296875
             }, 
             {
+                "bad": false, 
+                "events": 231885, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_195.root", 
-                "nevents": 231885
+                "nevents": 231885, 
+                "totEvents": 231885, 
+                "weights": 109568.8671875
             }, 
             {
+                "bad": false, 
+                "events": 271137, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_214.root", 
-                "nevents": 271137
+                "nevents": 271137, 
+                "totEvents": 271137, 
+                "weights": 128256.21875
             }, 
             {
+                "bad": false, 
+                "events": 202212, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_186.root", 
-                "nevents": 202212
+                "nevents": 202212, 
+                "totEvents": 202212, 
+                "weights": 95863.640625
             }, 
             {
+                "bad": false, 
+                "events": 303952, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_165.root", 
-                "nevents": 303952
+                "nevents": 303952, 
+                "totEvents": 303952, 
+                "weights": 144109.15625
             }, 
             {
+                "bad": false, 
+                "events": 214776, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_66.root", 
-                "nevents": 214776
+                "nevents": 214776, 
+                "totEvents": 214776, 
+                "weights": 101525.4375
             }, 
             {
+                "bad": false, 
+                "events": 228119, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_234.root", 
-                "nevents": 228119
+                "nevents": 228119, 
+                "totEvents": 228119, 
+                "weights": 107505.8828125
             }, 
             {
+                "bad": false, 
+                "events": 201585, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_151.root", 
-                "nevents": 201585
+                "nevents": 201585, 
+                "totEvents": 201585, 
+                "weights": 95464.8359375
             }, 
             {
+                "bad": false, 
+                "events": 250728, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_167.root", 
-                "nevents": 250728
+                "nevents": 250728, 
+                "totEvents": 250728, 
+                "weights": 118477.7265625
             }, 
             {
+                "bad": false, 
+                "events": 275062, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_248.root", 
-                "nevents": 275062
+                "nevents": 275062, 
+                "totEvents": 275062, 
+                "weights": 129702.8828125
             }, 
             {
+                "bad": false, 
+                "events": 281343, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_34.root", 
-                "nevents": 281343
+                "nevents": 281343, 
+                "totEvents": 281343, 
+                "weights": 133194.265625
             }, 
             {
+                "bad": false, 
+                "events": 276006, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_53.root", 
-                "nevents": 276006
+                "nevents": 276006, 
+                "totEvents": 276006, 
+                "weights": 130701.0390625
             }, 
             {
+                "bad": false, 
+                "events": 280088, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_63.root", 
-                "nevents": 280088
+                "nevents": 280088, 
+                "totEvents": 280088, 
+                "weights": 132341.78125
             }, 
             {
+                "bad": false, 
+                "events": 192796, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_102.root", 
-                "nevents": 192796
+                "nevents": 192796, 
+                "totEvents": 192796, 
+                "weights": 90808.8359375
             }, 
             {
+                "bad": false, 
+                "events": 272393, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_161.root", 
-                "nevents": 272393
+                "nevents": 272393, 
+                "totEvents": 272393, 
+                "weights": 128554.5078125
             }, 
             {
+                "bad": false, 
+                "events": 240992, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_68.root", 
-                "nevents": 240992
+                "nevents": 240992, 
+                "totEvents": 240992, 
+                "weights": 113877.90625
             }, 
             {
+                "bad": false, 
+                "events": 256061, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_72.root", 
-                "nevents": 256061
+                "nevents": 256061, 
+                "totEvents": 256061, 
+                "weights": 121311.5546875
             }, 
             {
+                "bad": false, 
+                "events": 232515, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_171.root", 
-                "nevents": 232515
+                "nevents": 232515, 
+                "totEvents": 232515, 
+                "weights": 109965.6953125
             }, 
             {
+                "bad": false, 
+                "events": 189499, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_54.root", 
-                "nevents": 189499
+                "nevents": 189499, 
+                "totEvents": 189499, 
+                "weights": 89598.296875
             }, 
             {
+                "bad": false, 
+                "events": 284169, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_233.root", 
-                "nevents": 284169
+                "nevents": 284169, 
+                "totEvents": 284169, 
+                "weights": 134695.5625
             }, 
             {
+                "bad": false, 
+                "events": 340690, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_134.root", 
-                "nevents": 340690
+                "nevents": 340690, 
+                "totEvents": 340690, 
+                "weights": 161095.015625
             }, 
             {
+                "bad": false, 
+                "events": 278044, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_37.root", 
-                "nevents": 278044
+                "nevents": 278044, 
+                "totEvents": 278044, 
+                "weights": 131401.109375
             }, 
             {
+                "bad": false, 
+                "events": 214304, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_41.root", 
-                "nevents": 214304
+                "nevents": 214304, 
+                "totEvents": 214304, 
+                "weights": 101229.140625
             }, 
             {
+                "bad": false, 
+                "events": 210379, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_18.root", 
-                "nevents": 210379
+                "nevents": 210379, 
+                "totEvents": 210379, 
+                "weights": 99551.1328125
             }, 
             {
+                "bad": false, 
+                "events": 209593, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_215.root", 
-                "nevents": 209593
+                "nevents": 209593, 
+                "totEvents": 209593, 
+                "weights": 99314.5546875
             }, 
             {
+                "bad": false, 
+                "events": 247902, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_12.root", 
-                "nevents": 247902
+                "nevents": 247902, 
+                "totEvents": 247902, 
+                "weights": 117354.1640625
             }, 
             {
+                "bad": false, 
+                "events": 327812, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_221.root", 
-                "nevents": 327812
+                "nevents": 327812, 
+                "totEvents": 327812, 
+                "weights": 154650.9375
             }, 
             {
+                "bad": false, 
+                "events": 233611, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_211.root", 
-                "nevents": 233611
+                "nevents": 233611, 
+                "totEvents": 233611, 
+                "weights": 110546.7890625
             }, 
             {
+                "bad": false, 
+                "events": 314469, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_46.root", 
-                "nevents": 314469
+                "nevents": 314469, 
+                "totEvents": 314469, 
+                "weights": 148628.75
             }, 
             {
+                "bad": false, 
+                "events": 229690, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_170.root", 
-                "nevents": 229690
+                "nevents": 229690, 
+                "totEvents": 229690, 
+                "weights": 108245.8359375
             }, 
             {
+                "bad": false, 
+                "events": 322007, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_123.root", 
-                "nevents": 322007
+                "nevents": 322007, 
+                "totEvents": 322007, 
+                "weights": 152540.71875
             }, 
             {
+                "bad": false, 
+                "events": 268938, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_8.root", 
-                "nevents": 268938
+                "nevents": 268938, 
+                "totEvents": 268938, 
+                "weights": 127338.6953125
             }, 
             {
+                "bad": false, 
+                "events": 232986, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_93.root", 
-                "nevents": 232986
+                "nevents": 232986, 
+                "totEvents": 232986, 
+                "weights": 110007.09375
             }, 
             {
+                "bad": false, 
+                "events": 317449, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_212.root", 
-                "nevents": 317449
+                "nevents": 317449, 
+                "totEvents": 317449, 
+                "weights": 150274.25
             }, 
             {
+                "bad": false, 
+                "events": 256852, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_237.root", 
-                "nevents": 256852
+                "nevents": 256852, 
+                "totEvents": 256852, 
+                "weights": 121385.3671875
             }, 
             {
+                "bad": false, 
+                "events": 256380, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_16.root", 
-                "nevents": 256380
+                "nevents": 256380, 
+                "totEvents": 256380, 
+                "weights": 121311.59375
             }, 
             {
+                "bad": false, 
+                "events": 250097, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_92.root", 
-                "nevents": 250097
+                "nevents": 250097, 
+                "totEvents": 250097, 
+                "weights": 118198.5859375
             }, 
             {
+                "bad": false, 
+                "events": 233929, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_81.root", 
-                "nevents": 233929
+                "nevents": 233929, 
+                "totEvents": 233929, 
+                "weights": 110650.0
             }, 
             {
+                "bad": false, 
+                "events": 241779, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_98.root", 
-                "nevents": 241779
+                "nevents": 241779, 
+                "totEvents": 241779, 
+                "weights": 114448.390625
             }, 
             {
+                "bad": false, 
+                "events": 277575, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_159.root", 
-                "nevents": 277575
+                "nevents": 277575, 
+                "totEvents": 277575, 
+                "weights": 131485.40625
             }, 
             {
+                "bad": false, 
+                "events": 307405, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_100.root", 
-                "nevents": 307405
+                "nevents": 307405, 
+                "totEvents": 307405, 
+                "weights": 144941.234375
             }, 
             {
+                "bad": false, 
+                "events": 272707, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_136.root", 
-                "nevents": 272707
+                "nevents": 272707, 
+                "totEvents": 272707, 
+                "weights": 128983.703125
             }, 
             {
+                "bad": false, 
+                "events": 238636, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_52.root", 
-                "nevents": 238636
+                "nevents": 238636, 
+                "totEvents": 238636, 
+                "weights": 112668.59375
             }, 
             {
+                "bad": false, 
+                "events": 268469, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_79.root", 
-                "nevents": 268469
+                "nevents": 268469, 
+                "totEvents": 268469, 
+                "weights": 127179.84375
             }, 
             {
+                "bad": false, 
+                "events": 227021, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_144.root", 
-                "nevents": 227021
+                "nevents": 227021, 
+                "totEvents": 227021, 
+                "weights": 107430.6015625
             }, 
             {
+                "bad": false, 
+                "events": 227804, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_89.root", 
-                "nevents": 227804
+                "nevents": 227804, 
+                "totEvents": 227804, 
+                "weights": 108080.7109375
             }, 
             {
+                "bad": false, 
+                "events": 240991, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_64.root", 
-                "nevents": 240991
+                "nevents": 240991, 
+                "totEvents": 240991, 
+                "weights": 113731.53125
             }, 
             {
+                "bad": false, 
+                "events": 296101, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_94.root", 
-                "nevents": 296101
+                "nevents": 296101, 
+                "totEvents": 296101, 
+                "weights": 139561.59375
             }, 
             {
+                "bad": false, 
+                "events": 234867, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_67.root", 
-                "nevents": 234867
+                "nevents": 234867, 
+                "totEvents": 234867, 
+                "weights": 110771.265625
             }, 
             {
+                "bad": false, 
+                "events": 274746, 
                 "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_DiphotonsHiStat/1/DiPhotonJetsBox_MGG-80toInf_13TeV-Sherpa/HHbbgg_DiphotonsHiStat-1-v0-RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/190213_161427/0000/myMicroAODOutputFile_9.root", 
-                "nevents": 274746
+                "nevents": 274746, 
+                "totEvents": 274746, 
+                "weights": 130071.5
             }
-        ]
+        ], 
+        "vetted": true
     }
 }
