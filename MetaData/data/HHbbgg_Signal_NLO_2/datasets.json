@@ -1,0 +1,55 @@
+{
+    "/GluGluToHHTo2B2G_TuneCP5_13TeV-powheg-NLO-pythia8/micheli-HHbbgg_Signal_NLO_2-1-v0-RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v2-36d24ab2b1bdce9fc3412fbb0eb04dd1/USER": {
+        "files": [
+            {
+                "bad": false, 
+                "events": 3976, 
+                "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_Signal_NLO_2/1/GluGluToHHTo2B2G_TuneCP5_13TeV-powheg-NLO-pythia8/HHbbgg_Signal_NLO_2-1-v0-RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v2/190315_163644/0000/myMicroAODOutputFile_2.root", 
+                "nevents": 3976, 
+                "totEvents": 3976, 
+                "weights": 109.41251373291016
+            }, 
+            {
+                "bad": false, 
+                "events": 3976, 
+                "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_Signal_NLO_2/1/GluGluToHHTo2B2G_TuneCP5_13TeV-powheg-NLO-pythia8/HHbbgg_Signal_NLO_2-1-v0-RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v2/190315_163644/0000/myMicroAODOutputFile_4.root", 
+                "nevents": 3976, 
+                "totEvents": 3976, 
+                "weights": 108.88629913330078
+            }, 
+            {
+                "bad": false, 
+                "events": 3976, 
+                "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_Signal_NLO_2/1/GluGluToHHTo2B2G_TuneCP5_13TeV-powheg-NLO-pythia8/HHbbgg_Signal_NLO_2-1-v0-RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v2/190315_163644/0000/myMicroAODOutputFile_1.root", 
+                "nevents": 3976, 
+                "totEvents": 3976, 
+                "weights": 111.02629852294922
+            }, 
+            {
+                "bad": false, 
+                "events": 120, 
+                "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_Signal_NLO_2/1/GluGluToHHTo2B2G_TuneCP5_13TeV-powheg-NLO-pythia8/HHbbgg_Signal_NLO_2-1-v0-RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v2/190315_163644/0000/myMicroAODOutputFile_6.root", 
+                "nevents": 120, 
+                "totEvents": 120, 
+                "weights": 3.403822898864746
+            }, 
+            {
+                "bad": false, 
+                "events": 3976, 
+                "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_Signal_NLO_2/1/GluGluToHHTo2B2G_TuneCP5_13TeV-powheg-NLO-pythia8/HHbbgg_Signal_NLO_2-1-v0-RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v2/190315_163644/0000/myMicroAODOutputFile_3.root", 
+                "nevents": 3976, 
+                "totEvents": 3976, 
+                "weights": 109.5788803100586
+            }, 
+            {
+                "bad": false, 
+                "events": 3976, 
+                "name": "/store/user/micheli/HHbbgg/MicroAod/HHbbgg_Signal_NLO_2/1/GluGluToHHTo2B2G_TuneCP5_13TeV-powheg-NLO-pythia8/HHbbgg_Signal_NLO_2-1-v0-RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v2/190315_163644/0000/myMicroAODOutputFile_5.root", 
+                "nevents": 3976, 
+                "totEvents": 3976, 
+                "weights": 108.00762176513672
+            }
+        ], 
+        "vetted": true
+    }
+}
