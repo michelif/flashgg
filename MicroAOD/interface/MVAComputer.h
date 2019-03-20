@@ -15,6 +15,8 @@
 #include "TMVA/Reader.h"
 #include "flashgg/Taggers/interface/GlobalVariablesDumper.h"
 
+#include "XGBoostCMSSW/XGBoostInterface/interface/XGBComputer.h"
+
 namespace flashgg {
 
     template<class ObjectT, class FunctorT = StringObjectFunction<ObjectT, true> >
@@ -23,16 +25,21 @@ namespace flashgg {
     public:
         typedef ObjectT object_type;
         typedef FunctorT functor_type;
-
+        
         MVAComputer( const edm::ParameterSet &cfg, GlobalVariablesComputer *global = 0 );
         ~MVAComputer();
 
         float operator()( const object_type &obj ) const;
         std::vector<float> predict_prob( const object_type &obj ) const;
-
+        void getMVAVar();
+        XGBComputer xgbComputer_;
+        XGBComputer::mva_variables  xgbVars_;
+        void setupXGB();
+        std::vector<float> predict_probXGB();
+        
     private:
         void bookMVA() const;
-
+        
         mutable TMVA::Reader *reader_;
         GlobalVariablesComputer *global_;
 
@@ -123,6 +130,28 @@ namespace flashgg {
         return reader_->EvaluateMulticlass(classifier_.c_str());
     }
 
+    template<class F, class O>
+    void MVAComputer<F, O>::getMVAVar() 
+    {
+        for( size_t ivar = 0; ivar < values_.size(); ++ivar ) {
+            xgbVars_.push_back(std::make_tuple(get<0>(variables_[ivar]),values_[ivar]));
+            //            std::cout<<vars[0]<<std::endl;
+        }
+    }
+
+    template<class F, class O>
+    void MVAComputer<F, O>::setupXGB()
+    {
+        std::string modelfile="Taggers/data/HHTagger/training_with_20190201_test_2.pkl";
+        getMVAVar();
+        xgbComputer_=XGBComputer(&xgbVars_,modelfile);
+    }
+
+    template<class F, class O>
+    std::vector<float> MVAComputer<F, O>::predict_probXGB() 
+    {
+        return xgbComputer_();
+    }
 
 }
 

@@ -23,6 +23,7 @@
 
 #include "PhysicsTools/TensorFlow/interface/TensorFlow.h"
 
+
 #include <vector>
 #include <algorithm>
 #include "TGraph.h"
@@ -46,7 +47,7 @@ namespace flashgg {
         bool isclose(double a, double b, double rel_tol, double abs_tol);        
         void StandardizeHLF();
         void StandardizeParticleList();
-        
+
         EDGetTokenT<View<DiPhotonCandidate> > diPhotonToken_;
         std::vector<edm::EDGetTokenT<edm::View<flashgg::Jet> > > jetTokens_;
         EDGetTokenT<View<reco::GenParticle> > genParticleToken_;
@@ -136,6 +137,8 @@ namespace flashgg {
         globalVariablesDumper_(iConfig.getParameter<edm::ParameterSet>("globalVariables")),
         mvaComputer_(iConfig.getParameter<edm::ParameterSet>("MVAConfig"),  &globalVariablesDumper_)
     {
+        mvaComputer_.setupXGB();
+
         mjjBoundaries_ = iConfig.getParameter<vector<double > >( "MJJBoundaries" ); 
         mvaBoundaries_ = iConfig.getParameter<vector<double > >( "MVABoundaries" );
         mxBoundaries_ = iConfig.getParameter<vector<double > >( "MXBoundaries" );
@@ -429,13 +432,21 @@ namespace flashgg {
                 tag_obj.setSigmaMDecorrTransf(transfEBEB_,transfNotEBEB_);
             }
 
+           
+
             // eval MVA discriminant
             std::vector<float> mva_vector = mvaComputer_.predict_prob(tag_obj);
             double mva = mva_vector[multiclassSignalIdx_];
+            std::vector<float> mva_vector_xgb = mvaComputer_.predict_probXGB();
+            for (unsigned int i=0;i<mva_vector_xgb.size();++i){
+                std::cout<<"TMVA:"<<mva_vector[i]<<std::endl;
+                std::cout<<"XGB:"<<mva_vector_xgb[i]<<std::endl;
+            }
             if(doMVAFlattening_){
                 double mvaScaled = mva/(mva*(1.-MVAscaling_)+MVAscaling_);
                 mva = MVAFlatteningCumulative_->Eval(mvaScaled);
             }
+
 
             tag_obj.setEventNumber(evt.id().event() );
             tag_obj.setMVA( mva );
@@ -820,6 +831,7 @@ namespace flashgg {
         float NNscore = outputs[0].matrix<float>()(0, 0);
         return NNscore;
     }
+    
     
 }
 

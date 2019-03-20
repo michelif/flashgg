@@ -10,6 +10,7 @@
 <use   name="roofit"/>
 <use   name="roottmva"/>
 <use   name="CommonTools/CandAlgos"/>
+<use   name="xgboost"/>
 <release name="CMSSW_8">
   <flags CXXFLAGS="-DCMSSW8"/>
   <use name="DNN/Base" />
