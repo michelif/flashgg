@@ -11,6 +11,7 @@
 <use   name="roottmva"/>
 <use   name="CommonTools/CandAlgos"/>
 <use   name="xgboost"/>
+<use   name=" XGBoostCMSSW/XGBoostInterface"/>
 <release name="CMSSW_8">
   <flags CXXFLAGS="-DCMSSW8"/>
   <use name="DNN/Base" />

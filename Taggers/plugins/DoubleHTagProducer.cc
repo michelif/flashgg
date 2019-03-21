@@ -76,8 +76,9 @@ namespace flashgg {
         bool       useJetID_;
         string     JetIDLevel_;        
 
-        GlobalVariablesDumper globalVariablesDumper_;
-        MVAComputer<DoubleHTag> mvaComputer_;
+        ConsumesCollector cc_;
+        GlobalVariablesComputer globalVariablesComputer_;
+        MVAComputer<DoubleHTag, StringObjectFunction<DoubleHTag, true>, true> mvaComputer_;
         vector<double> mvaBoundaries_, mxBoundaries_;
         int multiclassSignalIdx_;
             
@@ -134,11 +135,10 @@ namespace flashgg {
         bTagType_( iConfig.getParameter<vector<std::string>>( "BTagType") ),
         useJetID_( iConfig.getParameter<bool>   ( "UseJetID"     ) ),
         JetIDLevel_( iConfig.getParameter<string> ( "JetIDLevel"   ) ),
-        globalVariablesDumper_(iConfig.getParameter<edm::ParameterSet>("globalVariables")),
-        mvaComputer_(iConfig.getParameter<edm::ParameterSet>("MVAConfig"),  &globalVariablesDumper_)
+        cc_( consumesCollector() ),
+        globalVariablesComputer_(iConfig.getParameter<edm::ParameterSet>("globalVariables"),cc_),
+        mvaComputer_(iConfig.getParameter<edm::ParameterSet>("MVAConfig"),  &globalVariablesComputer_)
     {
-        mvaComputer_.setupXGB();
-
         mjjBoundaries_ = iConfig.getParameter<vector<double > >( "MJJBoundaries" ); 
         mvaBoundaries_ = iConfig.getParameter<vector<double > >( "MVABoundaries" );
         mxBoundaries_ = iConfig.getParameter<vector<double > >( "MXBoundaries" );
@@ -284,6 +284,8 @@ namespace flashgg {
         
     void DoubleHTagProducer::produce( Event &evt, const EventSetup & )
     {
+        globalVariablesComputer_.update(evt);
+
         // read diphotons
         Handle<View<flashgg::DiPhotonCandidate> > diPhotons;
         evt.getByToken( diPhotonToken_, diPhotons );
@@ -435,13 +437,15 @@ namespace flashgg {
            
 
             // eval MVA discriminant
-            std::vector<float> mva_vector = mvaComputer_.predict_prob(tag_obj);
+            //            std::vector<float> mva_vector = mvaComputer_.predict_prob(tag_obj);
+            std::vector<float> mva_vector = {0.,0.,0.};
             double mva = mva_vector[multiclassSignalIdx_];
-            std::vector<float> mva_vector_xgb = mvaComputer_.predict_probXGB();
-            for (unsigned int i=0;i<mva_vector_xgb.size();++i){
-                std::cout<<"TMVA:"<<mva_vector[i]<<std::endl;
-                std::cout<<"XGB:"<<mva_vector_xgb[i]<<std::endl;
-            }
+            std::vector<float> mva_vector_xgb = mvaComputer_.predict_prob(tag_obj);
+            //            for (unsigned int i=0;i<mva_vector_xgb.size();++i){
+            //                std::cout<<"prob ["<<i<<"]"<<std::endl;
+            //                std::cout<<"TMVA:"<<mva_vector[i]<<std::endl;
+            //                std::cout<<"XGB:"<<mva_vector_xgb[i]<<std::endl;
+            //            }
             if(doMVAFlattening_){
                 double mvaScaled = mva/(mva*(1.-MVAscaling_)+MVAscaling_);
                 mva = MVAFlatteningCumulative_->Eval(mvaScaled);

@@ -19,7 +19,7 @@
 
 namespace flashgg {
 
-    template<class ObjectT, class FunctorT = StringObjectFunction<ObjectT, true> >
+    template<class ObjectT, class FunctorT = StringObjectFunction<ObjectT, true>, bool useXGB=false>
     class MVAComputer
     {
     public:
@@ -31,17 +31,17 @@ namespace flashgg {
 
         float operator()( const object_type &obj ) const;
         std::vector<float> predict_prob( const object_type &obj ) const;
-        void getMVAVar();
-        XGBComputer xgbComputer_;
-        XGBComputer::mva_variables  xgbVars_;
-        void setupXGB();
-        std::vector<float> predict_probXGB();
         
     private:
-        void bookMVA() const;
-        
+
+        void bookMVA() const;        
+
         mutable TMVA::Reader *reader_;
         GlobalVariablesComputer *global_;
+
+        mutable XGBComputer xgbComputer_;
+        mutable XGBComputer::mva_variables  xgbVars_;
+        
 
         bool regression_;
         bool multiclass_;
@@ -51,13 +51,13 @@ namespace flashgg {
         std::vector<functor_type> functors_;
     };
 
-    template<class F, class O>
-    MVAComputer<F, O>::MVAComputer( const edm::ParameterSet &cfg, GlobalVariablesComputer *global ) :
+    template<class F, class O, bool useXGB>
+    MVAComputer<F, O, useXGB>::MVAComputer( const edm::ParameterSet &cfg, GlobalVariablesComputer *global ) :
         reader_( 0 ),
         global_( global ),
         regression_( cfg.exists("regression") ? cfg.getParameter<bool>("regression") : false ),
         multiclass_( cfg.exists("multiclass") ? cfg.getParameter<bool>("multiclass") : false ),
-        classifier_( cfg.getParameter<std::string>( "classifier" ) )
+        classifier_( cfg.exists("classifier") ? cfg.getParameter<std::string>( "classifier" ) : "" )
     {
         using namespace std;
 
@@ -76,41 +76,55 @@ namespace flashgg {
                 variables_.push_back( std::make_tuple( name, functors_.size() - 1 ) );
             }
         }
+
+        bookMVA();
     }
 
-    template<class F, class O>
-    MVAComputer<F, O>::~MVAComputer()
+    template<class F, class O, bool useXGB>
+    MVAComputer<F, O, useXGB>::~MVAComputer()
     {
         if( reader_ ) {
             delete reader_;
         }
     }
 
-    template<class F, class O>
-    void MVAComputer<F, O>::bookMVA() const
+    template<class F, class O, bool useXGB>
+    void MVAComputer<F, O, useXGB>::bookMVA()  const
     {
-        if( reader_ ) { return; }
-        reader_ = new TMVA::Reader( "!Color" );
+        if( !useXGB )
+            {
+                if( reader_ ) { return; }
+                reader_ = new TMVA::Reader( "!Color" );
+            }
         values_.resize( functors_.size(), 0. );
         for( auto &var : variables_ ) {
             auto &name = std::get<0>( var );
             auto ivar = std::get<1>( var );
             if( ivar >= 0 ) {
-                reader_->AddVariable( name, &values_[ivar] );
+                if( useXGB )
+                    xgbVars_.push_back(std::make_tuple(name, values_[ivar]));
+                else
+                    reader_->AddVariable( name, &values_[ivar] );
             } else {
                 assert( global_ != 0 );
                 auto pos = name.find( "::" );
                 auto vname = name.substr( 0, pos );
                 auto gname = name.substr( pos + 2 );
-                reader_->AddVariable( vname, global_->addressOf( gname ) );
+                if( useXGB )
+                    xgbVars_.push_back(std::make_tuple(vname, global_->valueOf( gname )));
+                else
+                    reader_->AddVariable( vname, global_->addressOf( gname ) );
             }
         }
-        reader_->BookMVA( classifier_, weights_ );
+        if( useXGB )
+            xgbComputer_ = XGBComputer(&xgbVars_, weights_);    
+        else
+            reader_->BookMVA( classifier_, weights_ );
 
     }
 
-    template<class F, class O>
-    float MVAComputer<F, O>::operator()( const object_type &obj ) const
+    template<class F, class O, bool useXGB>
+    float MVAComputer<F, O, useXGB>::operator()( const object_type &obj ) const
     {
         assert (multiclass_==false);
         if( ! reader_ ) { bookMVA(); }
@@ -119,40 +133,37 @@ namespace flashgg {
         }
         return ( regression_ ? reader_->EvaluateRegression(0, classifier_.c_str() ) : reader_->EvaluateMVA( classifier_.c_str() ) );
     }
-    template<class F, class O>
-    std::vector<float> MVAComputer<F, O>::predict_prob( const object_type &obj ) const
+
+    template<class F, class O, bool useXGB>
+    std::vector<float> MVAComputer<F, O, useXGB>::predict_prob( const object_type &obj ) const
     {
-        assert (multiclass_==true);
-        if( ! reader_ ) { bookMVA(); }
-        for( size_t ivar = 0; ivar < functors_.size(); ++ivar ) {
-            values_[ivar] = functors_[ivar]( obj );
+        for( size_t ivar = 0; ivar < variables_.size(); ++ivar ) {
+            auto fvar = std::get<1>(variables_[ivar]);
+            if(fvar >= 0)
+                {
+                    values_[ivar] = functors_[fvar]( obj );
+                    if( useXGB )
+                        std::get<1>(xgbVars_[ivar]) = values_[ivar];
+                }
+            else if( useXGB )
+                {
+                    auto name = std::get<0>(variables_[ivar]);
+                    auto pos = name.find( "::" );
+                    auto vname = name.substr( 0, pos );
+                    auto gname = name.substr( pos + 2 );
+                    std::get<1>(xgbVars_[ivar]) = global_->valueOf( gname );
+                }
         }
-        return reader_->EvaluateMulticlass(classifier_.c_str());
-    }
 
-    template<class F, class O>
-    void MVAComputer<F, O>::getMVAVar() 
-    {
-        for( size_t ivar = 0; ivar < values_.size(); ++ivar ) {
-            xgbVars_.push_back(std::make_tuple(get<0>(variables_[ivar]),values_[ivar]));
-            //            std::cout<<vars[0]<<std::endl;
-        }
+        if( !useXGB )
+            {
+                assert (multiclass_==true);
+                if( ! reader_ ) { bookMVA(); }
+                return reader_->EvaluateMulticlass(classifier_.c_str());
+            }
+        else
+            return xgbComputer_();
     }
-
-    template<class F, class O>
-    void MVAComputer<F, O>::setupXGB()
-    {
-        std::string modelfile="Taggers/data/HHTagger/training_with_20190201_test_2.pkl";
-        getMVAVar();
-        xgbComputer_=XGBComputer(&xgbVars_,modelfile);
-    }
-
-    template<class F, class O>
-    std::vector<float> MVAComputer<F, O>::predict_probXGB() 
-    {
-        return xgbComputer_();
-    }
-
 }
 
 

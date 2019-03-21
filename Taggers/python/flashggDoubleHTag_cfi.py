@@ -24,7 +24,8 @@ if year == "2016":
 elif year == "2017":
     year_norm = 1
     jetPUID = 'Tight2017'
-    weightsFile="flashgg/Taggers/data/HHTagger/training_with_10_12_2018_commonTraining_2017.weights.xml", 
+#    weightsFile="flashgg/Taggers/data/HHTagger/training_with_10_12_2018_commonTraining_2017.weights.xml", 
+    weightsFile= "flashgg/Taggers/data/HHTagger/training_with_20190225_optimized_2017_dump.pkl"
     MVAscalingValue=1.011026
 
 
@@ -82,7 +83,7 @@ flashggDoubleHTag = cms.EDProducer("FlashggDoubleHTagProducer",
                                    ElectronTag=cms.InputTag('flashggSelectedElectrons'),
                                    MuonTag=cms.InputTag('flashggSelectedMuons'),
                                    VertexTag=cms.InputTag('offlineSlimmedPrimaryVertices'),
-                                   METTag=cms.InputTag('flashggMets'),
+                                   METTag=cms.InputTag('flashggMetsCorr'),
                                    rhoTag = cms.InputTag('fixedGridRhoFastjetAll'),
                                    looseLeptonPtThreshold = cms.double(10.),
                                    muonEtaThreshold = cms.double(2.4),
