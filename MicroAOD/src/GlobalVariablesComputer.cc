@@ -70,7 +70,8 @@ namespace flashgg {
                 puBins_ = cfg.getParameter<std::vector<double> >("puBins");
                 puWeight_ = cfg.getParameter<std::vector<double> >("dataPu");
                 auto mcpu = cfg.getParameter<std::vector<double> >("mcPu");
-
+                std::cout<<"puWeight="<<puWeight_.size()<<" mcpu.size="<<mcpu.size()<<std::endl;
+                
                 assert( puWeight_.size() == mcpu.size() );
                 if ( puWeight_.size() != puBins_.size()-1 ) {
                     puBins_.resize(puWeight_.size()+1);
