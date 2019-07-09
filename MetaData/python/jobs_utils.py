@@ -526,6 +526,7 @@ class JobsManager(object):
         jobargs = jobargs[1:]
         for i,ijob in enumerate(self.task_config["jobs"]):
             inam,iargs = ijob[0:2]
+            print(len(ret),len(ijob))
             if inam == job and iargs == jobargs:
                 ijob[4] = ret[0]
                 if ret[0] != 0:
